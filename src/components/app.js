@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import BaseNavbar from "./navigation/navbar";
 import Homepage from "./homepage/homepage";
-import Carousel from "./homepage/carousel";
+import Login from "./auth/login";
 import Footer from "./navigation/footer";
 import TermsOfService from "./base-pages/terms-of-service";
 import PrivacyStatement from "./base-pages/privacy-statement";
@@ -22,7 +22,7 @@ export default class App extends Component {
               <Route path="/terms" component={TermsOfService}/>
               <Route path="/privacy" component={PrivacyStatement}/>
               <Route path="/contact-us" component={ContactUs}/>
-              <Route path="/carousel" component={Carousel}/>
+              <Route path="/login" component={Login}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
