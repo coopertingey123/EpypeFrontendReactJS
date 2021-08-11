@@ -23,11 +23,11 @@ export default function PhoneCarousel() {
         arrows: true,
         centerMode: true,
         centerPadding: '60px',
-        focusOnSelect: true,
-        swipe: true,
-        className: "center",
-        adaptiveHeight: true,
-        speed: 500,
+        // focusOnSelect: true,
+        // swipe: true,
+        // className: "center",
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 960,
@@ -55,54 +55,54 @@ export default function PhoneCarousel() {
             <Row>
                 <Slider {...settings}>
                     <div className="slide">
-                        <div>
-                            <img className="slide-img" alt="image" src={PhotoOne}/>
-                        </div>
+                        
+                        <img className="slide-img" alt="image" src={PhotoOne}/>
+                        
                         <div className="text-box">
                             <h4>Board of Advisors</h4>
                             <p>Promotional Events</p>
                         </div>
                     </div>
                     <div className="slide">
-                        <div>
-                            <img className="slide-img" alt="image" src={PhotoTwo}/>
-                        </div>
+                        
+                        <img className="slide-img" alt="image" src={PhotoTwo}/>
+                        
                         <div className="text-box">
                             <h4>Jim Piccolo</h4>
                             <p>Speaker / Coaching</p>
                         </div>
                     </div>
                     <div className="slide">
-                        <div>
+                    
                             <img className="slide-img" alt="image" src={PhotoThree}/>
-                        </div>
+                        
                         <div className="text-box">
                             <h4>Bottega University</h4>
                             <p>Training / Education</p>
                         </div>
                     </div>
                     <div className="slide">
-                        <div>
+                    
                             <img className="slide-img" alt="image" src={PhotoFour}/>
-                        </div>
+                        
                         <div className="text-box">
                             <h4>Platinum Payment Systems</h4>
                             <p>Virtual Business Card</p>
                         </div>
                     </div>
                     <div className="slide">
-                        <div>
+                    
                             <img className="slide-img" alt="image" src={PhotoFive}/>
-                        </div>
+                        
                         <div className="text-box">
                             <h4>Kevin Harrington - Shark Tank</h4>
                             <p>Sell your book</p>
                         </div>
                     </div>
                     <div className="slide">
-                        <div>
+                    
                             <img className="slide-img" alt="image" src={PhotoSix}/>
-                        </div>
+                        
                         <div className="text-box">
                             <h4>Global Education Philanthropists</h4>
                             <p>Nonprofit / Charitable</p>
