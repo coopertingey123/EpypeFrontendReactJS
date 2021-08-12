@@ -5,11 +5,13 @@ import BaseNavbar from "./navigation/navbar";
 import Homepage from "./homepage/homepage";
 import Login from "./auth/login";
 import Signup from "./auth/signup-preview";
+import Pricing from "./base-pages/pricing";
 import Footer from "./navigation/footer";
 import TermsOfService from "./base-pages/terms-of-service";
 import SMSTerms from "./base-pages/sms-terms-and-conditions";
 import PrivacyStatement from "./base-pages/privacy-statement";
 import ContactUs from "./base-pages/contact-us";
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,6 +29,7 @@ export default class App extends Component {
               <Route path="/login" component={Login}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/sms" component={SMSTerms}/>
+              <Route path="/pricing" component={Pricing}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
