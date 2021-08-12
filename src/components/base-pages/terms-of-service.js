@@ -3,9 +3,9 @@ import { Container } from "react-bootstrap";
 
 export default function TermsOfService(props) {
     return (
-        <Container id="terms-of-service">
-            <h1>EPYPE Terms of Service</h1>
-            <p><a href="sms/">SMS Terms and Conditions</a></p>
+        <Container id="terms-of-service" className="py-3">
+            <h1 className="text-center">EPYPE Terms of Service</h1>
+            <p className="text-center"><a href="sms/">SMS Terms and Conditions</a></p>
             <h4>1. ACCEPTANCE OF TERMS</h4>
 
             <p>Welcome to EPYPE. EPYPE provides its service to you, subject to the following Terms of Service ("TOS"), which may be

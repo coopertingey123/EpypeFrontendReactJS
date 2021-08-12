@@ -5,11 +5,11 @@ import BuildingPhoto from "../../../static/assets/photos/EpypeCompanyBuilding.jp
 
 export default function ContactUs(props) {
     return (
-        <Container id="contact-us">
-            <h1>Contact Us</h1>
-            <Row>
+        <Container id="contact-us" className="p-5">
+            <h1 className="p-3">Contact Us</h1>
+            <Row className="align-items-center">
                 <Col>
-                    <img src={BuildingPhoto}/>
+                    <img width="100%" src={BuildingPhoto}/>
                 </Col>
                 <Col>
                     <h3>EPYPE</h3>

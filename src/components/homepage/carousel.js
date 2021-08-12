@@ -23,9 +23,9 @@ export default function PhoneCarousel() {
         arrows: true,
         centerMode: true,
         centerPadding: '60px',
-        // focusOnSelect: true,
+        focusOnSelect: true,
         // swipe: true,
-        // className: "center",
+        // className: "p-5",
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
@@ -51,65 +51,65 @@ export default function PhoneCarousel() {
             <h1>Clients Portfolio</h1>
             <p>Here are a few sample Video Landing Pages:</p>
         </div>
-        <Container id="slides-wrapper" fluid>
-            <Row>
+        <Container id="slides-wrapper" className="px-5 justify-content-center" fluid>
+            {/* <Row > */}
                 <Slider {...settings}>
-                    <div className="slide">
+                    <div className="slide py-5">
                         
-                        <img className="slide-img" alt="image" src={PhotoOne}/>
+                        <img className="slide-img" width="180px" alt="image" src={PhotoOne}/>
                         
-                        <div className="text-box">
+                        <div className="text-box pt-2">
                             <h4>Board of Advisors</h4>
                             <p>Promotional Events</p>
                         </div>
                     </div>
-                    <div className="slide">
+                    <div className="slide py-5">
                         
-                        <img className="slide-img" alt="image" src={PhotoTwo}/>
+                        <img className="slide-img" width="180px" alt="image" src={PhotoTwo}/>
                         
-                        <div className="text-box">
+                        <div className="text-box pt-2">
                             <h4>Jim Piccolo</h4>
                             <p>Speaker / Coaching</p>
                         </div>
                     </div>
-                    <div className="slide">
+                    <div className="slide py-5">
                     
-                            <img className="slide-img" alt="image" src={PhotoThree}/>
+                            <img className="slide-img" width="180px" alt="image" src={PhotoThree}/>
                         
-                        <div className="text-box">
+                        <div className="text-box pt-2">
                             <h4>Bottega University</h4>
                             <p>Training / Education</p>
                         </div>
                     </div>
-                    <div className="slide">
+                    <div className="slide py-5">
                     
-                            <img className="slide-img" alt="image" src={PhotoFour}/>
+                            <img className="slide-img" width="180px" alt="image" src={PhotoFour}/>
                         
-                        <div className="text-box">
+                        <div className="text-box pt-2">
                             <h4>Platinum Payment Systems</h4>
                             <p>Virtual Business Card</p>
                         </div>
                     </div>
-                    <div className="slide">
+                    <div className="slide py-5">
                     
-                            <img className="slide-img" alt="image" src={PhotoFive}/>
+                            <img className="slide-img" width="180px" alt="image" src={PhotoFive}/>
                         
-                        <div className="text-box">
+                        <div className="text-box pt-2">
                             <h4>Kevin Harrington - Shark Tank</h4>
                             <p>Sell your book</p>
                         </div>
                     </div>
-                    <div className="slide">
+                    <div className="slide py-5">
                     
-                            <img className="slide-img" alt="image" src={PhotoSix}/>
+                            <img className="slide-img" width="180px" alt="image" src={PhotoSix}/>
                         
-                        <div className="text-box">
+                        <div className="text-box pt-2">
                             <h4>Global Education Philanthropists</h4>
                             <p>Nonprofit / Charitable</p>
                         </div>
                     </div>
                 </Slider>
-            </Row>
+            {/* </Row> */}
         </Container>
     </Container>
   );

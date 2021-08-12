@@ -43,6 +43,11 @@ p {
 	color: #00bdfc;
 }
 
+.navbar{
+    background-color: #880aa1;
+    background-image: linear-gradient(45deg, #3a16af, #880aa1);
+}
+
 #hero-wrapper {
 	width: 100%;
 	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
@@ -187,8 +192,6 @@ p {
 }
 
 #section-three-container #slides-wrapper {
-	padding-left: 40px;
-	padding-right: 40px;
 	h4 {
 		color: #fff;
 		font-size: 1.4rem;
@@ -200,23 +203,7 @@ p {
 	}
 }
 
-#section-three-container #slides-wrapper .slick-slide {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	img {
-		height: 360px;
-	}
-	.text-box {
-		padding-top: 15px;
-	}
-}
-
-#section-three-container #slides-wrapper .slick-slider {
-	height: 100%;
-}
-
 #slides-wrapper .slick-list {
-	padding: 30px;
 	.slick-track {
 		.slick-slide {
 			text-align: -webkit-center;
@@ -230,17 +217,11 @@ p {
 					transition: ease-in-out .3s;
 				}
 			}
-			.text-box {
-				padding-left: 10px;
-				padding-right: 10px;
-			}
 		}	
 		.slick-active.slick-center.slick-current {
-			height: auto;
 			-ms-transform: scale(1.1); /* IE 9 */
 			-webkit-transform: scale(1.1); /* Safari 3-8 */
 			transform: scale(1.1);
-			border-radius: 20px;
 			img {
 				opacity: 1;
 				filter: drop-shadow(8px 8px 10px black) brightness(1)
@@ -287,20 +268,11 @@ p {
 }
 
 #contact-us {
-	height: 100%;
-	margin-bottom: 60px;
-	margin-top: 30px;
 	h1 {
 		color: #3C16AF;
 	}
 	h3 {
 		color: #3C16AF;
-	}
-	img {
-		width: 100%;
-	}
-	.col {
-		padding-top: 20px;
 	}
 }
 
@@ -321,27 +293,3 @@ p {
 		color: #3C16AF;
 	}
 }
-
-#login-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	h3 {
-		color: #3C16AF;
-	}
-	#loginForm {
-		border: 1px solid #ddd;
-		.button-group {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			button {
-				background-color: #3C16AF;
-			}
-		}
-	}
-}
-

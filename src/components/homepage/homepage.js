@@ -25,7 +25,7 @@ export default function (props) {
                         </span>
                     </h1>
                     <h2>
-                        Sending videos personalizes your message. <br/>Speak to them face-to-face.
+                        Sending videos personalizes your message. <br/>Speak to clients face-to-face.
                     </h2>
                     <div className="text-demo-box py-3">
                         <h3>Try it!</h3>
@@ -44,25 +44,25 @@ export default function (props) {
                 <Container id="second-section-wrapper">
 	                <h1>How it Works</h1>
                     
-                        <Container className="groups-container">
-                            <Row>
-                                <Col className="group col-12 col-lg-4">
-                                    <img src={RecordImage}/>
-                                    <h1>Record</h1>
-                                    <p> Record a video with your camera</p>
-                                </Col>
-                                <Col className="group col-12 col-lg-4">
-                                    <img src={UploadImage}/>
-                                    <h1>Upload</h1>
-                                    <p>Upload your new or saved video</p>
-                                </Col>
-                                <Col className="group col-12 col-lg-4">
-                                    <img src={PublishImage}/>
-                                    <h1>Publish</h1>
-                                    <p>Your video page is ready to view</p>
-                                </Col>
-                            </Row>
-                        </Container>
+                    <Container className="groups-container">
+                        <Row>
+                            <Col className="group col-12 col-lg-4">
+                                <img src={RecordImage}/>
+                                <h1>Record</h1>
+                                <p> Record a video with your camera</p>
+                            </Col>
+                            <Col className="group col-12 col-lg-4">
+                                <img src={UploadImage}/>
+                                <h1>Upload</h1>
+                                <p>Upload your new or saved video</p>
+                            </Col>
+                            <Col className="group col-12 col-lg-4">
+                                <img src={PublishImage}/>
+                                <h1>Publish</h1>
+                                <p>Your video page is ready to view</p>
+                            </Col>
+                        </Row>
+                    </Container>
                     
                     
                     
