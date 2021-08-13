@@ -3,6 +3,7 @@ import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 import SignupType from "./signup-type";
 import SignupUserInfo from "./signup-user-info";
 import SignupPackageSelect from "./signup-package-select";
+import SignupPaymentEntry from "./signup-payment-entry";
 
 export default function Signup(props) {
     return (
@@ -38,6 +39,7 @@ export default function Signup(props) {
         <SignupType/>
         <SignupUserInfo/>
         <SignupPackageSelect/>
+        <SignupPaymentEntry/>
         </Container>
         
     )
