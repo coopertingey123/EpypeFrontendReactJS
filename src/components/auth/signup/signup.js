@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
-import SignupType from "./signup-type"
+import SignupType from "./signup-type";
+import SignupUserInfo from "./signup-user-info";
 
 export default function Signup(props) {
     return (
@@ -15,18 +16,18 @@ export default function Signup(props) {
                 <Col className="col-6">
                     <Form className="form1 text-start py-3" action="" method="post">
                         <Form.Group className="mb-3">
-                            <Form.Label className="purple2-text">Email Address</Form.Label>
+                            <Form.Label>Email Address</Form.Label>
                             <Form.Control type="email" placeholder="Email address"/>
                         </Form.Group>
                         <Form.Group className="mb-3">
-                            <Form.Label className="purple2-text">Password</Form.Label>
+                            <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Enter password"/>
                             <Form.Text className="text-muted">
                                 Your password must consist of at least 1 uppercase letter, 1 lowercase letter, and 1 number, and be at least 8 characters long.
                             </Form.Text>
                         </Form.Group>
                         <Form.Group className="mb-3">
-                            <Form.Label className="purple2-text">Confirm Password</Form.Label>
+                            <Form.Label>Confirm Password</Form.Label>
                             <Form.Control type="password" placeholder="Confirm password"/>
                         </Form.Group>
                     </Form>
@@ -34,6 +35,7 @@ export default function Signup(props) {
                 </Col>
             </Row>
         <SignupType/>
+        <SignupUserInfo/>
         </Container>
         
     )
