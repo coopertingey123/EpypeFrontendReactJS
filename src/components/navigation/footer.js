@@ -18,9 +18,11 @@ export default function (props) {
                         <Nav.Link href="/contact-us">Contact Us</Nav.Link>
                     </Nav.Item>
                 </Nav>
-                <Navbar.Brand>
-                    &copy; 2021 EPYPE. All Rights Reserved.
-                </Navbar.Brand>
+                <Nav>
+                    <Nav.Item>
+                        <Nav.Link href="/">&copy; 2021 EPYPE. All Rights Reserved.</Nav.Link>
+                    </Nav.Item>
+                </Nav>
             </Container>
         </Navbar>
     )

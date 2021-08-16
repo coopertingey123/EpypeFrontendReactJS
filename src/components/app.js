@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
+import Icons from "../helpers/icons";
+
 import BaseNavbar from "./navigation/navbar";
 import Homepage from "./homepage/homepage";
 import Login from "./auth/login";
@@ -12,12 +14,18 @@ import SMSTerms from "./base-pages/sms-terms-and-conditions";
 import PrivacyStatement from "./base-pages/privacy-statement";
 import ContactUs from "./base-pages/contact-us";
 import Signup from "./auth/signup/signup";
+import AdminHomepage from "./admin/admin-homepage";
 
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    Icons()
+  }
   render() {
     return (
       <div className='app'>
@@ -33,6 +41,7 @@ export default class App extends Component {
               <Route path="/sms" component={SMSTerms}/>
               <Route path="/pricing" component={Pricing}/>
               <Route path="/signup" component={Signup}/>
+              <Route path="/admin" component={AdminHomepage}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
