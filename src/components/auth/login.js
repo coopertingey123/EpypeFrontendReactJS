@@ -1,5 +1,8 @@
 import React from 'react'
 import { Container, Form, Button, Row, Col } from 'react-bootstrap'
+
+import PasswordReset from "./password-reset"
+
 export default function Login(props) {
     return (
 
@@ -26,7 +29,7 @@ export default function Login(props) {
                 </Col>
             </Row>
             
-            
+            <PasswordReset/>
         </Container>
     )
 }
