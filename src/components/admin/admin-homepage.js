@@ -3,6 +3,7 @@ import { Container, ListGroup } from "react-bootstrap"
 
 import ManageAccounts from "./manage-accounts"
 import AdminUsers from "./admin-users"
+import ManagePromoCodes from "./manage-promo-codes"
 
 export default function AdminHomepage(props) {
     return (
@@ -34,6 +35,7 @@ export default function AdminHomepage(props) {
             </ListGroup>
             <ManageAccounts/>
             <AdminUsers/>
+            <ManagePromoCodes/>
         </Container>
     )
 }
