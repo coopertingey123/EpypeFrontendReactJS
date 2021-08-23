@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, ListGroup } from "react-bootstrap"
 
+import ManageAccounts from "./manage-accounts"
+
 export default function AdminHomepage(props) {
     return (
         
@@ -29,6 +31,7 @@ export default function AdminHomepage(props) {
                     Manage Email Notices
                 </ListGroup.Item>
             </ListGroup>
+            <ManageAccounts/>
         </Container>
     )
 }
