@@ -1,9 +1,10 @@
-import React from 'react'
-import { Container, ListGroup } from "react-bootstrap"
+import React from 'react';
+import { Container, ListGroup } from "react-bootstrap";
 
-import ManageAccounts from "./manage-accounts"
-import AdminUsers from "./admin-users"
-import ManagePromoCodes from "./manage-promo-codes"
+import ManageAccounts from "./manage-accounts";
+import AdminUsers from "./admin-users";
+import ManagePromoCodes from "./manage-promo-codes";
+import SMSCodes from "./sms-codes";
 
 export default function AdminHomepage(props) {
     return (
@@ -36,6 +37,7 @@ export default function AdminHomepage(props) {
             <ManageAccounts/>
             <AdminUsers/>
             <ManagePromoCodes/>
+            <SMSCodes/>
         </Container>
     )
 }
