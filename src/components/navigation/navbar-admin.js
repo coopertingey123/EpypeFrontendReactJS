@@ -1,6 +1,7 @@
 import React from 'react'
-import {Navbar, Container, Nav, NavDropdown, Form, Button} from "react-bootstrap"
+import {Navbar, Container, Nav, NavDropdown, Form, Button, Col, Row} from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ProfilePic } from "../../../static/assets/photos/profilepic.png";
 
 import EpypeLogoGreenWhite from "../../../static/assets/logos/epype-rgb-logo-1.svg";
 
@@ -50,6 +51,16 @@ export default function (props) {
                     <Button className="bg-transparent border-0">
                         <FontAwesomeIcon icon="search"/>
                     </Button>
+                    <NavDropdown title={<FontAwesomeIcon icon="user"/>} className="px-3" drop="start">
+                        <NavDropdown.Item>
+                            Signed in as <br/>
+                            <strong>Cooper Tingey</strong>
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider/>
+                        <NavDropdown.Item href="">Change Password</NavDropdown.Item>
+                        <NavDropdown.Item href="">Change Preferences</NavDropdown.Item>
+                        <NavDropdown.Item href="">Log Out</NavDropdown.Item>
+                    </NavDropdown>
                 </Nav>
             </Container>
         </Navbar>
