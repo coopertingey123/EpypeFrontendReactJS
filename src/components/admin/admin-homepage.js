@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, ListGroup } from "react-bootstrap"
 
 import ManageAccounts from "./manage-accounts"
+import AdminUsers from "./admin-users"
 
 export default function AdminHomepage(props) {
     return (
@@ -32,6 +33,7 @@ export default function AdminHomepage(props) {
                 </ListGroup.Item>
             </ListGroup>
             <ManageAccounts/>
+            <AdminUsers/>
         </Container>
     )
 }
