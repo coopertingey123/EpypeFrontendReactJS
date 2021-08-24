@@ -4,6 +4,7 @@ import { Container, ListGroup } from "react-bootstrap";
 import ManageAccounts from "./manage-accounts";
 import AdminUsers from "./admin-users";
 import ManagePromoCodes from "./manage-promo-codes";
+import ManageVLPLayouts from "./manage-vlp-layouts";
 import SMSCodes from "./sms-codes";
 import ManageEvents from "./manage-events";
 import EmailNotices from "./email-notices";
@@ -40,6 +41,7 @@ export default function AdminHomepage(props) {
             <AdminUsers/>
             <ManagePromoCodes/>
             <SMSCodes/>
+            <ManageVLPLayouts/>
             <ManageEvents/>
             <EmailNotices/>
         </Container>

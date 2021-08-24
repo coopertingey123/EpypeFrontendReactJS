@@ -6,7 +6,7 @@ export default function ManageEvents(props) {
     return (
         <Container className="py-3 text-center">
             <h1 className="green-text p-3">Events</h1>
-            <Button>+ New Event</Button>
+            <Button className="mb-3">+ New Event</Button>
             <Table id="events-table" className="table-striped text-underline table-hover text-center p-3">
                 <thead className="dark">
                     <tr>
