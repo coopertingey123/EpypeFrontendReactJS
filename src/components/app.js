@@ -19,6 +19,7 @@ import AdminHomepage from "./admin/admin-homepage";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-datepicker/dist/react-datepicker.css";
 
 export default class App extends Component {
   constructor(props) {
