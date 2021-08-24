@@ -6,6 +6,7 @@ import AdminUsers from "./admin-users";
 import ManagePromoCodes from "./manage-promo-codes";
 import SMSCodes from "./sms-codes";
 import ManageEvents from "./manage-events";
+import EmailNotices from "./email-notices";
 
 export default function AdminHomepage(props) {
     return (
@@ -40,6 +41,7 @@ export default function AdminHomepage(props) {
             <ManagePromoCodes/>
             <SMSCodes/>
             <ManageEvents/>
+            <EmailNotices/>
         </Container>
     )
 }
