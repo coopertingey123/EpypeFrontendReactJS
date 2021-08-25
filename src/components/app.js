@@ -29,6 +29,7 @@ import OrganizationBilling from './admin/Billing/organization-billing';
 import ProcessOneTimePayment from './admin/Billing/process-one-time-payment';
 import UserBilling from './admin/Billing/user-billing';
 import AccountSearchResults from "./admin/account-search-results";
+import AdminChangePassword from "./auth/admin-change-password";
 
 
 
@@ -73,8 +74,9 @@ export default class App extends Component {
               <Route path="/admin/organization-billing" component={OrganizationBilling}/>
               <Route path="/admin/process-one-time-payment" component={ProcessOneTimePayment}/>
               <Route path="/admin/user-billing" component={UserBilling}/>
-
+              {/* admin misc pages */}
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
+              <Route path="/admin/change-password" component={AdminChangePassword}/>
               
             </Switch>
           <Footer />
