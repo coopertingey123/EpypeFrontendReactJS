@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Button, Form, Alert, Row, Col } from 'react-bootstrap'
 
-export default function (props) {
+export default function UserBilling(props) {
     return (
         <Container className="text-center">
             <h1 className="green-text py-3">User Billing for August 24, 2021</h1>

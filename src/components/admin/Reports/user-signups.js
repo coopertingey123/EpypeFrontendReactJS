@@ -5,9 +5,6 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function UserSignups(props) {
     
-    // const [startDate, setStartDate] = useState(new Date());
-    // const [endDate, setEndDate] = useState([]);
-    
     return (
         
         <Container className="text-center py-3">
@@ -30,18 +27,6 @@ export default function UserSignups(props) {
                         <option value="">Valinda Hanks (Platinum Payments)</option>
                     </select>
                 </Form.Group>
-                {/* <Form.Group>
-                    <Form.Label>Date Range</Form.Label>
-                    <select id="frmDateSelect" name="date_select" className="form-select">
-                        <option value="today">Today</option>
-                        <option value="week-to-date">This Week</option>
-                        <option value="month-to-date" selected>This Month</option>
-                        <option value="year-to-date">This Year</option>
-                        <option value="yesterday">Yesterday</option>
-                        <option value="last-week">Last Week</option>
-                        <option value="last-month">Last Month</option>
-				    </select>
-                </Form.Group> */}
                 <Row className="py-3">
                     <Col className="col-6">
                         <Form.Group>

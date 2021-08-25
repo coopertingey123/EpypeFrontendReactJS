@@ -1,10 +1,8 @@
-import React from 'react';
-import { Container, ListGroup } from "react-bootstrap";
+import React from 'react'
+import { Container, ListGroup } from 'react-bootstrap'
 
-export default function AdminHomepage(props) {
-
+export default function AdminHome(props) {
     return (
-      
         <Container>
             <h1 className="green-text m-3">General Admin</h1>
             <ListGroup className="m-3">
