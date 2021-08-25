@@ -30,7 +30,7 @@ import ProcessOneTimePayment from './admin/Billing/process-one-time-payment';
 import UserBilling from './admin/Billing/user-billing';
 import AccountSearchResults from "./admin/account-search-results";
 import AdminChangePassword from "./auth/admin-change-password";
-
+import AdminChangePreferences from './auth/admin-preferences';
 
 
 
@@ -77,6 +77,7 @@ export default class App extends Component {
               {/* admin misc pages */}
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>
+              <Route path="/admin/change-preferences" component={AdminChangePreferences} />
               
             </Switch>
           <Footer />
