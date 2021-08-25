@@ -6,6 +6,7 @@ import Icons from "../helpers/icons";
 import BaseNavbar from "./navigation/navbar";
 import Homepage from "./homepage/homepage";
 import Login from "./auth/login";
+import ResetPassword from "./auth/password-reset";
 import SignupPreview from "./auth/signup/signup-preview";
 import Pricing from "./base-pages/pricing";
 import Footer from "./navigation/footer";
@@ -13,7 +14,12 @@ import TermsOfService from "./base-pages/terms-of-service";
 import SMSTerms from "./base-pages/sms-terms-and-conditions";
 import PrivacyStatement from "./base-pages/privacy-statement";
 import ContactUs from "./base-pages/contact-us";
+
 import Signup from "./auth/signup/signup";
+import SignupType from "./auth/signup/signup-type";
+import SignupUserInfo from "./auth/signup/signup-user-info";
+import SignupPackageSelect from "./auth/signup/signup-package-select";
+import SignupPaymentEntry from "./auth/signup/signup-payment-entry";
 
 import AdminHomepage from "./admin/admin-homepage";
 import AdminUsers from "./admin/General/admin-users";
@@ -47,18 +53,25 @@ export default class App extends Component {
     return (
       <div className='app'>
         <BrowserRouter>
-          <BaseNavbar/>
             <Switch>
               <Route exact path="/" component={Homepage}/>
               <Route path="/terms" component={TermsOfService}/>
               <Route path="/privacy" component={PrivacyStatement}/>
               <Route path="/contact-us" component={ContactUs}/>
               <Route path="/login" component={Login}/>
+              <Route path="/reset-password" component={ResetPassword}/>
               <Route path="/signup-preview" component={SignupPreview}/>
               <Route path="/sms" component={SMSTerms}/>
               <Route path="/pricing" component={Pricing}/>
-              <Route path="/signup" component={Signup}/>
+              <Route exact path="/signup" component={SignupPreview}/>
               <Route exact path="/admin" component={AdminHomepage}/>
+              {/* signup pages */}
+              <Route path="/signup/package-select" component={SignupPackageSelect}/>
+              <Route path="/signup/payment-entry" component={SignupPaymentEntry}/>
+              <Route path="/signup/signup" component={Signup}/>
+              <Route path="/signup/type" component={SignupType}/>
+              <Route path="/signup/user-info" component={SignupUserInfo}/>
+              
               {/* admin general pages */}
               <Route path="/admin/users" component={AdminUsers}/>
               <Route path="/admin/email-notices" component={EmailNotices}/>

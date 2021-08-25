@@ -1,9 +1,11 @@
 import React from 'react'
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
+import BaseNavbar from "../navigation/navbar"
 
 export default function PasswordReset(props) {
     return (
-        <Container>
+        <Container className="text-center">
+            <BaseNavbar/>
             <h1 className="green-text">Password Reset</h1>
             <Row className="justify-content-center py-3">
                 <Col className="col-6">

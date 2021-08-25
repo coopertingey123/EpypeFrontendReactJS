@@ -1,9 +1,11 @@
 import React from 'react'
+import BaseNavbar from "../navigation/navbar"
 import { Container, Table, Alert, Col} from "react-bootstrap";    
 
 export default function Pricing(props) {
     return (
         <Container className="py-3">
+            <BaseNavbar/>
             <h1 className="green-text">Pricing</h1>
             <Table id="pricing-table" className="table-hover text-center">
                 <thead className="dark">

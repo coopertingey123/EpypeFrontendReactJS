@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Col, Row } from "react-bootstrap";
-
+import BaseNavbar from "../navigation/navbar";
 import BuildingPhoto from "../../../static/assets/photos/EpypeCompanyBuilding.jpg";
 
 export default function ContactUs(props) {
     return (
             <Container id="contact-us" className="p-5">
+                <BaseNavbar/>
                 <h1 className="py-3">Contact Us</h1>
                 <Row className="align-items-center">
                     <Col>

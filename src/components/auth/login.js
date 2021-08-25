@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Form, Button, Row, Col } from 'react-bootstrap'
+import BaseNavbar from "../navigation/navbar";
 
 import PasswordReset from "./password-reset"
 
@@ -7,6 +8,7 @@ export default function Login(props) {
     return (
 
         <Container id="login-container" className="py-3 text-center">
+            <BaseNavbar/>
             <h1 className="green-text">Log in</h1>
             <Row className="justify-content-center">
                 <Col className="col-3 text-start">
@@ -23,13 +25,11 @@ export default function Login(props) {
                         <Button className="btn-primary" type="submit">Log In</Button>
                     </p>
                     <p className="text-center">
-                        <a href="/login/password-reset.php">Forgot your password?</a>
+                        <a href="/reset-password">Forgot your password?</a>
                     </p>
                     </Form>
                 </Col>
             </Row>
-            
-            <PasswordReset/>
         </Container>
     )
 }

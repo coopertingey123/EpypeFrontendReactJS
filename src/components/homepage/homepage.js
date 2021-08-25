@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col} from "react-bootstrap";
 
+import BaseNavbar from "../navigation/navbar";
 import PhoneCarousel from "./carousel";
 
 import IphoneImage from "../../../static/assets/phones/iPhone11-hero-image7.png";
@@ -16,6 +17,7 @@ import GreenPhone from "../../../static/assets/phones/green-phone.png";
 export default function (props) {
     return (
         <Container id="main_content" fluid>
+            <BaseNavbar/>
             <div id="hero-wrapper" className="hero-text-container py-5">
                 <Container>
                     <h1 className="mt-lg-5">
