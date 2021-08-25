@@ -1,11 +1,13 @@
 import React from 'react';
 import { Container, ListGroup } from "react-bootstrap";
+import NavbarAdmin from "../navigation/navbar-admin";
 
 export default function AdminHomepage(props) {
 
     return (
       
         <Container>
+            <NavbarAdmin/>
             <h1 className="green-text m-3">General Admin</h1>
             <ListGroup className="m-3">
                 <ListGroup.Item action href="/admin/manage-accounts">

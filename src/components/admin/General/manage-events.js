@@ -2,9 +2,12 @@ import React from 'react'
 import { Container, Table, Button, Alert, Col} from "react-bootstrap";   
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 
+import NavbarAdmin from "../../navigation/navbar-admin";
+
 export default function ManageEvents(props) {
     return (
-        <Container className="py-3 text-center">
+        <Container className="text-center">
+            <NavbarAdmin/>
             <h1 className="green-text p-3">Events</h1>
             <Button className="mb-3">+ New Event</Button>
             <Table id="events-table" className="table-striped text-underline table-hover text-center p-3">

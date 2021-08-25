@@ -29,8 +29,8 @@ import OrganizationBilling from './admin/Billing/organization-billing';
 import ProcessOneTimePayment from './admin/Billing/process-one-time-payment';
 import UserBilling from './admin/Billing/user-billing';
 import AccountSearchResults from "./admin/account-search-results";
-import AdminChangePassword from "./auth/admin-change-password";
-import AdminChangePreferences from './auth/admin-preferences';
+import AdminChangePassword from "./auth/admin/admin-change-password";
+import AdminChangePreferences from './auth/admin/admin-preferences';
 
 
 
@@ -47,7 +47,7 @@ export default class App extends Component {
     return (
       <div className='app'>
         <BrowserRouter>
-          <BaseNavbar />
+          <BaseNavbar/>
             <Switch>
               <Route exact path="/" component={Homepage}/>
               <Route path="/terms" component={TermsOfService}/>
@@ -62,10 +62,10 @@ export default class App extends Component {
               {/* admin general pages */}
               <Route path="/admin/users" component={AdminUsers}/>
               <Route path="/admin/email-notices" component={EmailNotices}/>
-              <Route path="/admin/manage-accounts" component={ManageAccounts}/>
-              <Route path="/admin/manage-events" component={ManageEvents}/>
-              <Route path="/admin/manage-promo-codes" component={ManagePromoCodes}/>
-              <Route path="/admin/manage-vlp-layouts" component={ManageVLPLayouts}/>
+              <Route path="/admin/accounts" component={ManageAccounts}/>
+              <Route path="/admin/events" component={ManageEvents}/>
+              <Route path="/admin/promo-codes" component={ManagePromoCodes}/>
+              <Route path="/admin/vlp-layouts" component={ManageVLPLayouts}/>
               <Route path="/admin/sms-codes" component={SMSCodes}/>
               {/* admin reports pages */}
               <Route path="/admin/user-signups" component={UserSignups}/>
@@ -78,7 +78,6 @@ export default class App extends Component {
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>
               <Route path="/admin/change-preferences" component={AdminChangePreferences} />
-              
             </Switch>
           <Footer />
         </BrowserRouter>        

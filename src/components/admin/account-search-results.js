@@ -1,9 +1,12 @@
 import React from 'react'
 import { Container, Table, Button, } from 'react-bootstrap'
 
+import NavbarAdmin from "../navigation/navbar-admin";
+
 export default function AccountSearchResults(props) {
     return (
-        <Container className="py-3">
+        <Container>
+            <NavbarAdmin/>
             <h1 className="green-text py-3">Account Search Results</h1>
             <h5 className="text-center">Jump to <a href=""> Users </a> | <a href="">Organizations</a></h5>
             <h2>Users</h2>

@@ -3,11 +3,14 @@ import { Container, Form, Button, Col, Row } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
+import NavbarAdmin from "../../navigation/navbar-admin";
+
 export default function UserSignups(props) {
     
     return (
         
-        <Container className="text-center py-3">
+        <Container className="text-center">
+            <NavbarAdmin/>
             <h1 className="green-text p-3">User Signups</h1>
             <Form className="text-start p-3">
                 <Form.Group>

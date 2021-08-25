@@ -1,9 +1,12 @@
 import React from 'react'
 import { Form, Button, Row, Col, Container, Table } from 'react-bootstrap'
 
+import NavbarAdmin from "../../navigation/navbar-admin";
+
 export default function ManagePromoCodes(props) {
     return (
         <Container className="text-center">
+            <NavbarAdmin/>
             <h1 className="green-text p-3">
                 Promo Codes
             </h1>
