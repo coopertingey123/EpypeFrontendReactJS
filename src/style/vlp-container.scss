@@ -1,0 +1,22 @@
+.videoPageInfo h6 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.videoThumbnail img { max-width: 100%; }
+.videoPageInfo .carousel-caption { 
+    left: 0.5rem; 
+    right: 0.5rem; 
+    bottom: 2.9rem; 
+    margin-bottom: 0; 
+    padding-top: 0.25rem; 
+    padding-bottom: 0.25rem; 
+    background: rgba(0,0,0,0.5); }
+.videoPageInfo.videoPageStatus1 .carousel-caption { bottom: 0.5rem; }
+.videoPageLinks a.dropdown { border-color: transparent; }
+h5.videoPageStatus0 { color: #c00; }
+h5.videoPageStatus1 { color: #bb0; }
+h5.videoPageStatus2 { }
+h5.videoPageStatus3 { color: #999; }
+h5.videoPageStatus4 { color: #999; }
+.videoPageStatus0 { color: #999; }
+.videoPageStatus1 { color: #999; }
+.videoPageStatus2 {}
+.videoPageStatus3 { color: #999; }
+.videoPageStatus4 { color: #999; }

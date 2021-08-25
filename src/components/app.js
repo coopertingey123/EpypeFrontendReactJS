@@ -38,6 +38,8 @@ import AccountSearchResults from "./admin/account-search-results";
 import AdminChangePassword from "./auth/admin/admin-change-password";
 import AdminChangePreferences from './auth/admin/admin-preferences';
 
+import HomeVLPs from "../components/user/home-vlps";
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -91,6 +93,8 @@ export default class App extends Component {
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>
               <Route path="/admin/change-preferences" component={AdminChangePreferences} />
+
+              <Route path="/user/vlps" component={HomeVLPs}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
