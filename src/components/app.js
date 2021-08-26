@@ -38,8 +38,9 @@ import AccountSearchResults from "./admin/account-search-results";
 import AdminChangePassword from "./auth/admin/admin-change-password";
 import AdminChangePreferences from './auth/admin/admin-preferences';
 
-import HomeVLPs from "../components/user/home-vlps";
-import UserTemplates from "../components/user/saved-templates";
+import HomeVLPs from "./user/home-vlps";
+import UserTemplates from "./user/saved-templates";
+import UserProducts from "./user/products";
 
 
 
@@ -97,6 +98,7 @@ export default class App extends Component {
               {/* user pages */}
               <Route path="/user/vlps" component={HomeVLPs}/>
               <Route path="/user/templates" component={UserTemplates}/>
+              <Route path="/user/products" component={UserProducts}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
