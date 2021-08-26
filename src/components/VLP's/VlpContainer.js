@@ -1,12 +1,13 @@
 // import { Dropdown } from 'bootstrap';
 import React from 'react'
-import {Container, Card, Col, Row, Button, Modal, DropdownButton, Dropdown} from "react-bootstrap";
+import {Container, Card, Col, Row, Button, Modal, Dropdown, DropdownButton} from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import ExcitedGirl from "../../../static/assets/phones/iPhone11-hero-image7.png"
+import ExcitedGirl from "../../../static/assets/photos/vlpExample2.jpg"
 
 export default function (props) {
     return (
-        <Container id="main_content">
+        <Container className="p-3">
             <Modal id="videoPlaybackModal" className="modal" tabindex="-1" aria-labelledby="loginPatienterModalLabel" aria-hidden="true">
                 <Modal.Dialog>
                     <Modal.Content>
@@ -26,7 +27,7 @@ export default function (props) {
 
                 </Modal.Dialog>
             </Modal>
-            <Row className="mt-2 justify-content-space-between videoPageLinks">
+            <Row>
                 <Col className="col-12 col-md-6 col-lg-4 col-xxl-3 videoPageInfo videoPageStatus2">
                     <Card className="mb-3">
                         <Card.Header>
@@ -46,25 +47,26 @@ export default function (props) {
                                 </a>
 						        <p className="carousel-caption"><small>August 2, 2021</small></p>
 					        </div>
-                            <Row className="mt-2 justify-content-space-between align-items-center videoPageLinks">
-                                <Col className="col-auto">
+                            <p className="carousel-caption"><small>August 2, 2021</small></p>
+                            <Row className="mt-2 justify-content-space-between videoPageLinks">
+                                <Col className="text-start">
                                     <Button id="actionSms853" variant="outline-primary" className="btn-sm actionSms mx-1" href="" title="Quick Send">
-                                        <small>Send</small>
+                                        <small> <FontAwesomeIcon icon="share"/> Send</small>
                                     </Button>
                                     <Button id="vlpStats853" variant="outline-primary" className="btn-sm actionStats mx-1" href="" title="VLP Stats">
-                                        <small>Activity</small>
+                                        <small> <FontAwesomeIcon icon="chart-bar"/> Activity</small>
                                     </Button>
                                     <Button id="actionUpdate853" variant="outline-primary" className="btn-sm actionUpdate853 mx-1" href="" title="Update">
-                                        <small>Update</small>
+                                        <small> <FontAwesomeIcon icon="edit"/> Update</small>
                                     </Button>
                                 </Col>
                                 <Col className="col-auto">
                                     <Dropdown>
-                                        <DropdownButton variant="outline-secondary" className="btn-sm dropdown" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <Dropdown.Item id="actionView853" className="actionView" href="" target="_blank" title="View VLP">View</Dropdown.Item>
-                                            <Dropdown.Item id="actionCopy853" className="actionCopy" href="" target="" title="Copy URL">Copy URL</Dropdown.Item>
-                                            <Dropdown.Item id="actionDeactivate853" className="actionDeactivate" href="" target="" title="Deactivate">Deactivate</Dropdown.Item>
-                                            <Dropdown.Item id="actionDelete853" className="actionDelete" href="" target="" title="Delete">Delete</Dropdown.Item>
+                                        <DropdownButton variant="outline-secondary" size="sm" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <Dropdown.Item id="actionView853" className="actionView" href="" target="_blank" title="View VLP"> <FontAwesomeIcon icon="eye"/> View</Dropdown.Item>
+                                            <Dropdown.Item id="actionCopy853" className="actionCopy" href="" target="" title="Copy URL"> <FontAwesomeIcon icon="copy"/> Copy URL</Dropdown.Item>
+                                            <Dropdown.Item id="actionDeactivate853" className="actionDeactivate" href="" target="" title="Deactivate"> <FontAwesomeIcon icon="ban"/> Deactivate</Dropdown.Item>
+                                            <Dropdown.Item id="actionDelete853" className="actionDelete" href="" target="" title="Delete"> <FontAwesomeIcon icon="trash"/> Delete</Dropdown.Item>
                                         </DropdownButton>
                                     </Dropdown>
                                 </Col>
