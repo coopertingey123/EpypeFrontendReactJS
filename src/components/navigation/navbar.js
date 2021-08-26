@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import EpypeLogoGreenWhite from "../../../static/assets/logos/epype-rgb-logo-1.svg";
+import EpypeLogoGreenWhite from "../../../static/assets/logos/epype-logo-alt-25h.png";
 
 
 export default function (props) {
@@ -10,7 +10,7 @@ export default function (props) {
                 <Container className="justify-content-between">
                   
                   <Navbar.Brand href="/" className="my-0 py-0">
-                      <img width="175" src={EpypeLogoGreenWhite}/>
+                      <img width="120" src={EpypeLogoGreenWhite}/>
                   </Navbar.Brand>
                 
                   <Nav>
