@@ -35,9 +35,6 @@ export default function UserNavbar(props) {
                         <Nav.Link>Help</Nav.Link>
                     </Nav>
                     <Nav className="align-items-center">
-                        <NavDropdown title="Accounts" id="collapsible-nav-dropdown" className="">
-                            <NavDropdown.Item href="#action/3.1">Accounts</NavDropdown.Item>
-                        </NavDropdown>
                         <Form className="d-flex">
                             <Form.Control
                                 type="search"
@@ -55,8 +52,7 @@ export default function UserNavbar(props) {
                                 <strong>Cooper Tingey</strong>
                             </NavDropdown.Item>
                             <NavDropdown.Divider/>
-                            <NavDropdown.Item href="/admin/change-password">Change Password</NavDropdown.Item>
-                            <NavDropdown.Item href="/admin/change-preferences">Change Preferences</NavDropdown.Item>
+                            <NavDropdown.Item href="/admin/change-password">Update Profile</NavDropdown.Item>
                             <NavDropdown.Item href="">Log Out</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

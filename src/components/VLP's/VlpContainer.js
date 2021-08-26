@@ -1,31 +1,30 @@
 // import { Dropdown } from 'bootstrap';
-import React from 'react'
+import React, {useState} from 'react'
 import {Container, Card, Col, Row, Button, Modal, Dropdown, DropdownButton} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import ExcitedGirl from "../../../static/assets/photos/vlpExample2.jpg"
 
-export default function (props) {
+export default function VlpContainerThumbnail(props) {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <Container className="p-3">
-            <Modal id="videoPlaybackModal" className="modal" tabindex="-1" aria-labelledby="loginPatienterModalLabel" aria-hidden="true">
-                <Modal.Dialog>
-                    <Modal.Content>
-                        <Modal.Body>
-                            <div id="videoContainer">
-                                {/* <video id="myVideo" playsinline class="video-js vjs-default-skin vjs-big-play-centered"></video> */}
-                                Video Goes here
-                            </div>
-                        <div className="modal-footer">
-                            <Button data-bs-dismiss="modal">Close</Button>
-                        </div>
-                        </Modal.Body>
-                        <Modal.Footer>
-                            <Button>Close</Button>
-                        </Modal.Footer>
-                    </Modal.Content>
-
-                </Modal.Dialog>
+            <Modal show={show} onHide={handleClose} id="videoPlaybackModal" className="modal" tabindex="-1" aria-labelledby="loginPatienterModalLabel" aria-hidden="true">
+                <Modal.Body>
+                    <div id="videoContainer">
+                        {/* <video id="myVideo" playsinline class="video-js vjs-default-skin vjs-big-play-centered"></video> */}
+                        {/* Video Goes here */}
+                        <img width="100%" src={ExcitedGirl} alt="" />
+                    </div>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button onClick={handleClose}>Close</Button>
+                </Modal.Footer>
             </Modal>
             <Row>
                 <Col className="col-12 col-md-6 col-lg-4 col-xxl-3 videoPageInfo videoPageStatus2">
@@ -38,6 +37,7 @@ export default function (props) {
 						        <a 
                                 id="actionVideoPlay853"
                                 className="actionVideoPlay"
+                                onClick={handleShow}
                                 href="#"
                                 data-video-id="853"
                                 data-video-url=""

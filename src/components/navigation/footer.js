@@ -5,7 +5,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap'
 
 export default function (props) {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg" className="footer">
+        <Navbar bg="dark" variant="dark" expand="lg" className="footer" id="footer">
             <Container>
                 <Nav>
                     <Nav.Item className="px-3">

@@ -39,6 +39,7 @@ import AdminChangePassword from "./auth/admin/admin-change-password";
 import AdminChangePreferences from './auth/admin/admin-preferences';
 
 import HomeVLPs from "../components/user/home-vlps";
+import UserTemplates from "../components/user/saved-templates";
 
 
 
@@ -93,8 +94,9 @@ export default class App extends Component {
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>
               <Route path="/admin/change-preferences" component={AdminChangePreferences} />
-
+              {/* user pages */}
               <Route path="/user/vlps" component={HomeVLPs}/>
+              <Route path="/user/templates" component={UserTemplates}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
