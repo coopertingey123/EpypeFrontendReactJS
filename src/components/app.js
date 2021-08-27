@@ -41,6 +41,7 @@ import AdminChangePreferences from './auth/admin/admin-preferences';
 import HomeVLPs from "./user/home-vlps";
 import UserTemplates from "./user/saved-templates";
 import UserProducts from "./user/products";
+import UserContacts from "./user/contacts";
 
 
 
@@ -99,6 +100,7 @@ export default class App extends Component {
               <Route path="/user/vlps" component={HomeVLPs}/>
               <Route path="/user/templates" component={UserTemplates}/>
               <Route path="/user/products" component={UserProducts}/>
+              <Route path="/user/contacts" component={UserContacts}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
