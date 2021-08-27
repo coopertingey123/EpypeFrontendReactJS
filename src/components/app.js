@@ -42,6 +42,8 @@ import HomeVLPs from "./user/home-vlps";
 import UserTemplates from "./user/saved-templates";
 import UserProducts from "./user/products";
 import UserContacts from "./user/contacts";
+import UserTags from "./user/tags";
+import SMSKeywords from "./user/sms-keywords";
 
 
 
@@ -101,6 +103,8 @@ export default class App extends Component {
               <Route path="/user/templates" component={UserTemplates}/>
               <Route path="/user/products" component={UserProducts}/>
               <Route path="/user/contacts" component={UserContacts}/>
+              <Route path="/user/tags" component={UserTags}/>
+              <Route path="/user/sms-keywords" component={SMSKeywords}/>"
             </Switch>
           <Footer />
         </BrowserRouter>        
