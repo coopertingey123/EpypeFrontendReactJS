@@ -1,0 +1,187 @@
+#myContainer h2 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+#myContainer h3 {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.step {
+    display: none;
+}
+
+.currentStep {
+    display: block;
+}
+
+.phone-display {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    min-height: 180px;
+    max-width: 100%;
+    border-left: 12px solid #000;
+    border-right: 12px solid #000;
+    border-bottom: 12px solid #000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.bottom-phone {
+    padding: 1rem;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: medium;
+    text-align: left;
+}
+
+.contact {
+    align-items: flex-start;
+}
+
+.contact .message {
+    margin-right: 25%;
+    margin-left: 1em;
+    background-color: #eee;
+    position: relative;
+}
+
+.contact .message.last:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -7px;
+    height: 20px;
+    width: 20px;
+    background: #eee;
+    border-bottom-right-radius: 15px;
+}
+
+.contact .message.last:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+}
+
+/**** STEPS PROGRESS BAR START ****/
+#steps-progress-bar-wrapper {
+	border-bottom: 2px solid #880aa1;
+}
+
+@media (min-width: 992px) {
+	#steps-progress-bar-wrapper.with-video-training {
+		display: grid;
+		grid-template-columns: 2fr 80px;
+	}
+}
+
+#steps-progress-bar-wrapper > #videoTrainingIcon {
+	display: flex;
+	flex-direction: column;
+	padding: 0 0 1rem;
+	text-align: center;
+	justify-content: center;
+}
+
+#steps-progress-bar-wrapper > #videoTrainingIcon i {
+	color: #f00;
+	transition: 0.3s ease-in-out;
+}
+
+#steps-progress-bar-wrapper > #videoTrainingIcon i:hover {
+	color: #545454;
+	cursor: pointer;
+}
+
+#steps-progress-bar-wrapper > #videoTrainingIcon p {
+	margin: 0;
+	font-size: 0.625rem;
+}
+
+#steps-progress-bar {
+	counter-reset: step;
+	display: flex;
+	width: 100%;
+	margin: 1rem auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+#steps-progress-bar li {
+	position: relative;
+	width: 100%;
+	list-style-type: none;
+}
+
+#steps-progress-bar li i {
+	color: #ddd;
+}
+
+#steps-progress-bar li p {
+	margin-bottom: 0;
+	font-size: 0.625rem;
+}
+
+#steps-progress-bar li p::before {
+	counter-increment: step;
+	content: counter(step);
+	display: block;
+	width: 2em;
+	margin: 0.5em auto;
+	border-radius: 0.3em;
+	padding: 0.3em 0;
+	font-size: 1.1em;
+	font-weight: 600;
+	background: #ddd;
+	color: #999;
+}
+
+@media (min-width: 992px) {
+	#steps-progress-bar li p::after {
+		content: '';
+		position: absolute;
+		width: 84%;
+		height: 2px;
+		left: -42%;
+		bottom: 3em;
+		background: #ddd;
+	}
+
+	#steps-progress-bar li:first-child p::after {
+		content: none;
+	}
+}
+
+#steps-progress-bar li.active i {
+	color: #f7a800;
+}
+
+#steps-progress-bar li.active p::before,
+#steps-progress-bar li.active p::after {
+	background: #f7a800;
+	color: #fff;
+}

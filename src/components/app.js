@@ -44,7 +44,7 @@ import UserProducts from "./user/products";
 import UserContacts from "./user/contacts";
 import UserTags from "./user/tags";
 import SMSKeywords from "./user/sms-keywords";
-
+import SMSBlast from "./user/message-blast/sms-blast";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -104,7 +104,8 @@ export default class App extends Component {
               <Route path="/user/products" component={UserProducts}/>
               <Route path="/user/contacts" component={UserContacts}/>
               <Route path="/user/tags" component={UserTags}/>
-              <Route path="/user/sms-keywords" component={SMSKeywords}/>"
+              <Route path="/user/sms-keywords" component={SMSKeywords}/>
+              <Route path="/user/sms-blast" component={SMSBlast}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
