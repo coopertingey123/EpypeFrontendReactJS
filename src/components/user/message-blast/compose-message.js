@@ -41,11 +41,13 @@ export default function ComponseMessage(props) {
                         </Row>
                         
                     </Col>
-                    <Col className="col-lg-auto d-flex justify-content-center">
+                    <Col id="step3-right-column" className="col-lg-auto d-flex justify-content-center">
                         <div className="phone-display">
                             <div className="user messages">
-                                <span className="blastMessageContent"></span>
-                                Reply STOP to cancel
+                                <span id="messageBubble" className="message last">
+                                    <span className="blastMessageContent">What would you like to say to your amazing people? </span>
+                                     Reply STOP to cancel
+                                </span>
                             </div>
                             <div className="bottom-phone"></div>
                         </div>

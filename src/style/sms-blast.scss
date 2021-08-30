@@ -185,3 +185,147 @@
 	background: #f7a800;
 	color: #fff;
 }
+
+
+
+.phone-display {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	min-height: 180px;
+	max-width: 100%;
+	border-left: 12px solid #000;
+	border-right: 12px solid #000;
+	border-bottom: 12px solid #000;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.bottom-phone {
+	padding: 1rem;
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+}
+
+.message {
+	border-radius: 20px;
+	padding: 8px 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: inline-block;
+	font-size: medium;
+	text-align: left;
+}
+
+.contact {
+	align-items: flex-start;
+}
+
+.contact .message {
+	margin-right: 25%;
+	margin-left: 1em;
+	background-color: #eee;
+	position: relative;
+}
+
+.contact .message.last:before {
+	content: "";
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	left: -7px;
+	height: 20px;
+	width: 20px;
+	background: #eee;
+	border-bottom-right-radius: 15px;
+}
+
+.contact .message.last:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: -10px;
+	width: 10px;
+	height: 20px;
+	background: white;
+	border-bottom-right-radius: 10px;
+}
+
+.user {
+	align-items: flex-end;
+}
+
+.user .message {
+	color: white;
+	margin-left: 25%;
+	margin-right: 1em;
+	background: linear-gradient(to bottom, #30cb95 0%, #5bc236 100%);
+	background-attachment: fixed;
+	position: relative;
+}
+
+.user .message.last:before {
+	content: "";
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	right: -8px;
+	height: 20px;
+	width: 20px;
+	background: linear-gradient(to bottom, #30cb95 0%, #5bc236 100%);
+	background-attachment: fixed;
+	border-bottom-left-radius: 15px;
+}
+
+.user .message.last:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	right: -10px;
+	width: 10px;
+	height: 20px;
+	background: white;
+	border-bottom-left-radius: 10px;
+}
+
+#message-contact-count {
+	font-size: large;
+	width: 400px;
+	max-width: 100%;
+}
+
+#optin-contact-count {
+	font-size: large;
+	width: 400px;
+	max-width: 100%;
+}
+
+/* these must be set as display: flex here instead of using the d-flex class
+because d-flex sets !important, which prevents jQuery show/hide */
+#no-need-for-message-alert,
+#no-need-to-opt-in-alert,
+#contact-count-alert,
+#message-review-column,
+#optin-review-column {
+	display: flex;
+}
+
+#optinYes-container,
+#return-home-wrapper,
+#br-opted-in,
+#br-not-opted-in,
+#blast-error-wrapper,
+#try-again-later-wrapper {
+	display: none;
+}
+
+#mainErrorMessage,
+#mainWarningMessage {
+	display: flex;
+	align-items: center;
+}

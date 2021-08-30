@@ -6,6 +6,7 @@ import ChooseSMSKeyword from './choose-sms-keyword';
 import ChooseTags from "./choose-tags";
 import ComposeMessage from "./compose-message";
 import CreateMessageBlast from "./create-message-blast";
+import ReviewAndSend from './review-and-send';
 
 export default function SMSBlast(props) {
     return (
@@ -45,7 +46,7 @@ export default function SMSBlast(props) {
             <ChooseTags/>
             <ComposeMessage/>
             <CreateMessageBlast/>
-
+            <ReviewAndSend/>
         </Container>
     )
 }

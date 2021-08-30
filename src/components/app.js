@@ -107,7 +107,7 @@ export default class App extends Component {
               <Route path="/user/sms-keywords" component={SMSKeywords}/>
               <Route path="/user/sms-blast" component={SMSBlast}/>
             </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>        
       </div>
     );
