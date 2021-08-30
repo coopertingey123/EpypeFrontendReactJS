@@ -8,6 +8,7 @@ import ComposeMessage from "./compose-message";
 import CreateMessageBlast from "./create-message-blast";
 import ReviewAndSend from './review-and-send';
 import ThankYouMessage from "./thank-you-message";
+import ScheduledBlasts from './scheduled-message-blasts';
 
 export default function SMSBlast(props) {
     return (
@@ -49,6 +50,7 @@ export default function SMSBlast(props) {
             <CreateMessageBlast/>
             <ReviewAndSend/>
             <ThankYouMessage/>
+            <ScheduledBlasts/>
         </Container>
     )
 }
