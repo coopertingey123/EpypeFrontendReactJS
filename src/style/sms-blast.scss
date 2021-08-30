@@ -329,3 +329,72 @@ because d-flex sets !important, which prevents jQuery show/hide */
 	display: flex;
 	align-items: center;
 }
+/* contact tags */
+#contact_taglist {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#contact_taglist .tag {
+	margin: 0.5rem 0.75rem 0 0;
+}
+
+#contact_taglist .tag:last-child {
+	margin-right: 0;
+}
+
+#contact_taglist .tag input {
+	display: none;
+}
+
+#contact_taglist .tag label {
+	display: inline-block;
+	border: 1px solid #888;
+	border-radius: 0.25rem;
+	padding: 0.2rem 0.5rem;
+	background: #999;
+	color: #fff;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+#contact_taglist .tag label:hover {
+	cursor: pointer;
+	background: #aaa;
+}
+
+#contact_taglist .tag label:active {
+	background: #888;
+}
+
+#contact_taglist .tag label.on {
+	border-color: #e69700;
+	background: #f7a800;
+}
+
+#contact_taglist .tag label.on:hover {
+	background: #f8b911;
+}
+
+#contact_taglist .tag label.on:active {
+	background: #e69700;
+}
+
+/* contact opted-in keywords */
+#contact_keyword_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#contact_keyword_list .keyword {
+	margin: 0.5rem 0.75rem 0 0;
+	border: 1px solid #e69700;
+	border-radius: 0.25rem;
+	padding: 0.2rem 0.5rem;
+	background: #f7a800;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+#contact_keyword_list .keyword:last-child {
+	margin-right: 0;
+}
