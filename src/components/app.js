@@ -49,6 +49,7 @@ import EditSMSKeywords from "./user/edit-sms-keyword";
 import OutboundReportPreview from './user/Reports/outbound-report-preview';
 import OutboundSMSReport from './user/Reports/outbound-report';
 import VLPActivity from "./user/Reports/vlp-activity";
+import KeywordActivity from "./user/Reports/keyword-activity-report";
 
 
 
@@ -115,6 +116,7 @@ export default class App extends Component {
               <Route path="/user/outbound-report-preview" component={OutboundReportPreview}/>
               <Route path="/user/sms-outbound-report" component={OutboundSMSReport}/>
               <Route path="/user/vlp-activity" component={VLPActivity}/>
+              <Route path="/user/keyword-activity" component={KeywordActivity}/>
             </Switch>
           {/* <Footer /> */}
         </BrowserRouter>        

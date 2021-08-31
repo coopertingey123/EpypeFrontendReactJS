@@ -9,11 +9,11 @@ export default function OutboundSMSReport(props) {
     return (
         <Container className="text-center">
             <UserNavbar/>
-            <h3 className="green-text">VLP Activity Report</h3>
+            <h3 className="green-text">Keyword Activity Report</h3>
             <Row>
                 <Col className="col-lg">
-                    <h4>VLP Name</h4>
-                    <p>BareBack Friday</p>
+                    <h4>Keyword</h4>
+                    <p>FOOTBALL</p>
                     <h4>Current Date Range</h4>
                     <p>7/1/2021 to 8/31/2021</p>
                 </Col>
@@ -63,7 +63,7 @@ export default function OutboundSMSReport(props) {
                 <thead>
                     <tr>
                         <td></td>
-                        <td>Create Date</td>
+                        <td>Keyword</td>
                         <td>Description</td>
                         <td></td>
                     </tr>
@@ -71,19 +71,19 @@ export default function OutboundSMSReport(props) {
                 <tbody>
                     <tr>
                         <td><Form.Check/></td>
-                        <td>7/24/2021 12:30 pm</td>
+                        <td>FOOTBALL</td>
                         <td>We'd love to hear from you. Please tell us what you throught of the Fundraiser! See you next year. https://vlp.epype.net/MkqWJy</td>
                         <td><Button className="btn-sm">Get Report</Button></td>
                     </tr>
                     <tr>
                         <td><Form.Check/></td>
-                        <td>8/2/2021 8:30 pm</td>
+                        <td>WESTWOOD</td>
                         <td> Thanks for participating in the Fundraiser!  https://vlp.epype.net/MkqWJy</td>
                         <td><Button className="btn-sm">Get Report</Button></td>
                     </tr>
                     <tr>
                         <td><Form.Check/></td>
-                        <td>7/8/2021 12:45 pm</td>
+                        <td>WARRIORS</td>
                         <td>View the highlights here! https://vlp.epype.net/MkqWJy</td>
                         <td><Button className="btn-sm">Get Report</Button></td>
                     </tr>
@@ -101,36 +101,20 @@ export default function OutboundSMSReport(props) {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>VLP views</td>
+                                    <td>Opt-ins</td>
                                     <td className="text-end">12</td>
                                 </tr>
                                 <tr>
-                                    <td>Video watches</td>
+                                    <td>Opt-outs</td>
                                     <td className="text-end">12</td>
                                 </tr>
                                 <tr>
-                                    <td>Average watch time (seconds)</td>
+                                    <td>sed in Outbound Blasts</td>
                                     <td className="text-end">35</td>
                                 </tr>
                                 <tr>
-                                    <td>VLP Shares</td>
+                                    <td>Opt-in Requests Sent</td>
                                     <td className="text-end">2</td>
-                                </tr>
-                                <tr>
-                                    <td>Link clicks: General</td>
-                                    <td className="text-end">3</td>
-                                </tr>
-                                <tr>
-                                    <td>Link clicks: Action Items</td>
-                                    <td className="text-end">6</td>
-                                </tr>
-                                <tr>
-                                    <td>Link clicks: Social Media</td>
-                                    <td className="text-end">4</td>
-                                </tr>
-                                <tr>
-                                    <td>Product purchases</td>
-                                    <td className="text-end">3</td>
                                 </tr>
                             </tbody>
                         </Table>

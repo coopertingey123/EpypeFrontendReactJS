@@ -32,7 +32,6 @@ export default function UserNavbar(props) {
                             <NavDropdown.Item href="/admin/organization-billing">VLP Activity</NavDropdown.Item>
                             <NavDropdown.Item href="/admin/invoice-payments">Keyword Activity</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link>Help</Nav.Link>
                     </Nav>
                     <Nav className="align-items-center">
                         <Form className="d-flex">
