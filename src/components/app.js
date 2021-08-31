@@ -46,7 +46,10 @@ import UserTags from "./user/tags";
 import SMSKeywords from "./user/sms-keywords";
 import SMSBlast from "./user/message-blast/sms-blast";
 import EditSMSKeywords from "./user/edit-sms-keyword";
-import OutboundSMSReport from './user/Reports/outbound-sms-report';
+import OutboundReportPreview from './user/Reports/outbound-report-preview';
+import OutboundSMSReport from './user/Reports/outbound-report';
+import VLPActivity from "./user/Reports/vlp-activity";
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -109,7 +112,9 @@ export default class App extends Component {
               <Route path="/user/sms-keywords" component={SMSKeywords}/>
               <Route path="/user/sms-blast" component={SMSBlast}/>
               <Route path="/user/edit-sms-keywords" component={EditSMSKeywords}/>
-              <Route path="/user/outbound-sms-report" component={OutboundSMSReport}/>
+              <Route path="/user/outbound-report-preview" component={OutboundReportPreview}/>
+              <Route path="/user/sms-outbound-report" component={OutboundSMSReport}/>
+              <Route path="/user/vlp-activity" component={VLPActivity}/>
             </Switch>
           {/* <Footer /> */}
         </BrowserRouter>        

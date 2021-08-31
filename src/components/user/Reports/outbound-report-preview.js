@@ -1,16 +1,16 @@
 import React from 'react'
-import { Container, Form, Alert, Row, Col, Button } from "react-bootstrap"
+import { Container, Form, Alert, Row, Col, Button, Table } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function OutboundSMSReport(props) {
     return (
-        <Container>
+        <Container className="text-center">
             <Alert className="" variant="danger">
                 <Alert.Heading>The following errors occured:</Alert.Heading>
                 No blast groups were found for the specified date range.
             </Alert>
-            <fieldset>
+            <Form className="text-start">
                 <legend>Date Range</legend>
                 <div className="mb-3">
                     <label for="frmDateSelect" class="visually-hidden">Date Range</label>
@@ -41,8 +41,39 @@ export default function OutboundSMSReport(props) {
                         </div>
                     </Col>
                 </Row>
-                <Button>Search</Button>
-            </fieldset>
+            </Form>
+            <Button className="mb-5">Search</Button>
+            <h3>Blast Group List</h3>
+            <Table className="text-start">
+                <thead>
+                    <tr>
+                        <td>Send Date</td>
+                        <td>Message</td>
+                        <td>Opt-In Message</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7/24/2021 <br/> 12:30 pm</td>
+                        <td>We'd love to hear from you. Please tell us what you throught of the Fundraiser! See you next year. https://vlp.epype.net/MkqWJy</td>
+                        <td>-</td>
+                        <td><Button className="btn-sm">Get Report</Button></td>
+                    </tr>
+                    <tr>
+                        <td>7/24/2021 <br/> 4:15 pm</td>
+                        <td>See the stats from last week's game! https://vlp.epype.net/MkqWJy</td>
+                        <td>-</td>
+                        <td><Button className="btn-sm">Get Report</Button></td>
+                    </tr>
+                    <tr>
+                        <td>7/24/2021 <br/> 9:49 pm</td>
+                        <td>Watch the highlights from last season!  https://vlp.epype.net/MkqWJy</td>
+                        <td>Reply FOOTBALL to get a discount on season tickets next year!</td>
+                        <td><Button className="btn-sm">Get Report</Button></td>
+                    </tr>
+                </tbody>
+            </Table>
         </Container>
     )
 }
