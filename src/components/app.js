@@ -37,6 +37,7 @@ import UserBilling from './admin/Billing/user-billing';
 import AccountSearchResults from "./admin/account-search-results";
 import AdminChangePassword from "./auth/admin/admin-change-password";
 import AdminChangePreferences from './auth/admin/admin-preferences';
+import AdminEditUser from "./admin/edit-user"
 
 import HomeVLPs from "./user/home-vlps";
 import UserTemplates from "./user/saved-templates";
@@ -105,6 +106,7 @@ export default class App extends Component {
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>
               <Route path="/admin/change-preferences" component={AdminChangePreferences} />
+              <Route path="/admin/edit-user" component={AdminEditUser}/>
               {/* user pages */}
               <Route path="/user/vlps" component={HomeVLPs}/>
               <Route path="/user/templates" component={UserTemplates}/>
