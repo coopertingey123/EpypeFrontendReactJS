@@ -3,7 +3,7 @@ import { Container, Form, Button, Col, Row } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
-import UserNavbar from "../navigation/user-navbar";
+import UserNavbar from "../../navigation/user-navbar";
 
 export default function UserSignups(props) {
     

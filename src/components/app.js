@@ -41,7 +41,8 @@ import AdminChangePreferences from './auth/admin/admin-preferences';
 import HomeVLPs from "./user/home-vlps";
 import UserTemplates from "./user/saved-templates";
 import UserProducts from "./user/products";
-import UserContacts from "./user/contacts";
+import UserContacts from "./user/Contacts/contacts";
+import ContactSearchResults from './user/Contacts/contact-search-results';
 import UserTags from "./user/tags";
 import SMSKeywords from "./user/sms-keywords";
 import SMSBlast from "./user/message-blast/sms-blast";
@@ -109,6 +110,7 @@ export default class App extends Component {
               <Route path="/user/templates" component={UserTemplates}/>
               <Route path="/user/products" component={UserProducts}/>
               <Route path="/user/contacts" component={UserContacts}/>
+              <Route path="/user/search-results-contacts" component={ContactSearchResults}/>
               <Route path="/user/tags" component={UserTags}/>
               <Route path="/user/sms-keywords" component={SMSKeywords}/>
               <Route path="/user/sms-blast" component={SMSBlast}/>
