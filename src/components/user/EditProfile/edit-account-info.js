@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Alert, Form, Table, Button, Nav } from 'react-bootstrap'
 import NotificationSettings from './notification-settings'
+import BillingSettings from "./billing-settings"
 
 export default function EditAccountInformation(props) {
     return (
@@ -248,6 +249,7 @@ export default function EditAccountInformation(props) {
                 </p>
             </Form>
             <NotificationSettings/>
+            <BillingSettings/>
         </Container>
     )
 }
