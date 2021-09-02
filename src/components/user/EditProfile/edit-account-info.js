@@ -1,22 +1,29 @@
 import React from 'react'
-import { Container, Row, Col, Alert, Form, Table, Button } from 'react-bootstrap'
+import { Container, Row, Col, Alert, Form, Table, Button, Nav } from 'react-bootstrap'
+import NotificationSettings from './notification-settings'
 
 export default function EditAccountInformation(props) {
     return (
         <Container>
             <h1>Account Information</h1>
-            <div id="crminfocontainer">
-                <h5>Fiesta Days</h5>
-                <div id="crmnavcontainer" className="bg-dark">
-                    <ul id="crmnav">
-                        <li><a href="/login/user/account/settings.php" className="active">Profile</a></li>
-                        <li><a href="/login/user/account/notifications.php" className="">Notifications</a></li>
-                        <li><a href="/login/user/account/bi.php" className="">Billing</a></li>
-                        <li><a href="/login/user/account/pw.php" className="">Change Password</a></li>
-                        <li><a href="/login/user/account/product-payments/" className="">Product Payments</a></li>
-                    </ul>
-                </div>
-            </div>
+            <h5 className="pb-3">Fiesta Days</h5>
+            <Nav variant="tabs dark" id="crminfocontainer" className="my-3">
+                <Nav.Item>
+                    <Nav.Link href="" className="active">Profile</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="" className="">Notifications</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="" className="">Billing</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="" className="">Change Password</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="" className="">Product Payments</Nav.Link>
+                </Nav.Item>
+            </Nav>
             <Table className="table-responsive table-borderless table-sm no-padding">
                 <tbody>
                     <tr>
@@ -236,10 +243,11 @@ export default function EditAccountInformation(props) {
                 </fieldset>
 
                 <p class="text-center">
-                    <Button type="submit" id="btnSubmit" name="btnSubmit" className="btn-primary" value="Save Changes"/>
-                    <Button type="button" id="btnCancel" name="btnCancel" className="btn-danger" value="Cancel"/>
+                    <Button type="submit" id="btnSubmit" name="btnSubmit" className="btn-primary m-1" value="Save Changes">Save Changes</Button>
+                    <Button type="button" id="btnCancel" name="btnCancel" className="btn-danger m-1" value="Cancel">Cancel</Button>
                 </p>
             </Form>
+            <NotificationSettings/>
         </Container>
     )
 }

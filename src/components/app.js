@@ -52,7 +52,7 @@ import OutboundReportPreview from './user/Reports/outbound-report-preview';
 import OutboundSMSReport from './user/Reports/outbound-report';
 import VLPActivity from "./user/Reports/vlp-activity";
 import KeywordActivity from "./user/Reports/keyword-activity-report";
-import EditAccountInfo from "./user/Contacts/edit-account-info";
+import EditAccountInfo from "./user/EditProfile/edit-account-info";
 
 
 
