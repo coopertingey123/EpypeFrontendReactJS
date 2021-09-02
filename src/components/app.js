@@ -52,6 +52,7 @@ import OutboundReportPreview from './user/Reports/outbound-report-preview';
 import OutboundSMSReport from './user/Reports/outbound-report';
 import VLPActivity from "./user/Reports/vlp-activity";
 import KeywordActivity from "./user/Reports/keyword-activity-report";
+import EditAccountInfo from "./user/Contacts/edit-account-info";
 
 
 
@@ -121,6 +122,7 @@ export default class App extends Component {
               <Route path="/user/sms-outbound-report" component={OutboundSMSReport}/>
               <Route path="/user/vlp-activity" component={VLPActivity}/>
               <Route path="/user/keyword-activity" component={KeywordActivity}/>
+              <Route path="/user/edit-account-info" component={EditAccountInfo}/>
             </Switch>
           {/* <Footer /> */}
         </BrowserRouter>        
