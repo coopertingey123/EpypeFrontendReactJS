@@ -2,6 +2,8 @@ import React from 'react'
 import { Container, Row, Col, Alert, Form, Table, Button, Nav } from 'react-bootstrap'
 import NotificationSettings from './notification-settings'
 import BillingSettings from "./billing-settings"
+import ChangePassword from "./change-password"
+import ProductPayments from "./product-payments"
 
 export default function EditAccountInformation(props) {
     return (
@@ -250,6 +252,8 @@ export default function EditAccountInformation(props) {
             </Form>
             <NotificationSettings/>
             <BillingSettings/>
+            <ChangePassword/>
+            <ProductPayments/>
         </Container>
     )
 }
