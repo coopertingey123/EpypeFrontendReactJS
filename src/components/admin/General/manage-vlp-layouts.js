@@ -1,13 +1,9 @@
 import React from 'react'
 import { Container, Table, Button } from 'react-bootstrap'
-// import VLPImage from "../../../static/assets/photos/VLPExample.JPG"
-
-import NavbarAdmin from "../../navigation/navbar-admin";
 
 export default function ManageVLPLayouts(props) {
     return (
         <Container className="text-center">
-            <NavbarAdmin/>
             <h1 className="green-text p-3">Video Landing Page Themes</h1>
             <Button>+ Add a new Theme</Button>
             <Table className="table-striped border-bottom text-start p-3">

@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import Icons from "../helpers/icons";
 
 import BaseNavbar from "./navigation/navbar";
+import AdminNavbar from "./navigation/navbar-admin";
+import UserNavbar from "./navigation/user-navbar";
+
 import Homepage from "./homepage/homepage";
 import Login from "./auth/login";
 import ResetPassword from "./auth/password-reset";
@@ -29,7 +32,7 @@ import ManageEvents from './admin/General/manage-events';
 import ManagePromoCodes from './admin/General/manage-promo-codes';
 import ManageVLPLayouts from './admin/General/manage-vlp-layouts';
 import SMSCodes from './admin/General/sms-codes';
-import UserSignups from './admin/Reports/user-signups';
+import ClientSignups from './admin/Reports/user-signups';
 import InvoicePayments from './admin/Billing/invoice-payments';
 import OrganizationBilling from './admin/Billing/organization-billing';
 import ProcessOneTimePayment from './admin/Billing/process-one-time-payment';
@@ -59,16 +62,38 @@ import EditAccountInfo from "./user/EditProfile/edit-account-info";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
+export default function App(props) {
+  
 
-    Icons()
-  }
-  render() {
+    const [userType, setUserType] = useState("user")
+    // We are going to use either user, admin, or client as user types
+
+    Icons();
+  
+    const checkUserType = () => {
+      if (window.location.href.includes("user")) {
+        setUserType("client")
+      }
+      else if (window.location.href.includes("admin")) {
+        setUserType("admin")
+      }
+      else {
+        setUserType("user")
+      }
+    }
+
+    useEffect(() => {
+      checkUserType()
+    }, [])
+  
+
+  
     return (
       <div className='app'>
         <BrowserRouter>
+          {userType == "admin" ? <AdminNavbar/> : null}
+          {userType == "client" ? <UserNavbar/> : null}
+          {userType == "user" ? <BaseNavbar/> : null}
             <Switch>
               <Route exact path="/" component={Homepage}/>
               <Route path="/terms" component={TermsOfService}/>
@@ -86,10 +111,10 @@ export default class App extends Component {
               <Route path="/signup/payment-entry" component={SignupPaymentEntry}/>
               <Route path="/signup/signup" component={Signup}/>
               <Route path="/signup/type" component={SignupType}/>
-              <Route path="/signup/user-info" component={SignupUserInfo}/>
+              <Route path="/signup/client-info" component={SignupUserInfo}/>
               
               {/* admin general pages */}
-              <Route path="/admin/users" component={AdminUsers}/>
+              <Route path="/admin/clients" component={AdminUsers}/>
               <Route path="/admin/email-notices" component={EmailNotices}/>
               <Route path="/admin/accounts" component={ManageAccounts}/>
               <Route path="/admin/events" component={ManageEvents}/>
@@ -97,17 +122,17 @@ export default class App extends Component {
               <Route path="/admin/vlp-layouts" component={ManageVLPLayouts}/>
               <Route path="/admin/sms-codes" component={SMSCodes}/>
               {/* admin reports pages */}
-              <Route path="/admin/user-signups" component={UserSignups}/>
+              <Route path="/admin/client-signups" component={ClientSignups}/>
               {/* admin billing pages */}
               <Route path="/admin/invoice-payments" component={InvoicePayments}/>
               <Route path="/admin/organization-billing" component={OrganizationBilling}/>
               <Route path="/admin/process-one-time-payment" component={ProcessOneTimePayment}/>
-              <Route path="/admin/user-billing" component={UserBilling}/>
+              <Route path="/admin/client-billing" component={UserBilling}/>
               {/* admin misc pages */}
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>
               <Route path="/admin/change-preferences" component={AdminChangePreferences} />
-              <Route path="/admin/edit-user" component={AdminEditUser}/>
+              <Route path="/admin/edit-client" component={AdminEditUser}/>
               {/* user pages */}
               <Route path="/user/vlps" component={HomeVLPs}/>
               <Route path="/user/templates" component={UserTemplates}/>
@@ -124,10 +149,10 @@ export default class App extends Component {
               <Route path="/user/keyword-activity" component={KeywordActivity}/>
               <Route path="/user/edit-account-info" component={EditAccountInfo}/>
             </Switch>
-          {/* <Footer /> */}
+          <Footer />
         </BrowserRouter>        
       </div>
     );
   }
-}
+
 

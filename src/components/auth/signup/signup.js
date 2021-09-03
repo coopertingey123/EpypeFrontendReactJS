@@ -1,15 +1,9 @@
 import React from 'react';
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
-import BaseNavbar from "../../navigation/navbar"
-// import SignupType from "./signup-type";
-// import SignupUserInfo from "./signup-user-info";
-// import SignupPackageSelect from "./signup-package-select";
-// import SignupPaymentEntry from "./signup-payment-entry";
 
 export default function Signup(props) {
     return (
         <Container className="py-3 text-center">
-            <BaseNavbar/>
             <h1 className="green-text">
                 Signup
             </h1>

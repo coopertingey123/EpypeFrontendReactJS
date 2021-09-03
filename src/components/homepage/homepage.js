@@ -17,7 +17,6 @@ import GreenPhone from "../../../static/assets/phones/green-phone.png";
 export default function (props) {
     return (
         <Container id="main_content" fluid>
-            <BaseNavbar/>
             <div id="hero-wrapper" className="hero-text-container py-5">
                 <Container>
                     <h1 className="mt-lg-5">

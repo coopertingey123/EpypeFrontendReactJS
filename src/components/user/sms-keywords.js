@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Button, Table } from 'react-bootstrap'
-import UserNavbar from "../navigation/user-navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CountryFlag from "../../../static/assets/photos/16.png";
 
@@ -8,7 +7,6 @@ import CountryFlag from "../../../static/assets/photos/16.png";
 export default function Tags(props) {
     return (
         <Container className="text-center">
-            <UserNavbar/>
             <h1 className="green-text py-3">SMS Keywords</h1>
             <p>The following phone number is assigned to your account.  Contacts can text your keywords to any of the listed phone numbers.</p>
             <p>

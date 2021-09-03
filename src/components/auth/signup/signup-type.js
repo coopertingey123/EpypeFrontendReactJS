@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
-import BaseNavbar from "../../navigation/navbar";
 
 export default function SignupType(props) {
     return (
         <Container className="py-3 text-center">
-            <BaseNavbar/>
             <h1 className="green-text">Signup</h1>
             <h3 className="purple2-text">Does your organization already have an EPYPE account?</h3>
             <Row className="justify-content-center">

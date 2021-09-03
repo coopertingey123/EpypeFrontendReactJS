@@ -1,6 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Form , Button} from 'react-bootstrap'
-import UserNavbar from "../../navigation/user-navbar";
+import { Container} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ChooseSMSKeyword from './choose-sms-keyword';
 import ChooseTags from "./choose-tags";
@@ -13,7 +12,6 @@ import ScheduledBlasts from './scheduled-message-blasts';
 export default function SMSBlast(props) {
     return (
         <Container className="text-center">
-            <UserNavbar/>
             <h1 className="green-text">Create a Message Blast</h1>
             <div id="steps-progress-bar-wrapper" class="with-video-training">
                 <ul id="steps-progress-bar">

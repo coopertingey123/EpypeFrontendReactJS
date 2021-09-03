@@ -1,12 +1,9 @@
 import React from 'react'
-import { Container, Row, Col, Form, Button} from "react-bootstrap"
-
-import NavbarAdmin from "../../navigation/navbar-admin";
+import { Container, Form, Button} from "react-bootstrap"
 
 export default function ProcessOneTimePayment(props) {
     return (
         <Container className="text-center">
-            <NavbarAdmin/>
             <h1 className="green-text text-center p-3">Process One-time Payment</h1>
             <Form className="text-start py-3">
                 <Form.Group>

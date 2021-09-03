@@ -1,14 +1,10 @@
 import React from 'react'
 import { Container, Form, Button, Row, Col } from 'react-bootstrap'
-import BaseNavbar from "../navigation/navbar";
-
-import PasswordReset from "./password-reset"
 
 export default function Login(props) {
     return (
 
         <Container id="login-container" className="py-3 text-center">
-            <BaseNavbar/>
             <h1 className="green-text">Log in</h1>
             <Row className="justify-content-center">
                 <Col className="col-3 text-start">

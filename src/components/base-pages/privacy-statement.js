@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container } from "react-bootstrap";
-import BaseNavbar from "../navigation/navbar"
 
 export default function PrivacyStatement(props) {
     return (
         <Container id="privacy-statement" className="py-3">
-            <BaseNavbar/>
             <h1 className="text-center">Privacy Statement</h1>
             <h3>Information EPYPE Collects</h3>
             <p>EPYPE collects and stores information about you for the following purposes:</p>

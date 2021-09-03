@@ -1,12 +1,9 @@
 import React from 'react'
-import { Container, Row, Col, Form, Button} from "react-bootstrap"
-
-import NavbarAdmin from "../../navigation/navbar-admin";
+import { Container, Form, Button} from "react-bootstrap"
 
 export default function InvoicePayments(props) {
     return (
         <Container className="text-center">
-            <NavbarAdmin/>
             <h1 className="green-text p-3">Invoice Payments</h1>
             <Form className="text-start">
                 <Form.Group>

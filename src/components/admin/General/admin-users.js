@@ -1,12 +1,9 @@
 import React from 'react'
 import { Container, Form, Button, Row, Col } from 'react-bootstrap'
 
-import NavbarAdmin from "../../navigation/navbar-admin";
-
-export default function (props) {
+export default function AdminClients(props) {
     return (
         <Container className="text-center">
-            <NavbarAdmin/>
             <h1 className="green-text p-3">
                 Admin Users
             </h1>

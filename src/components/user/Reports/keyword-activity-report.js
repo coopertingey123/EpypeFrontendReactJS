@@ -2,13 +2,11 @@ import React from 'react'
 import { Container, Form, Alert, Row, Col, Button, Table } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
-import UserNavbar from '../../navigation/user-navbar';
 import BarChart from './bar-chart';
 
 export default function OutboundSMSReport(props) {
     return (
         <Container className="text-center">
-            <UserNavbar/>
             <h3 className="green-text">Keyword Activity Report</h3>
             <Row>
                 <Col className="col-lg">

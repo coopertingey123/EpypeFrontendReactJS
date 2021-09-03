@@ -3,14 +3,9 @@ import { Container, Form, Button, Col, Row } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
-import UserNavbar from "../../navigation/user-navbar";
-
 export default function UserSignups(props) {
-    
     return (
-        
         <Container className="text-center pb-5">
-            <UserNavbar/>
             <h1 className="green-text p-3">Contacts</h1>
             <Button className="mx-1">Add New Contact</Button>
             <Button className="mx-1">Import Contacts</Button>

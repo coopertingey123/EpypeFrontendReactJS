@@ -1,11 +1,9 @@
 import React from 'react';
 import { Container, Button, Row, Col } from "react-bootstrap";
-import BaseNavbar from "../../navigation/navbar"
 
 export default function Signup(props) {
     return (
         <Container id="signup-preview" className="my-5">
-            <BaseNavbar/>
             <Row className="justify-content-center">
                 <Col className="col-6 text-center">
                     <h3 className="py-3">Thank you for choosing EPYPE!</h3>

@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Alert, Button, Table } from 'react-bootstrap'
-import UserNavbar from "../navigation/user-navbar";
 
 export default function SavedTemplates(props) {
     return (
         <Container className="text-center">
-            <UserNavbar/>
             <h1 className="green-text p-3">Saved VLP Templates</h1>
             <Alert variant="danger">You don't have any Video Landing Page Templates</Alert>
             <Button>+ Add a new Template</Button>

@@ -1,13 +1,11 @@
 import React from 'react'
 import { Container, Button, Table } from 'react-bootstrap'
-import UserNavbar from "../navigation/user-navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 export default function Tags(props) {
     return (
         <Container className="text-center">
-            <UserNavbar/>
             <h1 className="green-text py-3">Contact Tags</h1>
             <Button>+ Add a new tag</Button>
             <Table className="table-striped border-bottom text-start p-3">

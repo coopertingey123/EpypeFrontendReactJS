@@ -3,7 +3,7 @@ import { Container, Row, Col, Table, Button, Alert, Form } from 'react-bootstrap
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Flag from "../../../static/assets/photos/16.png"
 
-export default function (props) {
+export default function AdminEditUser(props) {
     return (
         <Container>
             <h1 className="green-text">Edit User</h1>

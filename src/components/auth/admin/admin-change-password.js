@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
-import NavbarAdmin from "../../navigation/navbar-admin";
 
 export default function AdminChangePassword(props) {
     return (
         <Container className="text-center">
-            <NavbarAdmin/>
             <h1 className="green-text pt-3">Change Password</h1>
             <Form className="py-3 text-start">
                 <Form.Group className="py-2">

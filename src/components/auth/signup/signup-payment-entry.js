@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Row, Col, Button, Form, Alert } from 'react-bootstrap'
-import BaseNavbar from "../../navigation/navbar"
 
 export default function SignupPaymentEntry(props) {
     return (
         <Container className="text-center py-3">
-            <BaseNavbar/>
             <h1 className="green-text">Signup</h1>
             <h3 className="purple2-text py-3">Pricing</h3>
             <Row className="py-3">

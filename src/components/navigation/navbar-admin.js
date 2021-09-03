@@ -18,7 +18,7 @@ export default function (props) {
                     <NavDropdown title="General" id="collasible-nav-dropdown" className="px-3">
                         <NavDropdown.Item href="/admin/accounts">Accounts</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/admin/users">Admin Users</NavDropdown.Item>
+                        <NavDropdown.Item href="/admin/clients">Admin Users</NavDropdown.Item>
                         <NavDropdown.Item href="/admin/promo-codes">Promo Codes</NavDropdown.Item>
                         <NavDropdown.Item href="/admin/sms-codes">SMS Codes</NavDropdown.Item>
                         <NavDropdown.Item href="/admin/vlp-layouts">Video Page Layouts</NavDropdown.Item>
@@ -26,10 +26,10 @@ export default function (props) {
                         <NavDropdown.Item href="/admin/email-notices">Email Notices</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Reports" id="collasible-nav-dropdown" className="px-3">
-                        <NavDropdown.Item href="/admin/user-signups">Signups</NavDropdown.Item>
+                        <NavDropdown.Item href="/admin/client-signups">Signups</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Billing" id="collasible-nav-dropdown" className="px-3">
-                        <NavDropdown.Item href="/admin/user-billing">Users</NavDropdown.Item>
+                        <NavDropdown.Item href="/admin/client-billing">Users</NavDropdown.Item>
                         <NavDropdown.Item href="/admin/organization-billing">Organizations</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="/admin/invoice-payments">Invoices</NavDropdown.Item>

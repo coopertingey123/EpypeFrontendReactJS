@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Form, Button, Col, Row } from 'react-bootstrap'
-import NavbarAdmin from "../../navigation/navbar-admin";
 
 export default function ManageAccounts(props) {
     return (
         <Container className="text-center">
-            <NavbarAdmin/>
             <h1 className="green-text p-3">Accounts</h1>
             <Button>+ Add a New Organization</Button>
             <Form className="text-start">

@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
-import BaseNavbar from "../../navigation/navbar"
 
 export default function SignupPackageSelect(props) {
     return (
         <Container className="py-3 text-center">
-            <BaseNavbar/>
             <h1 className="green-text">Signup</h1>
             <h3 className="purple2-text">Please select a package.</h3>
             <Form className="text-left" name="form1" action="" method="post">

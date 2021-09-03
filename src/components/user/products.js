@@ -1,11 +1,9 @@
 import React from 'react'
-import { Container, Button, Table } from 'react-bootstrap'
-import UserHeader from "../navigation/user-navbar";
+import { Container, Table } from 'react-bootstrap'
 
 export default function (props) {
     return (
         <Container>
-            <UserHeader/>
             <h1 className="green-text py-3 text-center">Products</h1>
             <p class="text-center">
 		        <a href=""> Order History </a> | 

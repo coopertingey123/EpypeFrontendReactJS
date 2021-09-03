@@ -1,11 +1,9 @@
 import React from 'react';
 import { Container } from "react-bootstrap";
-import BaseNavbar from "../navigation/navbar"
 
 export default function SMSTerms(props) {
     return (
         <Container className="py-3" id="terms-of-service">
-            <BaseNavbar/>
             <h1 className="text-center">SMS Terms and Conditions</h1>
             <p className="service text-center fw-bold">EPYPE Service</p>
 

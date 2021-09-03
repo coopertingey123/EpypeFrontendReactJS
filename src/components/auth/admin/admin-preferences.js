@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
-import NavbarAdmin from "../../navigation/navbar-admin";
 
 export default function AdminChangePreferences(props) {
     return (
         <Container className="text-center">
-            <NavbarAdmin/>
             <h1 className="green-text pt-3">Change Preferences</h1>
             <Form className="py-3 text-start">
                 <Form.Group className="py-2">
