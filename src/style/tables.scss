@@ -1,0 +1,18 @@
+table.no-padding > tbody > tr > th, table.no-padding > tbody > tr > td {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.table .thead-dark {
+	background-color: #6d0fa7;
+	color: #fff;
+}
+
+table.border_bottom > :not(caption) > *:last-child {
+	border-bottom: 1px solid #880aa1;
+}
+
+tfoot.border_top td,
+.border_top {
+	border-top: 2px solid #880aa1;
+}

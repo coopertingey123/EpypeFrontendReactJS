@@ -1,69 +1,9 @@
-h1 {
-	line-height: 1;
-	font-weight: 700;
-}
-
-h2 {
-	font-size: 1.5em;
-	font-weight: 400;
-	line-height: 1.5;
-}
-
-h3 {
-	font-weight: 300;
-	margin: 0;
-}
-
-p {
-	font-weight: 400;
-}
-
-#main_content {
-	padding-left: 0px;
-	padding-right: 0px;
-	ul {
-		font-size: 1.45em;
-	}
-	height: 100%;
-}
-
-
-.green-text {
-	color: #1add00;
-}
-
-.purple-text {
-	color: #880aa1;
-}
-
-.purple2-text {
-	color: #3a16af;
-}
-
-.blue-text {
-	color: #00bdfc;
-}
-
-.navbar{
-    background-color: #880aa1;
-    background-image: linear-gradient(45deg, #3a16af, #880aa1);
-}
-
-#footer {
-//   position: fixed;
-  bottom: 0;
-//   left: 0;
-  width: 100%;
-}
-
 #hero-wrapper {
 	width: 100%;
 	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
 		url("../../static/assets/logos/GirlWithPhone.jpg");
 	background-size: cover;
 	background-position-y: 25%;
-
-
 }
 
 #hero-wrapper .container {
@@ -115,12 +55,10 @@ p {
 	}
 }
 
-
 #second-section-wrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	
 }
 
 #second-section-wrapper h1 {
@@ -170,7 +108,6 @@ p {
 	width: auto;
 }
 
-
 #section-three-container {
 	background-image: linear-gradient(45deg, #3a16af, #00bdfc, #3a16af);
 	width: 100%;
@@ -190,7 +127,6 @@ p {
 	margin-bottom: 3rem;
 	h1 {
 		color: #fff;
-		// margin: 4rem 0 3rem;
 		font-size: 4rem;
 	}
 	p {
@@ -275,16 +211,6 @@ p {
 	align-items: center;
 }
 
-// .footer {
-// 	margin-top: 1rem;
-//   padding: 1rem;
-//   background-color: rgb(235, 195, 64);
-//   position: fixed;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-// }
-
 #contact-us {
 	h1 {
 		color: #3C16AF;
@@ -307,23 +233,4 @@ p {
 	h1, h2, h3, h4, .service {
 		color: #3C16AF;
 	}
-}
-
-table.no-padding > tbody > tr > th, table.no-padding > tbody > tr > td {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.table .thead-dark {
-	background-color: #6d0fa7;
-	color: #fff;
-}
-
-table.border_bottom > :not(caption) > *:last-child {
-	border-bottom: 1px solid #880aa1;
-}
-
-tfoot.border_top td,
-.border_top {
-	border-top: 2px solid #880aa1;
 }

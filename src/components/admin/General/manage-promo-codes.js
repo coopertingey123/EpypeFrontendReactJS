@@ -3,6 +3,7 @@ import { Form, Button, Row, Col, Container, Table } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ManagePromoCodes(props) {
+
     return (
         <Container className="text-center">
             <h1 className="green-text p-3">
@@ -55,7 +56,7 @@ export default function ManagePromoCodes(props) {
                         <td class="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
                         <td class="text-end">
-                            <Button><FontAwesomeIcon icon="trash"/></Button>
+                            <Button onClick={deletePromoCode()}><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
                     <tr>
