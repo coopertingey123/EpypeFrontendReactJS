@@ -56,8 +56,8 @@ import OutboundSMSReport from './user/Reports/outbound-report';
 import VLPActivity from "./user/Reports/vlp-activity";
 import KeywordActivity from "./user/Reports/keyword-activity-report";
 import EditAccountInfo from "./user/EditProfile/edit-account-info";
-
-
+import OrderHistory from './user/order-history';
+import AddProduct from "./user/add-product";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
@@ -148,6 +148,8 @@ export default function App(props) {
               <Route path="/user/vlp-activity" component={VLPActivity}/>
               <Route path="/user/keyword-activity" component={KeywordActivity}/>
               <Route path="/user/edit-account-info" component={EditAccountInfo}/>
+              <Route path="/user/order-history" component={OrderHistory}/>
+              <Route path="/user/add-product" component={AddProduct}/>
             </Switch>
           <Footer />
         </BrowserRouter>        

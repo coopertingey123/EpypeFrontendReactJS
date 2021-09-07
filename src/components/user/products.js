@@ -6,8 +6,8 @@ export default function (props) {
         <Container>
             <h1 className="green-text py-3 text-center">Products</h1>
             <p class="text-center">
-		        <a href=""> Order History </a> | 
-		        <a href=""> Add a new Product </a>
+		        <a href="/user/order-history"> Order History </a> | 
+		        <a href="/user/add-product"> Add a new Product </a>
 	        </p>
             <Table className="table-striped border_bottom text-start p-3">
                 <thead className="thead-dark">
