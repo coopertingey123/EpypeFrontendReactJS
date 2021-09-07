@@ -8,8 +8,8 @@ export default function AccountSearchResults(props) {
             <h5 className="text-center">Jump to <a href=""> Users </a> | <a href="">Organizations</a></h5>
             <h2>Users</h2>
             <div className="text-center"><Button>New Search</Button></div>
-            <Table className="table-striped">
-                <thead>
+            <Table className="table-striped border_bottom">
+                <thead className="thead-dark">
                     <tr>
                         <th>User ID</th>
                         <th>Name</th>
@@ -43,8 +43,8 @@ export default function AccountSearchResults(props) {
 
             <h2>Organizations</h2>
             <div className="text-center py-3"><Button>New Search</Button> <Button>+ Add a new organization</Button></div>
-            <Table className="table-striped">
-                <thead>
+            <Table className="table-striped border_bottom">
+                <thead className="thead-dark">
                     <tr>
                         <th>User ID</th>
                         <th>Name</th>

@@ -16,8 +16,8 @@ export default function SignupType(props) {
                         <Form.Check type="radio" label="Create my account without attaching it to my organization"/>
                         <Form.Check type="radio"label="My organization has an EPYPE account"/>
                     </Form.Group>
-                    <Button className="m-1">Next</Button>
-                    <Button className="bg-secondary m-1">Back</Button>
+                    <Button className="bg-secondary m-1" href="/signup/signup">Back</Button>
+                    <Button className="m-1" href="/signup/client-info">Next</Button>
                 </Col>
             </Row>
         </Container>

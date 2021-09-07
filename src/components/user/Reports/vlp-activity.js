@@ -57,13 +57,13 @@ export default function OutboundSMSReport(props) {
                 </Col>
             </Row>
             <hr/>
-            <Table className="text-start">
-                <thead>
+            <Table className="text-start table-striped border_bottom">
+                <thead className="thead-dark">
                     <tr>
-                        <td></td>
-                        <td>Create Date</td>
-                        <td>Description</td>
-                        <td></td>
+                        <th></th>
+                        <th>Create Date</th>
+                        <th>Description</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -90,7 +90,7 @@ export default function OutboundSMSReport(props) {
             <Row>
                 <Col className="col order-1 order-lg-2">
                     <div className="table-responsive">
-                        <Table className="text-start table-striped">
+                        <Table className="text-start table-striped border_bottom">
                             <thead className="thead-dark">
                                 <tr>
                                     <td></td>

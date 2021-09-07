@@ -9,8 +9,8 @@ export default function ChangePassword(props) {
             <Table className="table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>
-                        <td>Method</td>
-                        <td></td>
+                        <th>Method</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

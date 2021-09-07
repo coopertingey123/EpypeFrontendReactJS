@@ -151,8 +151,8 @@ export default function SignupUserInfo(props) {
                     </Form>
                 </Col>
             </Row>
-            <Button className="m-1">Next</Button>
-            <Button className="bg-secondary m-1">Back</Button>
+            <Button className="bg-secondary m-1" href="/signup/type">Back</Button>
+            <Button className="m-1" href="/signup/package-select">Next</Button>
         </Container>
     )
 }

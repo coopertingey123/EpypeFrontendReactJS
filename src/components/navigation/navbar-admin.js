@@ -48,7 +48,7 @@ export default function (props) {
                             aria-label="Search"
                         />
                     </Form>
-                    <Button className="bg-transparent border-0">
+                    <Button className="bg-transparent border-0" href="/admin/account-search-results">
                         <FontAwesomeIcon icon="search"/>
                     </Button>
                     <NavDropdown title={<FontAwesomeIcon icon="user"/>} className="px-3" drop="start">
@@ -59,7 +59,7 @@ export default function (props) {
                         <NavDropdown.Divider/>
                         <NavDropdown.Item href="/admin/change-password">Change Password</NavDropdown.Item>
                         <NavDropdown.Item href="/admin/change-preferences">Change Preferences</NavDropdown.Item>
-                        <NavDropdown.Item href="">Log Out</NavDropdown.Item>
+                        <NavDropdown.Item href="/">Log Out</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
             </Container>

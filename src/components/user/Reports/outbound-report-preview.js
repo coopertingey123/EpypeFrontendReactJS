@@ -45,12 +45,12 @@ export default function OutboundSMSReport(props) {
             <Button className="mb-5">Search</Button>
             <h3>Blast Group List</h3>
             <Table className="text-start">
-                <thead>
+                <thead className="thead-dark">
                     <tr>
-                        <td>Send Date</td>
-                        <td>Message</td>
-                        <td>Opt-In Message</td>
-                        <td></td>
+                        <th>Send Date</th>
+                        <th>Message</th>
+                        <th>Opt-In Message</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

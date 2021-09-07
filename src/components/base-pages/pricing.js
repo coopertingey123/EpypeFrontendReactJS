@@ -5,8 +5,8 @@ export default function Pricing(props) {
     return (
         <Container className="py-3">
             <h1 className="green-text">Pricing</h1>
-            <Table id="pricing-table" className="table-hover text-center">
-                <thead className="dark">
+            <Table id="pricing-table" className="table-hover border_bottom text-center">
+                <thead className="thead-dark">
                     <tr>
                         <th></th>
                         <th>Personal</th>

@@ -13,7 +13,7 @@ export default function UserNavbar(props) {
                 
                 <Nav className="">
                     <NavDropdown title="Video Landing Pages" id="collapsible-nav-dropdown" className="">
-                        <NavDropdown.Item href="/user/vlps">Video Landing Pages</NavDropdown.Item>
+                        <NavDropdown.Item href="/user">Video Landing Pages</NavDropdown.Item>
                         <NavDropdown.Item href="/user/templates">Saved Templates</NavDropdown.Item>
                         <NavDropdown.Item href="/user/products">Products</NavDropdown.Item>
                     </NavDropdown>
@@ -41,7 +41,7 @@ export default function UserNavbar(props) {
                             aria-label="Search"
                         />
                     </Form>
-                    <Button className="bg-transparent border-0">
+                    <Button className="bg-transparent border-0" href="/user/search-results-contacts">
                         <FontAwesomeIcon icon="search"/>
                     </Button>
                     <NavDropdown title={<FontAwesomeIcon icon="user"/>} className="" drop="start">
@@ -51,7 +51,7 @@ export default function UserNavbar(props) {
                         </NavDropdown.Item>
                         <NavDropdown.Divider/>
                         <NavDropdown.Item href="/user/edit-account-info">Update Profile</NavDropdown.Item>
-                        <NavDropdown.Item href="">Log Out</NavDropdown.Item>
+                        <NavDropdown.Item href="/">Log Out</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
             </Container>

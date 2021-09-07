@@ -33,10 +33,10 @@ export default function ContactSearchResults(props) {
             <Table className="table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>
-                        <td><Form.Check/></td>
-                        <td>LastName / First Name</td>
-                        <td>Phone</td>
-                        <td>Email</td>
+                        <th><Form.Check/></th>
+                        <th>LastName / First Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
                     </tr>
                    
                 </thead>

@@ -9,14 +9,15 @@ export default function (props) {
 		        <a href=""> Order History </a> | 
 		        <a href=""> Add a new Product </a>
 	        </p>
-            <Table className="table-striped border-bottom text-start p-3">
-                <thead className="dark">
+            <Table className="table-striped border_bottom text-start p-3">
+                <thead className="thead-dark">
                     <tr>
                         <th>Product</th>
                         <th>Description</th>
                         <th className="text-end">Price</th>
                         <th className="text-end">Status</th>
                         <th className="text-end">Stock</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

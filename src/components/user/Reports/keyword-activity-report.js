@@ -57,13 +57,13 @@ export default function OutboundSMSReport(props) {
                 </Col>
             </Row>
             <hr/>
-            <Table className="text-start">
-                <thead>
+            <Table className="text-start table-striped border_bottom">
+                <thead className="thead-dark">
                     <tr>
-                        <td></td>
-                        <td>Keyword</td>
-                        <td>Description</td>
-                        <td></td>
+                        <th></th>
+                        <th>Keyword</th>
+                        <th>Description</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -93,8 +93,8 @@ export default function OutboundSMSReport(props) {
                         <Table className="text-start table-striped">
                             <thead className="thead-dark">
                                 <tr>
-                                    <td></td>
-                                    <td className="text-end">Total</td>
+                                    <th></th>
+                                    <th className="text-end">Total</th>
                                 </tr>
                             </thead>
                             <tbody>

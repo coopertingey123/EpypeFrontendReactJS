@@ -18,7 +18,7 @@ export default function Login(props) {
                         <Form.Control type="password" placeholder="Enter password" id="frmPassword" name="password" maxlength="20" autocomplete="current-password"/>
                     </Form.Group>
                     <p className="text-center">
-                        <Button className="btn-primary" type="submit">Log In</Button>
+                        <Button className="btn-primary" type="submit" href="/user">Log In</Button>
                     </p>
                     <p className="text-center">
                         <a href="/reset-password">Forgot your password?</a>

@@ -6,7 +6,7 @@ export default function EmailNotices(props) {
         <Container className="text-center">
             <h1 className="green-text p-3">Email Notices</h1>
             <Table className="text-start">
-                <thead className="dark">
+                <thead className="thead-dark">
                     <tr>
                         <th style={{width: "200px"}}>ID</th>
                         <th>Description</th>

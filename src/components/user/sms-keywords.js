@@ -14,8 +14,8 @@ export default function Tags(props) {
                  (888) 888-8888
             </p>
             <Button className="my-2">+ Add a new tag</Button>
-            <Table className="table-striped border-bottom text-start p-3">
-                <thead className="dark">
+            <Table className="table-striped border_bottom text-start p-3">
+                <thead className="thead-dark">
                     <tr>
                         <th style={{width: "140px"}}>Key Word</th>
                         <th>Description</th>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form, Button, Row, Col, Container, Table } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ManagePromoCodes(props) {
     return (
@@ -20,27 +21,27 @@ export default function ManagePromoCodes(props) {
                 </Row>
             </Form>
             <Button className="m-3">+ Add a new promo code</Button>
-            <Table className="table-striped border-bottom p-3">
-                <thead className="dark">
+            <Table className="table-striped border_bottom p-3">
+                <thead className="thead-dark">
                     <tr>
                         <th style={{width: "140px"}}>
-                            <a href="">Promo Code</a>
+                            Promo Code
                         </th>
                         <th style={{width: "100px"}}>
-                            <a href="">Expiration</a>
+                            Expiration
                         </th>
                         <th className="text-end" style={{width: "180px"}}>
-                            <a href="">Setup</a>  /  
-                            <a href="">Base</a>
+                            Setup  /  
+                            Base
                         </th>
                         <th className="text-end" style={{width: "120px"}}>
-                            <a href="">Free Months</a>
+                            Free Months
                         </th>
                         <th>
-                            <a href="">Sales Person</a>
+                            Sales Person
                         </th>
                         <th style={{width: "80px"}}>
-                            <a href=""></a>
+                            
                         </th>
                     </tr>
                 </thead>
@@ -54,7 +55,7 @@ export default function ManagePromoCodes(props) {
                         <td class="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
                         <td class="text-end">
-                            <a href="" data-bs-toggle="modal" data-bs-target="">Delete</a>
+                            <Button><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
                     <tr>
@@ -66,7 +67,7 @@ export default function ManagePromoCodes(props) {
                         <td class="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
                         <td class="text-end">
-                            <a href="" data-bs-toggle="modal" data-bs-target="">Delete</a>
+                            <Button><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
                     <tr>
@@ -78,11 +79,10 @@ export default function ManagePromoCodes(props) {
                         <td class="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
                         <td class="text-end">
-                            <a href="" data-bs-toggle="modal" data-bs-target="">Delete</a>
+                            <Button><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
                 </tbody>
-
             </Table>
         </Container>
     )

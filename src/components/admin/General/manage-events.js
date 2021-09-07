@@ -8,7 +8,7 @@ export default function ManageEvents(props) {
             <h1 className="green-text p-3">Events</h1>
             <Button className="mb-3">+ New Event</Button>
             <Table id="events-table" className="table-striped text-underline table-hover text-center p-3">
-                <thead className="dark">
+                <thead className="thead-dark">
                     <tr>
                         <th>Description</th>
                         <th>Start Date</th>

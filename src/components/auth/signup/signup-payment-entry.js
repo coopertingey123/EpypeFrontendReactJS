@@ -8,7 +8,7 @@ export default function SignupPaymentEntry(props) {
             <h3 className="purple2-text py-3">Pricing</h3>
             <Row className="py-3">
                 <Col className="col-xs-12 col-lg-8">
-                    <h5 className="pb-3">Your selected package: <strong>Business Plan</strong> <a href="">(Change)</a></h5>
+                    <h5 className="pb-3">Your selected package: <strong>Business Plan</strong> <a href="/signup/package-select">(Change)</a></h5>
                     <Container >
                         <Row className="justify-content-center">
                             <Col className="text-start col-6">
@@ -18,11 +18,6 @@ export default function SignupPaymentEntry(props) {
                                 <p>Membership fee: <strong> $199.00 </strong> every month</p>
                             </Col>
                         </Row>
-{/*                         
-                        <p> Text Messages: <strong> 3000 </strong></p>
-                        <p> Video Viewing Minutes: <strong> 9000 </strong></p>
-                        <p>Initial setup fee: <strong> $49.95 </strong></p>
-                        <p>Membership fee: <strong> $199.00 </strong> every month</p> */}
                     </Container>
                 </Col>
                 <Col className="col-xs-12 col-lg-4 mt-3 mt-lg-0">
@@ -106,8 +101,8 @@ export default function SignupPaymentEntry(props) {
                     </Col>
                 </Row>
             </Form>
-            <Button className="m-1">Next</Button>
-            <Button className="bg-secondary m-1">Back</Button>
+            <Button className="bg-secondary m-1" href="/signup/package-select">Back</Button>
+            <Button className="m-1" href="">Next</Button>
         </Container>
     )
 }

@@ -7,8 +7,8 @@ export default function SavedTemplates(props) {
             <h1 className="green-text p-3">Saved VLP Templates</h1>
             <Alert variant="danger">You don't have any Video Landing Page Templates</Alert>
             <Button>+ Add a new Template</Button>
-            <Table className="table-striped border-bottom text-start p-3">
-                <thead className="dark">
+            <Table className="table-striped border_bottom text-start p-3">
+                <thead className="thead-dark">
                     <tr>
                         <th style={{width: "120x"}}></th>
                         <th>Name</th>

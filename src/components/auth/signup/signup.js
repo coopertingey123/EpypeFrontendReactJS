@@ -29,7 +29,7 @@ export default function Signup(props) {
                             <Form.Control type="password" placeholder="Confirm password"/>
                         </Form.Group>
                     </Form>
-                    <Button>Next</Button>
+                    <Button href="/signup/type">Next</Button>
                 </Col>
             </Row>
         {/* <SignupType/>

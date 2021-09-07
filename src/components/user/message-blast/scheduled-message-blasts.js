@@ -7,14 +7,14 @@ export default function ScheduledBlasts(props) {
         <Container>
             <h1 className="green-text">Scheduled Blasts</h1>
             <Alert className="alert-danger">You don't have any scheduled message blasts.</Alert>
-            <Table>
-                <thead>
+            <Table className="table-striped border_bottom">
+                <thead className="thead-dark">
                     <tr>
-                        <td>Send Date</td>
-                        <td>Message</td>
-                        <td>Opt-In Message</td>
-                        <td>Message Count</td>
-                        <td></td>
+                        <th>Send Date</th>
+                        <th>Message</th>
+                        <th>Opt-In Message</th>
+                        <th>Message Count</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

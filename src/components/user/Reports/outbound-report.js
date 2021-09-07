@@ -19,8 +19,8 @@ export default function OutboundReport(props) {
                         <Table className="table-striped border_bottom">
                             <thead className="thead-dark">
                                 <tr>
-                                    <td></td>
-                                    <td className="text-end">Total</td>
+                                    <th></th>
+                                    <th className="text-end">Total</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,8 +54,8 @@ export default function OutboundReport(props) {
                         <Table className="table-responsive table-striped border_bottom">
                             <thead className="thead-dark">
                                 <tr>
-                                    <td></td>
-                                    <td className="text-end">Total</td>
+                                    <th></th>
+                                    <th className="text-end">Total</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -103,21 +103,23 @@ export default function OutboundReport(props) {
                     <small><em>(Within two hours after the blast was initiated)</em></small>
                     <Row className="optout-table-chart">
                         <Col className="col-lg-5 order-1 order-lg-1">
-                            <Table className="table-responsive">
+                            <Table className="table-responsive border_bottom table-striped">
                                 <thead className="thead-dark">
                                     <tr>
-                                        <td></td>
-                                        <td className="text-end">Total</td>
-                                        <td className="text-end">%</td>
-                                        <td className="text-end"></td>
+                                        <th></th>
+                                        <th className="text-end">Total</th>
+                                        <th className="text-end">%</th>
+                                        <th className="text-end"></th>
                                     </tr>
+                                </thead>
+                                <tbody>
                                     <tr>
                                         <td>Opt-outs</td>
                                         <td className="text-end">9</td>
                                         <td className="text-end">2.37%</td>
                                         <td className="text-end"><Button className="btn-sm"><FontAwesomeIcon icon="file-download"/> Download</Button></td>
                                     </tr>
-                                </thead>
+                                </tbody>
                             </Table>
                         </Col>
                         <Col className="order-2 order-lg-2 mb-3 optout-chart">
@@ -135,8 +137,8 @@ export default function OutboundReport(props) {
                             <Table className="table-striped border_bottom">
                                 <thead className="thead-dark">
                                     <tr>
-                                        <td></td>
-                                        <td className="text-end">Total</td>
+                                        <th></th>
+                                        <th className="text-end">Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>

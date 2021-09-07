@@ -90,11 +90,11 @@ export default function NotificationSettings(props) {
                     <legend>Notifications</legend>
                     <p>Check marks indicate which methods of notifications are currently available for each notification type.</p>
                     <Table style={{width: "100%"}}>
-                        <thead>
+                        <thead className="thead-dark">
                             <tr>
-                                <td></td>
-                                <td className="text-center" style={{width: "60px"}}>Email</td>
-                                <td className="text-center" style={{width: "60px"}}>Text</td>
+                                <th></th>
+                                <th className="text-center" style={{width: "60px"}}>Email</th>
+                                <th className="text-center" style={{width: "60px"}}>Text</th>
                             </tr>
                         </thead>
                     </Table>

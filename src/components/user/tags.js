@@ -8,8 +8,8 @@ export default function Tags(props) {
         <Container className="text-center">
             <h1 className="green-text py-3">Contact Tags</h1>
             <Button>+ Add a new tag</Button>
-            <Table className="table-striped border-bottom text-start p-3">
-                <thead className="dark">
+            <Table className="table-striped border_bottom text-start p-3">
+                <thead className="thead-dark">
                     <tr>
                         <th>Description</th>
                         <th className="text-end" style={{width: "100px"}}>Contacts</th>

@@ -6,8 +6,8 @@ export default function ManageVLPLayouts(props) {
         <Container className="text-center">
             <h1 className="green-text p-3">Video Landing Page Themes</h1>
             <Button>+ Add a new Theme</Button>
-            <Table className="table-striped border-bottom text-start p-3">
-                <thead className="dark">
+            <Table className="table-striped border_bottom text-start p-3">
+                <thead className="thead-dark">
                     <tr>
                         <th style={{width: "120x"}}></th>
                         <th>Name</th>

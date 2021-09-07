@@ -18,11 +18,11 @@ export default function UpdateBilling(props) {
             <Table className="table-responsive table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>
-                        <td style={{width: "80px"}}>Date</td>
-                        <td className="text-end" style={{width: "100px"}}>Amount</td>
-                        <td>Description</td>
-                        <td style={{width: "100px"}}>Invoice</td>
-                        <td style={{width: "160px"}}>Method</td>
+                        <th style={{width: "80px"}}>Date</th>
+                        <th className="text-end" style={{width: "100px"}}>Amount</th>
+                        <th>Description</th>
+                        <th style={{width: "100px"}}>Invoice</th>
+                        <th style={{width: "160px"}}>Method</th>
                     </tr>
                 </thead>
                 <tbody>

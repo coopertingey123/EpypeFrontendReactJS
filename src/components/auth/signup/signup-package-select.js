@@ -72,9 +72,8 @@ export default function SignupPackageSelect(props) {
                         <a href="">See Promotional Price</a>
                     </Col>
                 </Row>
-                <Button className="m-1">Next</Button>
-                <Button className="bg-secondary m-1">Back</Button>
-                
+                <Button className="bg-secondary m-1" href="/signup/client-info">Back</Button>
+                <Button className="m-1" href="/signup/payment-entry">Next</Button>
             </Form>
         </Container>
     )

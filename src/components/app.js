@@ -101,7 +101,7 @@ export default function App(props) {
               <Route path="/contact-us" component={ContactUs}/>
               <Route path="/login" component={Login}/>
               <Route path="/reset-password" component={ResetPassword}/>
-              <Route path="/signup-preview" component={SignupPreview}/>
+              {/* <Route path="/signup-preview" component={SignupPreview}/> */}
               <Route path="/sms" component={SMSTerms}/>
               <Route path="/pricing" component={Pricing}/>
               <Route exact path="/signup" component={SignupPreview}/>
@@ -134,7 +134,7 @@ export default function App(props) {
               <Route path="/admin/change-preferences" component={AdminChangePreferences} />
               <Route path="/admin/edit-client" component={AdminEditUser}/>
               {/* user pages */}
-              <Route path="/user/vlps" component={HomeVLPs}/>
+              <Route exact path="/user" component={HomeVLPs}/>
               <Route path="/user/templates" component={UserTemplates}/>
               <Route path="/user/products" component={UserProducts}/>
               <Route path="/user/contacts" component={UserContacts}/>
