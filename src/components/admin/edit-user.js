@@ -15,7 +15,7 @@ export default function AdminEditUser(props) {
             </div>
             <Form className="intl-phone-form" method="">
                 <Row>
-                    <Col className="col-lg">
+                    <Col className="" md={6}>
                         <fieldset>
                             <legend>General</legend>
                             <Form.Group className="mb-3">
@@ -169,7 +169,7 @@ export default function AdminEditUser(props) {
                             </Form.Group>
                         </fieldset>
                     </Col>
-                    <Col>
+                    <Col className="" md={6}>
                         <fieldset>
                             <legend>Account Status / Flags</legend>
                             <Form.Check className="mb-3">

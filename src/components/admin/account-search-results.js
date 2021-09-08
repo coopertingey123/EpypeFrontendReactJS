@@ -6,15 +6,17 @@ export default function AccountSearchResults(props) {
         <Container>
             <h1 className="green-text py-3">Account Search Results</h1>
             <h5 className="text-center">Jump to <a href=""> Users </a> | <a href="">Organizations</a></h5>
-            <h2>Users</h2>
-            <div className="text-center"><Button>New Search</Button></div>
-            <Table className="table-striped border_bottom">
+            <h2 id="userlist">Users</h2>
+            <div className="text-center py-2">
+                <Button>New Search</Button>
+            </div>
+            <Table className="table-responsive table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>
-                        <th>User ID</th>
+                        <th style={{width:"100px"}}>User ID</th>
                         <th>Name</th>
-                        <th>Phone / Email</th>
-                        <th>Organization</th>
+                        <th style={{width:"260px"}}>Phone / Email</th>
+                        <th style={{width:"260px"}}>Organization</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +45,7 @@ export default function AccountSearchResults(props) {
 
             <h2>Organizations</h2>
             <div className="text-center py-3"><Button>New Search</Button> <Button>+ Add a new organization</Button></div>
-            <Table className="table-striped border_bottom">
+            <Table className="table-responsive table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>
                         <th>User ID</th>
@@ -76,7 +78,7 @@ export default function AccountSearchResults(props) {
                 </tbody>
             </Table>
             <p className="text-center p-2"><strong> 3 </strong>Records Found</p>
-            <div className="text-center"><Button>New Search</Button> <Button>+ Add a new organization</Button></div>
+            <div className="text-center py-2"><Button>New Search</Button> <Button>+ Add a new organization</Button></div>
         </Container>
     )
 }

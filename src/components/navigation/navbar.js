@@ -12,19 +12,19 @@ export default function (props) {
                   <Navbar.Brand href="/" className="my-0 py-0">
                       <img width="120" src={EpypeLogoGreenWhite}/>
                   </Navbar.Brand>
-                
-                  <Nav>
-                      <Nav.Item className="px-3">
-                          <Nav.Link href="/pricing">Pricing</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item className="px-3">
-                          <Nav.Link href="/login">Log In</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item className="px-3">
-                          <Nav.Link href="/signup">Sign Up</Nav.Link>
-                      </Nav.Item>
-                  </Nav>
-                    
+                  <div className="">
+                    <Nav className="ms-auto">
+                        <Nav.Item className="px-3">
+                            <Nav.Link href="/pricing">Pricing</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item className="px-3">
+                            <Nav.Link href="/login">Log In</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item className="px-3">
+                            <Nav.Link href="/signup">Sign Up</Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                  </div>
                 </Container>
             </Navbar>
                    

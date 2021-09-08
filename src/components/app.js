@@ -1,12 +1,13 @@
 import React, { useState, useEffect, Component } from 'react';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-
 import Icons from "../helpers/icons";
 
+// Navbar Components
 import BaseNavbar from "./navigation/navbar";
 import AdminNavbar from "./navigation/navbar-admin";
 import UserNavbar from "./navigation/user-navbar";
 
+// Base Comonents
 import Homepage from "./homepage/homepage";
 import Login from "./auth/login";
 import ResetPassword from "./auth/password-reset";
@@ -18,12 +19,14 @@ import SMSTerms from "./base-pages/sms-terms-and-conditions";
 import PrivacyStatement from "./base-pages/privacy-statement";
 import ContactUs from "./base-pages/contact-us";
 
+// Signup Components
 import Signup from "./auth/signup/signup";
 import SignupType from "./auth/signup/signup-type";
 import SignupUserInfo from "./auth/signup/signup-user-info";
 import SignupPackageSelect from "./auth/signup/signup-package-select";
 import SignupPaymentEntry from "./auth/signup/signup-payment-entry";
 
+// Admin Components
 import AdminHomepage from "./admin/admin-homepage";
 import AdminUsers from "./admin/General/admin-users";
 import EmailNotices from "./admin/General/email-notices";
@@ -42,6 +45,7 @@ import AdminChangePassword from "./auth/admin/admin-change-password";
 import AdminChangePreferences from './auth/admin/admin-preferences';
 import AdminEditUser from "./admin/edit-user"
 
+// User Components
 import HomeVLPs from "./user/home-vlps";
 import UserTemplates from "./user/saved-templates";
 import UserProducts from "./user/products";
@@ -59,6 +63,7 @@ import EditAccountInfo from "./user/EditProfile/edit-account-info";
 import OrderHistory from './user/order-history';
 import AddProduct from "./user/add-product";
 
+// css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
 

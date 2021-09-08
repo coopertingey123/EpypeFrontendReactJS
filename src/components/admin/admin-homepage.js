@@ -6,22 +6,22 @@ export default function AdminHomepage(props) {
         <Container>
             <h1 className="green-text m-3">General Admin</h1>
             <ListGroup className="m-3">
-                <ListGroup.Item action href="/admin/manage-accounts">
+                <ListGroup.Item action href="/admin/accounts">
                     Manage Accounts
                 </ListGroup.Item>
-                <ListGroup.Item action href="/admin/users">
+                <ListGroup.Item action href="/admin/clients">
                     Manage Admin Users
                 </ListGroup.Item>
-                <ListGroup.Item action href="/admin/manage-promo-codes">
+                <ListGroup.Item action href="/admin/promo-codes">
                     Manage Promo Codes
                 </ListGroup.Item>
                 <ListGroup.Item action href="/admin/sms-codes">
                     Manage SMS Codes
                 </ListGroup.Item>
-                <ListGroup.Item action href="/admin/manage-vlp-layouts">
+                <ListGroup.Item action href="/admin/vlp-layouts">
                     Manage Video Landing Page Themes
                 </ListGroup.Item>
-                <ListGroup.Item action href="/admin/manage-events">
+                <ListGroup.Item action href="/admin/events">
                     Manage Events
                 </ListGroup.Item>
                 <ListGroup.Item action href="/admin/email-notices">

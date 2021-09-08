@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col} from "react-bootstrap";
 
-import BaseNavbar from "../navigation/navbar";
 import PhoneCarousel from "./carousel";
 
 import IphoneImage from "../../../static/assets/phones/iPhone11-hero-image7.png";
@@ -11,14 +10,11 @@ import PublishImage from "../../../static/assets/phones/PlatinumVLPIphone.jpg";
 import PurplePhone from "../../../static/assets/phones/purple-phone.png";
 import GreenPhone from "../../../static/assets/phones/green-phone.png";
 
-
-
-
 export default function (props) {
     return (
         <Container id="main_content" fluid>
             <div id="hero-wrapper" className="hero-text-container py-5">
-                <Container>
+                <Container >
                     <h1 className="mt-lg-5">
                         <span className="thin-heading-font">Look </span>Your Clients <br/>
                         <span className="green-text">
