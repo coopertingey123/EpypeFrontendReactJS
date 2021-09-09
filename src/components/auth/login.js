@@ -17,7 +17,7 @@ export default function Login(props) {
         <Container id="login-container" className="py-3 text-center">
             <h1 className="green-text">Log in</h1>
             <Row className="justify-content-center">
-                <Col className="col-3 text-start">
+                <Col className="text-start" md={4}>
                     <Form className="p-3 border needs-validation" method="post" action="" onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="emailForm">
                             <Form.Label>Email address</Form.Label>
