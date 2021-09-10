@@ -40,11 +40,17 @@ export default function AccountSearchResults(props) {
                     </tr>
                 </tbody>
             </Table>
-            <p className="text-center"><strong> 3 </strong> Records Found (10 Canceled - <a href="">Show</a>)</p>
-            <div className="text-center"><Button>New Search</Button></div>
-
+            <p className="text-center">
+                <strong> 3 </strong> Records Found (10 Canceled - <a href="">Show</a>)
+            </p>
+            <div className="text-center">
+                <Button>New Search</Button>
+            </div>
             <h2>Organizations</h2>
-            <div className="text-center py-3"><Button>New Search</Button> <Button>+ Add a new organization</Button></div>
+            <div className="text-center py-3">
+                <Button className="my-2">New Search</Button> 
+                <Button className="my-2">+ Add a new organization</Button>
+            </div>
             <Table className="table-responsive table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>
@@ -78,7 +84,10 @@ export default function AccountSearchResults(props) {
                 </tbody>
             </Table>
             <p className="text-center p-2"><strong> 3 </strong>Records Found</p>
-            <div className="text-center py-2"><Button>New Search</Button> <Button>+ Add a new organization</Button></div>
+            <div className="text-center py-2">
+                <Button className="my-2">New Search</Button> 
+                <Button className="my-2">+ Add a new organization</Button>
+            </div>
         </Container>
     )
 }

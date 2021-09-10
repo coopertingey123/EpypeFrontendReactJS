@@ -1,19 +1,57 @@
-import React, {iframe} from 'react'
+import React, {iframe, useState} from 'react'
 import { Container, Row, Col, Table, Button, Alert, Form } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Flag from "../../../static/assets/photos/16.png"
+import Flag from "../../../../static/assets/photos/16.png"
 
 export default function AdminEditUser(props) {
+
+    const [loginEmail, setLoginEmail] = useState("")
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
+    const [email, setEmail] = useState("")
+    const [timeZone, setTimeZone] = useState("")
+    const [orgName, setOrgName] = useState("")
+    const [orgPhone, setOrgPhone] = useState("")
+    const [officeAddress1, setOfficeAddress1] = useState("")
+    const [officeAddress2, setOfficeAddress2] = useState("")
+    const [officeAddress3, setOfficeAddress3] = useState("")
+    const [state, setState] = useState("")
+    const [postalCode, setPostalCode] = useState("")
+    const [activeIssue, setActiveIssue] = useState("")
+    const [salesPerson, setSalesPerson] = useState("")
+    const [accountFlags, setAccountFlags] = useState("")
+    const [accountNotes, setAccountNotes] = useState("")
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log(loginEmail)
+        console.log(firstName)
+        console.log(lastName)
+        console.log(email)
+        console.log(timeZone)
+        console.log(orgName)
+        console.log(orgPhone)
+        console.log(officeAddress1)
+        console.log(officeAddress2)
+        console.log(officeAddress3)
+        console.log(state)
+        console.log(postalCode)
+        console.log(activeIssue)
+        console.log(salesPerson)
+        console.log(accountFlags)
+        console.log(accountNotes)
+      }
+
     return (
         <Container>
-            <h1 className="green-text">Edit User</h1>
+            <h1 className="green-text text-center">Edit User</h1>
             <div className="mb-3 text-center">
                 <Button className="m-1">Log in</Button>
                 <Button className="m-1">Send Email</Button>
                 <Button className="m-1">Reminders</Button>
                 <Button className="m-1">Event Log</Button>
             </div>
-            <Form className="intl-phone-form" method="">
+            <Form className="intl-phone-form" method="" onSubmit={handleSubmit}>
                 <Row>
                     <Col className="" md={6}>
                         <fieldset>
@@ -24,7 +62,14 @@ export default function AdminEditUser(props) {
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Login Email</Form.Label>
-                                <Form.Control type="text" id="frmLoginEmail" name="login_email" maxlength="100" value="example@example.net"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmLoginEmail" 
+                                    name="login_email" 
+                                    maxlength="100" 
+                                    value={loginEmail}
+                                    onChange={(e) => setLoginEmail(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Password</Form.Label>
@@ -34,11 +79,27 @@ export default function AdminEditUser(props) {
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>First Name</Form.Label>
-                                <Form.Control type="text" id="frmFirstName" name="first_name" className="form-control" maxlength="50" value="Micha"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmFirstName" 
+                                    name="first_name" 
+                                    className="form-control" 
+                                    maxlength="50" 
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Last Name</Form.Label>
-                                <Form.Control type="text" id="frmLastName" name="last_name" className="form-control" maxlength="50" value="Smith"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmLastName" 
+                                    name="last_name" 
+                                    className="form-control" 
+                                    maxlength="50" 
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Phone</Form.Label>
@@ -49,11 +110,24 @@ export default function AdminEditUser(props) {
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Email</Form.Label>
-                                <Form.Control type="text" id="frmEmail" name="email" maxlength="100" value="example@example.net"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmEmail" 
+                                    name="email" 
+                                    maxlength="100" 
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Time Zone</Form.Label>
-                                <select name="timezone" id="frmTimeZone" className="form-select">
+                                <select 
+                                    name="timezone" 
+                                    id="frmTimeZone" 
+                                    className="form-select"
+                                    value={timeZone}
+                                    onChange={(e) => setTimeZone(e.target.value)}
+                                >
                                     <option value="America/Anchorage">Alaska</option>
                                     <option value="America/Phoenix">Arizona</option>
                                     <option value="America/Chicago">Central</option>
@@ -76,28 +150,68 @@ export default function AdminEditUser(props) {
                             </div>
                             <Form.Group className="mb-3">
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control name="organization_name" maxlendth="50" value="Cooper"/>
+                                <Form.Control 
+                                    name="organization_name" 
+                                    maxlendth="50" 
+                                    value={orgName}
+                                    onChange={(e) => setOrgName(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="tel" id="frmOfficePhone" name="office_phone" maxlendth="50" value="+11234567890" data-error-element-id="frmOfficePhoneErrorMsg"/>
+                                <Form.Control 
+                                    type="tel" 
+                                    id="frmOfficePhone"
+                                    name="office_phone" 
+                                    maxlendth="50" 
+                                    value={orgPhone} 
+                                    onChange={(e) => setOrgPhone(e.target.value)}
+                                    data-error-element-id="frmOfficePhoneErrorMsg"
+                                />
                                 <div className="invalid-feedback" id="frmOfficePhoneErrorMsg"></div>
                             </Form.Group>
                             <Form.Group className="mb-3 office_address_edit">
                                 <Form.Label>Office Address</Form.Label>
-                                <Form.Control type="text" id="frmAddress1" name="address1" maxlength="50" value="933 1910 S"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmAddress1" 
+                                    name="address1" 
+                                    maxlength="50" 
+                                    value={officeAddress1}
+                                    onChange={(e) => setOfficeAddress1(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3 office_address_edit">
                                 <Form.Label className="visually-hidden">Office Address</Form.Label>
-                                <Form.Control type="text" id="frmAddress1" name="address2" maxlength="50" value="Suite 202"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmAddress1" 
+                                    name="address2" 
+                                    maxlength="50" 
+                                    value={officeAddress2}
+                                    onChange={(e) => setOfficeAddress2(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3 office_address_edit">
                                 <Form.Label className="visually-hidden">City</Form.Label>
-                                <Form.Control type="text" id="frmCity" name="city" maxlength="50" value="Provo"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmCity" 
+                                    name="city" 
+                                    maxlength="50" 
+                                    value={officeAddress3}
+                                    onChange={(e) => setOfficeAddress3(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3 office-address-edit">
                                 <Form.Label>State</Form.Label>
-                                <select name="state" id="" className="form-select">
+                                <select 
+                                    name="state" 
+                                    id="" 
+                                    className="form-select"
+                                    value={state}
+                                    onChange={(e) => setState(e.target.value)}
+                                >
                                     <option value="AK">AK</option>
                                     <option value="AL">AL</option>
                                     <option value="AR">AR</option>
@@ -144,7 +258,7 @@ export default function AdminEditUser(props) {
                                     <option value="SD">SD</option>
                                     <option value="TN">TN</option>
                                     <option value="TX">TX</option>
-                                    <option value="UT" selected>UT</option>
+                                    <option value="UT">UT</option>
                                     <option value="VA">VA</option>
                                     <option value="VI">VI</option>
                                     <option value="VT">VT</option>
@@ -156,7 +270,14 @@ export default function AdminEditUser(props) {
                             </Form.Group>
                             <Form.Group className="mb-3 office_address_edit">
                                 <Form.Label>Postal Code</Form.Label>
-                                <Form.Control id="frmZip" name="zip" className="form-control" maxlength="10" value="84606"/>
+                                <Form.Control 
+                                    id="frmZip" 
+                                    name="zip" 
+                                    className="form-control" 
+                                    maxlength="10" 
+                                    value={postalCode}
+                                    onChange={(e) => setPostalCode(e.target.value)}
+                                />
                             </Form.Group>
                             <Form.Group className="mb-3 office_address_view">
                                 <Form.Label>Office Address</Form.Label>
@@ -173,7 +294,15 @@ export default function AdminEditUser(props) {
                         <fieldset>
                             <legend>Account Status / Flags</legend>
                             <Form.Check className="mb-3">
-                                <input type="checkbox" id="frmActiveIssue" name="active_issue" className="form-check-input" checked/>
+                                <input 
+                                    type="checkbox" 
+                                    id="frmActiveIssue" 
+                                    name="active_issue" 
+                                    className="form-check-input" 
+                                    value="activeIssue"
+                                    checked={activeIssue==="activeIssue"}
+                                    onChange={(e) => setActiveIssue(e.target.value)}
+                                />
                                 <Form.Label className="form-check-label">Active Issue</Form.Label>
                             </Form.Check>
                             <Form.Group className="mb-3">
@@ -188,17 +317,23 @@ export default function AdminEditUser(props) {
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label>Sales Person</Form.Label>
-                                <select name="sales_id" id="frmSalesId" className="form-select">
-                                    <option value="">Unassigned</option>
-                                    <option value="">Ammont Freest0one (Platpay)</option>
-                                    <option value="">Corporate Sales</option>
-                                    <option value="">Ethan Morley(Epype)</option>
-                                    <option value="">Glen Oliver(EPYPE)</option>
-                                    <option value="">Jed Morley(Platinum Payments)</option>
-                                    <option value="">Lance Hansen(Platinum Payments)</option>
-                                    <option value="">Stace Vest (Platinum Payments)</option>
-                                    <option value="">Trennen Rasmussen (EPYPE)</option>
-                                    <option value="">Valinda Hanks (Platinum Payments)</option>
+                                <select 
+                                    name="sales_id" 
+                                    id="frmSalesId" 
+                                    className="form-select"
+                                    value={salesPerson}
+                                    onChange={(e) => setSalesPerson(e.target.value)}
+                                >
+                                    <option value="unassigned">Unassigned</option>
+                                    <option value="Ammont Freest0ne">Ammont Freest0one (Platpay)</option>
+                                    <option value="corporate sales">Corporate Sales</option>
+                                    <option value="Ethan Morley">Ethan Morley(Epype)</option>
+                                    <option value="Glen Oliver">Glen Oliver(EPYPE)</option>
+                                    <option value="Jed Morley">Jed Morley(Platinum Payments)</option>
+                                    <option value="Lance Hansen">Lance Hansen(Platinum Payments)</option>
+                                    <option value="Stace Vest">Stace Vest (Platinum Payments)</option>
+                                    <option value="Trennen Rasmussen">Trennen Rasmussen (EPYPE)</option>
+                                    <option value="Valinda Hanks">Valinda Hanks (Platinum Payments)</option>
                                 </select>
                             </Form.Group>
                             <Table className="table-sm table-borderless no-padding">
@@ -215,7 +350,12 @@ export default function AdminEditUser(props) {
                             </Table>
                             <Form.Group className="mb-3">
                                 <Form.Label>Account Flags</Form.Label>
-                                <Form.Control maxlength="20" value="CVKPP" name="flags"/>
+                                <Form.Control 
+                                    maxlength="20" 
+                                    value={accountFlags} 
+                                    onChange={(e) => setAccountFlags(e.target.value)}
+                                    name="flags"
+                                />
                             </Form.Group>
                         </fieldset>
                         <fieldset>
@@ -287,9 +427,16 @@ export default function AdminEditUser(props) {
                     <Button type="submit" name="btnSubmit" className="m-1" value="Save Changes">Save Changes</Button>
                     <Button name="btnCancel" className="btn-danger m-1" value="Cancel">Cancel</Button>
                 </p>
+                <h1>Account Notes</h1>
+                <textarea  
+                    value={accountNotes}
+                    onChange = {(e) => setAccountNotes(e.target.value)}
+                    className="form-control my-3" 
+                    style={{width: "100%", height: "250px", border: "1px solid #aaa"}} 
+                    name="usernotes" 
+                    frameborder="0"
+                />
             </Form>
-            <h1>Account Notes</h1>
-            <iframe style={{width: "100%", height: "250px", border: "1px solid #aaa"}} name="usernotes" src="" frameborder="0"></iframe>
         </Container>
     )
 }

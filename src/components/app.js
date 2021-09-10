@@ -27,7 +27,7 @@ import SignupPackageSelect from "./auth/signup/signup-package-select";
 import SignupPaymentEntry from "./auth/signup/signup-payment-entry";
 
 // Admin Components
-import AdminHomepage from "./admin/admin-homepage";
+import AdminHomepage from "./admin/Other/admin-homepage";
 import AdminUsers from "./admin/General/admin-users";
 import EmailNotices from "./admin/General/email-notices";
 import ManageAccounts from './admin/General/manage-accounts';
@@ -40,10 +40,10 @@ import InvoicePayments from './admin/Billing/invoice-payments';
 import OrganizationBilling from './admin/Billing/organization-billing';
 import ProcessOneTimePayment from './admin/Billing/process-one-time-payment';
 import UserBilling from './admin/Billing/user-billing';
-import AccountSearchResults from "./admin/account-search-results";
+import AccountSearchResults from "./admin/Other/account-search-results";
 import AdminChangePassword from "./auth/admin/admin-change-password";
 import AdminChangePreferences from './auth/admin/admin-preferences';
-import AdminEditUser from "./admin/edit-user"
+import AdminEditUser from "./admin/Other/edit-user"
 
 // User Components
 import HomeVLPs from "./user/home-vlps";
