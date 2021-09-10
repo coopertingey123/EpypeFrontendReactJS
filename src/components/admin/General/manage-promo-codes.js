@@ -4,24 +4,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ManagePromoCodes(props) {
 
+    
+
     return (
         <Container className="text-center">
             <h1 className="green-text p-3">
                 Promo Codes
             </h1>
-            <Form>
-                <Row className="mb-3 g-3 text-start">
-                    <Col className="col-3">
-                        <Form.Check type="checkbox" label="Show expired Promo codes"/>
-                    </Col>
-                    <Col>
-                        <Button>
-                            Go
-                        </Button>
-                    </Col>
-                </Row>
-            </Form>
-            <Button className="m-3">+ Add a new promo code</Button>
+            <Row className="justify-content-center py-2">
+                <Col sm={4}>
+                    <Row className="mb-3 g-3 justify-content-center">
+                        <Col className="col-auto">
+                            <Form.Check inline type="checkbox" label="Show expired Promo codes"/> 
+                        </Col>
+                        <Col className="col-auto">
+                            <Button className="btn-sm">
+                                Go
+                            </Button>
+                        </Col>             
+                    </Row>
+                </Col>
+                <Col sm={4}>
+                    <Button className="">+ Add a new promo code</Button>
+                </Col>
+            </Row>
+            
             <Table className="table-striped border_bottom p-3">
                 <thead className="thead-dark">
                     <tr>
@@ -56,7 +63,7 @@ export default function ManagePromoCodes(props) {
                         <td class="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
                         <td class="text-end">
-                            <Button onClick={deletePromoCode()}><FontAwesomeIcon icon="trash"/></Button>
+                            <Button><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
                     <tr>
