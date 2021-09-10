@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ManagePromoCodes(props) {
 
-    
-
     return (
         <Container className="text-center">
             <h1 className="green-text p-3">
