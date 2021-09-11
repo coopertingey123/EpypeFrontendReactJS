@@ -5,7 +5,7 @@ export default function ManageVLPLayouts(props) {
     return (
         <Container className="text-center">
             <h1 className="green-text p-3">Video Landing Page Themes</h1>
-            <Button>+ Add a new Theme</Button>
+            <Button className="mb-3">+ Add a new Theme</Button>
             <Table className="table-striped border_bottom text-start p-3">
                 <thead className="thead-dark">
                     <tr>

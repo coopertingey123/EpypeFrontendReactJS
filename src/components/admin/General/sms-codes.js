@@ -16,7 +16,7 @@ export default function SMSCodes(props) {
     return (
         <Container className="text-center">
             <h1 className="green-text p-3">SMS Codes</h1>
-            <Button>+ Add a new SMS Code</Button>
+            <Button className="mb-3">+ Add a new SMS Code</Button>
             <Form className="text-start py-3" onSubmit={handleSubmit}>
                 <Form.Group>
                     <Form.Label>SMS Code</Form.Label>
