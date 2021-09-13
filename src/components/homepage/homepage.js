@@ -36,36 +36,29 @@ export default function (props) {
                     </div>
                 </Container>
             </div>
+            <Container id="second-section-wrapper">
+                <h1>How it Works</h1>
+                
+                <Row className="groups-container justify-content-between">
+                    <Col className="group col-12 col-lg-4">
+                        <img src={RecordImage}/>
+                        <h1>Record</h1>
+                        <p> Record a video with your camera</p>
+                    </Col>
+                    <Col className="group col-12 col-lg-4">
+                        <img src={UploadImage}/>
+                        <h1>Upload</h1>
+                        <p>Upload your new or saved video</p>
+                    </Col>
+                    <Col className="group col-12 col-lg-4">
+                        <img src={PublishImage}/>
+                        <h1>Publish</h1>
+                        <p>Your video page is ready to view</p>
+                    </Col>
+                </Row>
+            </Container>
 
-            {/* <div className="section-two"> */}
-                <Container id="second-section-wrapper">
-	                <h1>How it Works</h1>
-                    
-                    <Container className="groups-container">
-                        <Row>
-                            <Col className="group col-12 col-lg-4">
-                                <img src={RecordImage}/>
-                                <h1>Record</h1>
-                                <p> Record a video with your camera</p>
-                            </Col>
-                            <Col className="group col-12 col-lg-4">
-                                <img src={UploadImage}/>
-                                <h1>Upload</h1>
-                                <p>Upload your new or saved video</p>
-                            </Col>
-                            <Col className="group col-12 col-lg-4">
-                                <img src={PublishImage}/>
-                                <h1>Publish</h1>
-                                <p>Your video page is ready to view</p>
-                            </Col>
-                        </Row>
-                    </Container>
-                    
-                    
-                    
-                </Container>
-            {/* </div> */}
-            <div className="section-three">
+            <div className="section-three d-md-flex d-none">
                 <PhoneCarousel/>
             </div>
             
