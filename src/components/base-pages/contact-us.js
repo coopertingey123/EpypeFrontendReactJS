@@ -7,10 +7,10 @@ export default function ContactUs(props) {
             <Container id="contact-us" className="p-5">
                 <h1 className="py-3">Contact Us</h1>
                 <Row className="align-items-center">
-                    <Col>
-                        <img width="100%" src={BuildingPhoto}/>
+                    <Col  className="pb-3" md={6}>
+                        <img className="" width="100%" src={BuildingPhoto}/>
                     </Col>
-                    <Col>
+                    <Col className="" md={6}>
                         <h3>EPYPE</h3>
                         <p>
                             933 E. 1910 S.<br />

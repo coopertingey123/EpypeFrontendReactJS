@@ -4,8 +4,8 @@ import { Container, Table, Alert, Col} from "react-bootstrap";
 export default function Pricing(props) {
     return (
         <Container className="py-3">
-            <h1 className="green-text">Pricing</h1>
-            <Table id="pricing-table" className="table-hover border_bottom text-center">
+            <h1 className="green-text py-3">Pricing</h1>
+            <Table id="pricing-table" className="table-striped table-responsive table-hover border_bottom text-center">
                 <thead className="thead-dark">
                     <tr>
                         <th></th>
