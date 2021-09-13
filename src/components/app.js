@@ -9,8 +9,8 @@ import UserNavbar from "./navigation/user-navbar";
 
 // Base Comonents
 import Homepage from "./homepage/homepage";
-import Login from "./auth/login";
-import ResetPassword from "./auth/password-reset";
+import Login from "./auth/Login/login";
+import ResetPassword from "./auth/Login/password-reset";
 import SignupPreview from "./auth/signup/signup-preview";
 import Pricing from "./base-pages/pricing";
 import Footer from "./navigation/footer";
