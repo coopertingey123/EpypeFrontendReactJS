@@ -6,25 +6,20 @@ import EpypeLogoGreenWhite from "../../../static/assets/logos/epype-logo-alt-25h
 
 export default function (props) {
     return (
-            <Navbar bg="dark" variant="dark">
+            <Navbar collapseOnSelect bg="dark" variant="dark" className="" expand="sm">
                 <Container className="justify-content-between">
                   
                   <Navbar.Brand href="/" className="my-0 py-0">
                       <img width="120" src={EpypeLogoGreenWhite}/>
                   </Navbar.Brand>
-                  <div className="">
-                    <Nav className="ms-auto">
-                        <Nav.Item className="px-3">
-                            <Nav.Link href="/pricing">Pricing</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item className="px-3">
-                            <Nav.Link href="/login">Log In</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item className="px-3">
-                            <Nav.Link href="/signup">Sign Up</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                  </div>
+                  <Navbar.Toggle aria-controls="base-navbar-nav"/>
+                  <Navbar.Collapse id="base-navbar-nav" className="">
+                        <Nav className="ms-auto">
+                            <Nav.Link className="px-3" href="/pricing">Pricing</Nav.Link>
+                            <Nav.Link className="px-3" href="/login">Log In</Nav.Link>
+                            <Nav.Link className="px-3" href="/signup">Sign Up</Nav.Link>
+                        </Nav>
+                  </Navbar.Collapse>
                 </Container>
             </Navbar>
                    
