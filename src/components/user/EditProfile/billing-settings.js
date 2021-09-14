@@ -5,7 +5,7 @@ export default function UpdateBilling(props) {
     return (
         <Container>
             <h1 className="green-text">Billing Information</h1>
-            <h3>Fiesta Days</h3>
+            {/* <h3>Fiesta Days</h3> */}
             <h2 className="py-3">Credit Card on File</h2>
             <p>
                 No credit card is on file

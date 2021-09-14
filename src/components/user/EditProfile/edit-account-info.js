@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Container, Nav } from 'react-bootstrap'
+import { Container, Nav, Button } from 'react-bootstrap'
 import NotificationSettings from './notification-settings'
 import BillingSettings from "./billing-settings"
 import ChangePassword from "./change-password"
@@ -9,44 +9,70 @@ import AccountInfo from './account-info'
 export default function EditAccountInformation(props) {
 
     const [currentTab, setCurrentTab] = useState("profile")
-
-    const handleTab = (tab) => {
-        if (tab === "profile"){
-            setCurrentTab("profile")
-        }
-        if (tab === "notifications"){
-            setCurrentTab("notifications")
-        }
-        if (tab === "billing"){
-            setCurrentTab("billing")
-        }
-        if (tab === "changePassword"){
-            setCurrentTab("change-password")
-        }
-        if (tab === "productPayments"){
-            setCurrentTab("product-payments")
-        }
-    }
+    const [active, setActive] = useState("1")
 
     return (
         <Container>
-            <h1>Account Information</h1>
-            <h5 className="pb-3">Fiesta Days</h5>
-            <Nav variant="tabs dark" id="crminfocontainer" className="my-3">
+            {/* <h3 className="green-text py-2">Edit Account Information</h3> */}
+            <h5 className="py-4">Fiesta Days</h5>
+            <Nav variant="tabs" id="crminfocontainer" className="my-3" activeKey={active}>
                 <Nav.Item>
-                    <Nav.Link href="" onClick={handleTab("profile")} className="active">Profile</Nav.Link>
+                    <Nav.Link
+                        href="" 
+                        onClick={() => {
+                            setCurrentTab("profile") 
+                            setActive("1")
+                        }} 
+                        className="text-decoration-none"
+                        eventKey="1"
+                        >
+                            Profile
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="" onClick={handleTab("notifications")}>Notifications</Nav.Link>
+                    <Nav.Link
+                        onClick={() => {
+                            setCurrentTab("notifications")
+                            setActive("2")
+                        }}
+                        eventKey="2"
+                        >
+                        Notifications
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="" onClick={handleTab("billing")}>Billing</Nav.Link>
+                    <Nav.Link
+                        onClick={() => {
+                            setCurrentTab("billing")
+                            setActive("3")
+                        }}
+                        eventKey="3"
+                    >
+                        Billing
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="" onClick={handleTab("changePassword")}>Change Password</Nav.Link>
+                    <Nav.Link 
+                        href="" 
+                        onClick={() => {
+                            setCurrentTab("change-password")
+                            setActive("4")
+                        }}
+                        eventKey="4"
+                    >
+                        Change Password
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="" onClick={handleTab("productPayments")}>Product Payments</Nav.Link>
+                    <Nav.Link 
+                        onClick={() => {
+                            setCurrentTab("product-payments")
+                            setActive("5")
+                        }}
+                        eventKey="5"
+                    >
+                        Product Payments
+                    </Nav.Link>
                 </Nav.Item>
             </Nav>
             {currentTab === "profile" ? <AccountInfo/> : null}

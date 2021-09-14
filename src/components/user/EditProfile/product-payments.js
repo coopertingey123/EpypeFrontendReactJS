@@ -5,7 +5,7 @@ export default function ChangePassword(props) {
     return (
         <Container>
             <h1 className="green-text">Product Payment Settings</h1> 
-            <h3>Fiesta Days</h3>
+            {/* <h3>Fiesta Days</h3> */}
             <Table className="table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>

@@ -1,35 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Row, Col, Form, Button, Table } from 'react-bootstrap'
 
 export default function NotificationSettings(props) {
+
+    const [email, setEmail] = useState("example@epype.net")
+    const [mobilePhone, setMobilePhone] = useState("+11234567890")
+    const [msgHoursStart, setMsgHoursStart] = useState("")
+    const [msgHoursEnd, setMsgHoursEnd] = useState("")
+
+
     return (
         <Container>
             <h1 className="green-text">Notification Settings</h1>
-            <h3>Fiesta Days</h3>
+            {/* <h3>Fiesta Days</h3> */}
             <Form className="int -phone-form">
                 <p>How would you like to receive notifications?</p>
                 <Form.Group className="mb-3">
                     <Form.Check type="checkbox" id="frmStatusEmail" name="status_email" label="Email"/>
-                    {/* <Form.Label>Email</Form.Label> */}
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Check type="checkbox" id="frmStatusEmail" name="status_email" label="Text Message"/>
-                    {/* <Form.Label>Text Message</Form.Label> */}
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="text" id="frmEmail" name="email" maxlength="100" value="example@epype.net"/>
+                    <Form.Control 
+                        type="text" id="frmEmail" name="email"
+                        maxlength="100" value={email}
+                        onChange={(e) => setEmail(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Mobile Phone</Form.Label>
-                    <Form.Control type="tel" id="frmMobilePhone" name="mobile_phone" value="+11234567890" data-error-element-id="frmMobilePhoneErrorMsg"/>
-                    <div id="frmMobilePhoneErrorMsg" class="invalid-feedback"></div>
+                    <Form.Control 
+                        type="tel" id="frmMobilePhone" name="mobile_phone" 
+                        value={mobilePhone} onChange={(e) => setMobilePhone(e.target.value)}
+                        data-error-element-id="frmMobilePhoneErrorMsg"/>
+                    <div id="frmMobilePhoneErrorMsg" className="invalid-feedback"></div>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Text Message Hours</Form.Label>
                     <Row>
                         <Col>
-                            <select name="start_hour" id="frmStartHour" className="form-select">
+                            <select 
+                                name="start_hour" 
+                                id="frmStartHour" 
+                                className="form-select"
+                                value={msgHoursStart}
+                                onChange={(e) => setMsgHoursStart(e.target.value)}
+                                >
                                 <option value="0">12 AM</option>
                                 <option value="1">1 AM</option>
                                 <option value="2">2 AM</option>
@@ -78,7 +95,7 @@ export default function NotificationSettings(props) {
                                 <option value="18">6 PM</option>
                                 <option value="19">7 PM</option>
                                 <option value="20">8 PM</option>
-                                <option value="21" selected>9 PM</option>
+                                <option value="21">9 PM</option>
                                 <option value="22">10 PM</option>
                                 <option value="23">11 PM</option>
                                 <option value="0">12 AM</option>

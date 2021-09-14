@@ -1,9 +1,70 @@
-import React from 'react'
-import { Container, Row, Col, Nav, Table, Form} from "react-bootstrap"
+import React, { useState } from 'react'
+import { Container, Row, Col, Nav, Table, Form, Button} from "react-bootstrap"
 
 export default function AccountInfo(props) {
+    // organization
+    const [timeZone, setTimeZone] = useState("")
+    const [orgName, setOrgName] = useState("Wrangler")
+    const [address1, setAddress1] = useState("933 1910 S")
+    const [address2, setAddress2] = useState("Suite 202")
+    const [city, setCity] = useState("Provo")
+    const [state, setState] = useState("UT")
+    const [postalCode, setPostalCode] = useState("84606")
+    const [phoneNumber, setPhoneNumber] = useState("+11234567890")
+    // contact information
+    const [bubbleText, setBubbleText] = useState("Let&apos;s talk!")
+    const [contactPhone, setContactPhone] = useState("+11234567890")
+    const [mobilePhone, setMobilePhone] = useState("+11234567890")
+    const [email, setEmail] = useState("scott+wrangler@epype.net")
+    const [faceTimePhone, setFaceTimePhone] = useState("")
+    const [whatsAppPhone, setWhatsAppPhone] = useState("")
+    const [messengerId, setMessengerId] = useState("")
+    const [website, setWebsite] = useState("")
+    const [websiteText, setWebsiteText] = useState("")
+    // live chat third party 
+    const [zendeskId, setZendeskId] = useState("")
+    // social media links 
+    const [facebookUrl, setFacebookUrl] = useState("")
+    const [twitterUrl, setTwitterUrl] = useState("")
+    const [instagramUrl, setInstagramUrl] = useState("")
+    const [linkedInUrl, setLinkedinUrl] = useState("")
+    const [youtubeUrl, setYoutubeUrl] = useState("")
+    // profile image 
+    // const [profileImg, setProfileImg] = useState("")
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        console.log(timeZone)
+        console.log(orgName)
+        console.log(address1)
+        console.log(address2)
+        console.log(city)
+        console.log(state)
+        console.log(postalCode)
+        console.log(phoneNumber)
+        console.log(bubbleText)
+        console.log(contactPhone)
+        console.log(mobilePhone)
+        console.log(email)
+        console.log(faceTimePhone)
+        console.log(whatsAppPhone)
+        console.log(messengerId)
+        console.log(website)
+        console.log(websiteText)
+        console.log(zendeskId)
+        console.log(facebookUrl)
+        console.log(twitterUrl)
+        console.log(instagramUrl)
+        console.log(linkedInUrl)
+        console.log(youtubeUrl)
+    }
+
+
+
     return (
         <Container>
+            <h1 className="green-text">Profile</h1>
+            {/* <h3>Fiesta Days</h3> */}
             <Table className="table-responsive table-borderless table-sm no-padding">
                 <tbody>
                     <tr>
@@ -20,13 +81,19 @@ export default function AccountInfo(props) {
                     </tr>
                 </tbody>
             </Table>
-            <Form className="intl-phone-form" action="settings.php" method="post">
+            <Form className="intl-phone-form" action="settings.php" method="post" onSubmit={handleSubmit}>
                 <input type="hidden" name="frmAction" value="submitted"/>
                 <input type="hidden" name="from_qs" value="0"/>
 
                 <Form.Group className="mb-3">
                     <Form.Label className="form-label">Time Zone</Form.Label>
-                    <select id="frmTimeZone" name="timezone" className="form-select">
+                    <select 
+                        id="frmTimeZone" 
+                        name="timezone" 
+                        className="form-select"
+                        value={timeZone}
+                        onChange={(e) => setTimeZone(e.target.value)}
+                    >
                         <option value="America/Anchorage">Alaska</option>
                         <option value="America/Phoenix">Arizona</option>
                         <option value="America/Chicago">Central</option>
@@ -42,27 +109,55 @@ export default function AccountInfo(props) {
 
                     <Form.Group className="mb-3">
                         <Form.Label >Organization Name</Form.Label>
-                        <Form.Control type="text" id="frmOrganizationName" name="organization_name" maxLength="100" value="Wrangler"/>
+                        <Form.Control 
+                            type="text" 
+                            id="frmOrganizationName" 
+                            name="organization_name" 
+                            maxLength="100" 
+                            value={orgName}
+                            onChange={(e) => setOrgName(e.target.value)}
+                        />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >Office Address</Form.Label>
-                        <Form.Control type="text" id="frmAddress1" name="address1" maxLength="50" value="933 1910 S"/>
+                        <Form.Control 
+                            type="text" 
+                            id="frmAddress1" 
+                            name="address1" 
+                            maxLength="50" 
+                            value={address1}
+                            onChange={(e) => setAddress1(e.target.value)}    
+                        />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label className="visually-hidden">Office Address</Form.Label>
-                        <Form.Control type="text" id="frmAddress2" name="address2" maxLength="50" value="Suite 202"/>
+                        <Form.Control 
+                            type="text" 
+                            id="frmAddress2" 
+                            name="address2" 
+                            maxLength="50" 
+                            value={address2}
+                            onChange={(e) => setAddress2(e.target.value)}
+                        />
                     </Form.Group>
                     <Row>
-                        <Col className="col-lg">
+                        <Col>
                             <Form.Group className="mb-3">
                                 <Form.Label>City</Form.Label>
-                                <Form.Control type="text" id="frmCity" name="city" maxLength="50" value="Provo"/>
+                                <Form.Control 
+                                    type="text" 
+                                    id="frmCity"
+                                    name="city" 
+                                    maxLength="50" 
+                                    value={city}
+                                    onChange={(e) => setCity(e.target.value)}
+                                />
                             </Form.Group>
                         </Col>
-                        <Col className="col-auto">
+                        <Col className="" sm="auto">
                             <Form.Group className="mb-3">
                                 <Form.Label className="form-label">State</Form.Label>
-                                <select id="frmState" name="state" className="form-select">
+                                <select id="frmState" name="state" className="form-select" value={state} onChange={(e) => setState(e.target.value)}>
                                     <option value="AK">AK</option>
                                     <option value="AL">AL</option>
                                     <option value="AR">AR</option>
@@ -120,15 +215,23 @@ export default function AccountInfo(props) {
                                 </select>
                             </Form.Group>
                         </Col>
-                        <Col className="col-auto">
+                        <Col className="" sm="auto">
                             <Form.Group className="mb-3">
                                 <Form.Label className="form-label">Postal Code</Form.Label>
-                                <Form.Control type="text" id="frmZip" name="zip" maxLength="10" value="84606"/>
+                                <Form.Control 
+                                    type="text" id="frmZip" 
+                                    name="zip" maxLength="10" 
+                                    value={postalCode} onChange={(e) => setPostalCode(e.target.value)}
+                                    />
                             </Form.Group>
                         </Col>
                         <Form.Group className="mb-3">
                             <Form.Label className="form-label">Phone Number</Form.Label>
-                            <Form.Control type="tel" id="frmOfficePhone" name="office_phone" value="+11234567890" data-error-element-id="frmOfficePhoneErrorMsg"/>
+                            <Form.Control 
+                                type="tel" id="frmOfficePhone" 
+                                name="office_phone" value={phoneNumber} 
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                data-error-element-id="frmOfficePhoneErrorMsg"/>
                             <div id="frmOfficePhoneErrorMsg" className="invalid-feedback"></div>
                         </Form.Group>
                     </Row>
@@ -139,43 +242,76 @@ export default function AccountInfo(props) {
 
                     <Form.Group className="mb-3">
                         <Form.Label className="form-label">VLP Contact Bubble Text</Form.Label>
-                        <Form.Control type="text" id="frmVlpContactText" name="vlp_contact_text" maxLength="20" value="Let&apos;s talk!" placeholder="Let's talk!"/>
+                        <Form.Control 
+                            type="text" id="frmVlpContactText" 
+                            name="vlp_contact_text" maxLength="20" 
+                            value={bubbleText} placeholder="Let's talk!"
+                            onChange={(e) => setBubbleText(e.target.value)} />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >Contact Phone</Form.Label>
-                        <Form.Control type="tel" id="frmContactPhone" name="contact_phone" value="+11234567890" data-error-element-id="frmContactPhoneErrorMsg"/>
+                        <Form.Control 
+                            type="tel" id="frmContactPhone" 
+                            name="contact_phone" value={contactPhone} 
+                            data-error-element-id="frmContactPhoneErrorMsg"
+                            onChange = {(e) => setContactPhone(e.target.value)} />
                         <div id="frmContactPhoneErrorMsg" className="invalid-feedback"></div>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >Mobile Phone</Form.Label>
-                        <Form.Control type="tel" id="frmMobilePhone" name="mobile_phone" value="+11234567890" data-error-element-id="frmMobilePhoneErrorMsg"/>
+                        <Form.Control 
+                            type="tel" id="frmMobilePhone" 
+                            name="mobile_phone" value={mobilePhone} 
+                            data-error-element-id="frmMobilePhoneErrorMsg"
+                            onChange={(e) => setMobilePhone(e.target.value)}/>
                         <div id="frmMobilePhoneErrorMsg" className="invalid-feedback"></div>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >Email</Form.Label>
-                        <Form.Control type="text" id="frmEmail" name="email" maxLength="100" value="scott+wrangler@epype.net"/>
+                        <Form.Control 
+                            type="text" id="frmEmail" 
+                            name="email" maxLength="100" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >FaceTime Phone</Form.Label>
-                        <Form.Control type="tel" id="frmFaceTimePhone" name="facetime_phone" value="" data-error-element-id="frmFaceTimePhoneErrorMsg"/>
+                        <Form.Control type="tel" id="frmFaceTimePhone" 
+                        name="facetime_phone" value={faceTimePhone} 
+                        data-error-element-id="frmFaceTimePhoneErrorMsg"
+                        onChange={(e) => setFaceTimePhone(e.target.value)}/>
                         <div id="frmFaceTimePhoneErrorMsg" className="invalid-feedback"></div>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >WhatsApp Phone</Form.Label>
-                        <Form.Control type="tel" id="frmWhatsAppPhone" name="whatsapp_phone" value="" data-error-element-id="frmWhatsAppPhoneErrorMsg"/>
+                        <Form.Control 
+                            type="tel" id="frmWhatsAppPhone" 
+                            name="whatsapp_phone" value={whatsAppPhone} 
+                            onChange={(e) => setWhatsAppPhone(e.target.value)}
+                            data-error-element-id="frmWhatsAppPhoneErrorMsg"/>
                         <div id="frmWhatsAppPhoneErrorMsg" className="invalid-feedback"></div>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >Messenger ID/Username</Form.Label>
-                        <Form.Control type="text" id="frmMessenger" name="messenger_id" value=""/>
+                        <Form.Control 
+                            type="text" id="frmMessenger"
+                            name="messenger_id" value={messengerId}
+                            onChange={(e) => setMessengerId(e.target.value)}/>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >Web Site</Form.Label>
-                        <Form.Control type="text" id="frmWebSite" name="website" maxLength="100" value=""/>
+                        <Form.Control 
+                            type="text" id="frmWebSite" 
+                            name="website" maxLength="100" 
+                            value={website} onChange={(e) => setWebsite(e.target.value)}/>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label >Web Site Link Text</Form.Label>
-                        <Form.Control type="text" id="frmWebSiteDescription" name="website_description" maxLength="40" value=""/>
+                        <Form.Control 
+                            type="text" id="frmWebSiteDescription" 
+                            name="website_description" maxLength="40" 
+                            value={websiteText} onChange={(e) => setWebsiteText(e.target.value)}/>
                     </Form.Group>
                 </fieldset>
 
@@ -184,7 +320,10 @@ export default function AccountInfo(props) {
 
                     <Form.Group className="mb-3">
                         <Form.Label>Zendesk ID</Form.Label>
-                        <Form.Control type="text" id="frmZendeskId" name="zendesk_id" value=""/>
+                        <Form.Control 
+                            type="text" id="frmZendeskId" 
+                            name="zendesk_id" value={zendeskId}
+                            onChange={(e) => setZendeskId(e.target.value)}/>
                     </Form.Group>
                 </fieldset>
 
@@ -193,23 +332,38 @@ export default function AccountInfo(props) {
 
                     <Form.Group className="mb-3">
                         <Form.Label>Facebook Page URL</Form.Label>
-                        <Form.Control type="text" id="frmSmUrlFacebook" name="sm_url_facebook" maxLength="200" value=""/>
+                        <Form.Control 
+                            type="text" id="frmSmUrlFacebook" 
+                            name="sm_url_facebook" maxLength="200" 
+                            value={facebookUrl} onChange={(e) => setFacebookUrl(e.target.value)}/>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Twitter Page URL</Form.Label>
-                        <Form.Control type="text" id="frmSmUrlTwitter" name="sm_url_twitter" maxLength="200" value=""/>
+                        <Form.Control 
+                            type="text" id="frmSmUrlTwitter" 
+                            name="sm_url_twitter" maxLength="200" 
+                            value={twitterUrl} onChange={(e) => setTwitterUrl(e.target.value)}/>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Instagram Page URL</Form.Label>
-                        <Form.Control type="text" id="frmSmUrlInstagram" name="sm_url_instagram" maxLength="200" value=""/>
+                        <Form.Control 
+                            type="text" id="frmSmUrlInstagram" 
+                            name="sm_url_instagram" maxLength="200" 
+                            value={instagramUrl} onChange={(e) => setInstagramUrl(e.target.value)}/>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>LinkedIn Page URL</Form.Label>
-                        <Form.Control type="text" id="frmSmUrlLinkedIn" name="sm_url_linkedin" maxLength="200" value=""/>
+                        <Form.Control 
+                            type="text" id="frmSmUrlLinkedIn" 
+                            name="sm_url_linkedin" maxLength="200" 
+                            value={linkedInUrl} onChange={(e) => setLinkedinUrl(e.target.value)}/>
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>YouTube Page URL</Form.Label>
-                        <Form.Control type="text" id="frmSmUrlYouTube" name="sm_url_youtube" maxLength="200" value=""/>
+                        <Form.Control 
+                            type="text" id="frmSmUrlYouTube" 
+                            name="sm_url_youtube" maxLength="200" 
+                            value={youtubeUrl} onChange={(e) => setYoutubeUrl(e.target.value)}/>
                     </Form.Group>
                 </fieldset>
                 <fieldset>
@@ -223,8 +377,16 @@ export default function AccountInfo(props) {
                 </fieldset>
 
                 <p class="text-center">
-                    <Button type="submit" id="btnSubmit" name="btnSubmit" className="btn-primary m-1" value="Save Changes">Save Changes</Button>
-                    <Button type="button" id="btnCancel" name="btnCancel" className="btn-danger m-1" value="Cancel">Cancel</Button>
+                    <Button 
+                        type="submit" id="btnSubmit" 
+                        name="btnSubmit" className="btn-primary m-1" 
+                        value="Save Changes">
+                    Save Changes</Button>
+                    <Button 
+                        type="button" id="btnCancel" 
+                        name="btnCancel" className="btn-danger m-1" 
+                        value="Cancel">
+                    Cancel</Button>
                 </p>
             </Form>
         </Container>

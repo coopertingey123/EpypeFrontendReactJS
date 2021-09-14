@@ -5,7 +5,7 @@ export default function ChangePassword(props) {
     return (
         <Container>
             <h1 className="green-text">Change Password</h1> 
-            <h3>Fiesta Days</h3>
+            {/* <h3>Fiesta Days</h3> */}
             <Form>
                 <Form.Group className="py-2">
                     <Form.Label>Current Password</Form.Label>
