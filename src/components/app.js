@@ -46,22 +46,22 @@ import AdminChangePreferences from './auth/admin/admin-preferences';
 import AdminEditUser from "./admin/Other/edit-user"
 
 // User Components
-import HomeVLPs from "./user/home-vlps";
-import UserTemplates from "./user/saved-templates";
-import UserProducts from "./user/products";
+import HomeVLPs from "./VLPs/home-vlps";
+import UserTemplates from "./VLPs/saved-templates";
+import UserProducts from "./user/products/products";
 import UserContacts from "./user/Contacts/contacts";
 import ContactSearchResults from './user/Contacts/contact-search-results';
-import UserTags from "./user/tags";
-import SMSKeywords from "./user/sms-keywords";
+import UserTags from "./user/keywords/tags";
+import SMSKeywords from "./user/keywords/sms-keywords";
 import SMSBlast from "./user/message-blast/sms-blast";
-import EditSMSKeywords from "./user/edit-sms-keyword";
+import EditSMSKeywords from "./user/keywords/edit-sms-keyword";
 import OutboundReportPreview from './user/Reports/outbound-report-preview';
 import OutboundSMSReport from './user/Reports/outbound-report';
 import VLPActivity from "./user/Reports/vlp-activity";
 import KeywordActivity from "./user/Reports/keyword-activity-report";
 import EditAccountInfo from "./user/EditProfile/edit-account-info";
-import OrderHistory from './user/order-history';
-import AddProduct from "./user/add-product";
+import OrderHistory from './user/products/order-history';
+import AddProduct from "./user/products/add-product";
 
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -72,7 +72,6 @@ export default function App(props) {
 
     const [userType, setUserType] = useState("user")
     // We are going to use either user, admin, or client as user types
-
     Icons();
   
     const checkUserType = () => {
@@ -90,8 +89,6 @@ export default function App(props) {
     useEffect(() => {
       checkUserType()
     }, [])
-  
-
   
     return (
       <div className='app'>

@@ -1,9 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, Navbar, Nav, NavDropdown, Form, Button } from 'react-bootstrap'
 import EpypeLogoGreenWhite from "../../../static/assets/logos/epype-logo-alt-25h.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function UserNavbar(props) {
+
+    const [search, setSearch] = useState("")
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        console.log(search)
+    }
+
     return (
         <Navbar className="justify-content-between" bg="dark" variant="dark" width="100%" expand="lg">
             <Container>
@@ -34,17 +42,20 @@ export default function UserNavbar(props) {
                         </NavDropdown>
                     </Nav>
                     <Nav className="align-items-center">
-                        <Form className="d-flex">
+                        <Form className="d-flex align-items-center" onSubmit={handleSubmit}>
                             <Form.Control
                                 type="search"
                                 placeholder="Contact Search"
                                 className="m-2"
                                 aria-label="Search"
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
                             />
+                            <Button className="bg-transparent border-0" href="/user/search-results-contacts" type="submit">
+                                <FontAwesomeIcon icon="search"/>
+                            </Button>
                         </Form>
-                        <Button className="bg-transparent border-0" href="/user/search-results-contacts">
-                            <FontAwesomeIcon icon="search"/>
-                        </Button>
+                        
                         <NavDropdown title={<FontAwesomeIcon icon="user"/>} className="" drop="start">
                             <NavDropdown.Item>
                                 Signed in as <br/>

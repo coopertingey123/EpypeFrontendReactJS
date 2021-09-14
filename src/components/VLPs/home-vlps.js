@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Button } from 'react-bootstrap'
-import VlpContainer from '../VLP\'s/VlpContainer'
+import VlpContainer from './VlpContainer'
 
 export default function VLPContainer(props) {
     return (

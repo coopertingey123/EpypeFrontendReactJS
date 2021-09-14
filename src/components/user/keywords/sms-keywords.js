@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Button, Table } from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import CountryFlag from "../../../static/assets/photos/16.png";
+import CountryFlag from "../../../../static/assets/photos/16.png";
 
 
 export default function Tags(props) {

@@ -3,8 +3,8 @@ import { Container, Alert, Table, Form, Pagination, Row, Col } from 'react-boots
 import Flag from "../../../../static/assets/photos/16.png"
 export default function ContactSearchResults(props) {
 
-    let active = 1
-    let items = []
+    // let active = 1
+    // let items = []
 
     return (
         <Container>
