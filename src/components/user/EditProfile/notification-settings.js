@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row, Col, Form, Button, Table } from 'react-bootstrap'
+import { Container, Row, Col, Form, Button, Table} from 'react-bootstrap'
 
 export default function NotificationSettings(props) {
 
@@ -7,7 +7,9 @@ export default function NotificationSettings(props) {
     const [mobilePhone, setMobilePhone] = useState("+11234567890")
     const [msgHoursStart, setMsgHoursStart] = useState("")
     const [msgHoursEnd, setMsgHoursEnd] = useState("")
+    const [numDays, setNumDays] = useState("")
 
+    
 
     return (
         <Container>
@@ -39,7 +41,7 @@ export default function NotificationSettings(props) {
                 <Form.Group className="mb-3">
                     <Form.Label>Text Message Hours</Form.Label>
                     <Row>
-                        <Col>
+                        <Col md={6} className="pt-2">
                             <select 
                                 name="start_hour" 
                                 id="frmStartHour" 
@@ -73,8 +75,14 @@ export default function NotificationSettings(props) {
                                 <option value="23">11 PM</option>
                             </select>
                         </Col>
-                        <Col>
-                            <select name="end_hour" id="frmEndHour" className="form-select">
+                        <Col md={6} className="pt-2">
+                            <select 
+                                name="end_hour" 
+                                id="frmEndHour" 
+                                className="form-select"
+                                value={msgHoursEnd}
+                                onChange={(e) => setMsgHoursEnd(e.target.value)}
+                                >
                                 <option value="1">1 AM</option>
                                 <option value="2">2 AM</option>
                                 <option value="3">3 AM</option>
@@ -134,15 +142,21 @@ export default function NotificationSettings(props) {
                                     <Row className="g-3 align-items-center">
                                         <Col className="col-auto">
                                             <Form.Group>
-                                                <Form.Check checked label="Has no activity for "/>
+                                                <Form.Check label="Has no activity for "/>
                                             </Form.Group>
                                         </Col>
                                         <Col className="col-auto">
                                             <Form.Group>
-                                                <select name="contact_inactive_days" id="" className="form-select">
+                                                <select 
+                                                    name="contact_inactive_days" 
+                                                    id="" 
+                                                    className="form-select"
+                                                    value={numDays}
+                                                    onChange={(e) => setNumDays(e.target.value)}
+                                                    >
                                                     <option value="30">30 days</option>
                                                     <option value="60">60 days</option>
-                                                    <option value="90" selected>90 days</option>
+                                                    <option value="90">90 days</option>
                                                     <option value="120">120 days</option>
                                                 </select>
                                             </Form.Group>
@@ -160,6 +174,7 @@ export default function NotificationSettings(props) {
                     <Button type="button" id="btnCancel" name="btnCancel" className="btn-danger m-1" value="Cancel">Cancel</Button>
                 </p>
             </Form>
+            
         </Container>
     )
 }

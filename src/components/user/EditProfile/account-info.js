@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row, Col, Nav, Table, Form, Button} from "react-bootstrap"
+import { Container, Row, Col, Nav, Table, Form, Button, Modal} from "react-bootstrap"
 
 export default function AccountInfo(props) {
     // organization
@@ -12,7 +12,7 @@ export default function AccountInfo(props) {
     const [postalCode, setPostalCode] = useState("84606")
     const [phoneNumber, setPhoneNumber] = useState("+11234567890")
     // contact information
-    const [bubbleText, setBubbleText] = useState("Let&apos;s talk!")
+    const [bubbleText, setBubbleText] = useState("Let's talk!")
     const [contactPhone, setContactPhone] = useState("+11234567890")
     const [mobilePhone, setMobilePhone] = useState("+11234567890")
     const [email, setEmail] = useState("scott+wrangler@epype.net")
@@ -31,6 +31,10 @@ export default function AccountInfo(props) {
     const [youtubeUrl, setYoutubeUrl] = useState("")
     // profile image 
     // const [profileImg, setProfileImg] = useState("")
+
+    const [show, setShow] = useState(false)
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -369,9 +373,7 @@ export default function AccountInfo(props) {
                 <fieldset>
                     <legend>Profile Image</legend>
                     <Form.Group className="mb-3">
-                        <p>
-                            <a href="photoedit.php">Update</a>
-                        </p>
+                        <Button className="my-2" onClick={handleShow}>Update</Button>
                         <p class="text-danger">No profile image set.</p>
                     </Form.Group>
                 </fieldset>
@@ -389,6 +391,18 @@ export default function AccountInfo(props) {
                     Cancel</Button>
                 </p>
             </Form>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header>
+                    <Modal.Title>Update Profile Picture</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group>
+                            <Form.Control className="update-profile-pic" type="file"/>
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+            </Modal>
         </Container>
     )
 }

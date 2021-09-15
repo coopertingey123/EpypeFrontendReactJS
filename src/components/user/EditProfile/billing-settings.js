@@ -1,50 +1,82 @@
-import React from 'react'
-import { Container, Form, Table } from "react-bootstrap"
+import React, { useState } from 'react'
+import { Container, Form, Table, Nav } from "react-bootstrap"
+// import BillingInfo from './billing-info'
+import NewCreditCard from "./update-credit-card-info"
 
 export default function UpdateBilling(props) {
+
+    const [currentTab, setCurrentTab] = useState("profile")
+    const [active, setActive] = useState("1")
+
     return (
         <Container>
-            <h1 className="green-text">Billing Information</h1>
-            {/* <h3>Fiesta Days</h3> */}
-            <h2 className="py-3">Credit Card on File</h2>
-            <p>
-                No credit card is on file
-            </p>
-            <p><a href="">Update Credit Card Information</a></p>
-            <h2>Fees</h2>
-            <p>No fees are attached to your account.</p>
-            <h2>Payment History</h2>
-            <p>Last 1 payment</p>
-            <Table className="table-responsive table-striped border_bottom">
-                <thead className="thead-dark">
-                    <tr>
-                        <th style={{width: "80px"}}>Date</th>
-                        <th className="text-end" style={{width: "100px"}}>Amount</th>
-                        <th>Description</th>
-                        <th style={{width: "100px"}}>Invoice</th>
-                        <th style={{width: "160px"}}>Method</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="align-top">
-					    <td>6/29/2021</td>
-					    <td className="text-end">$0.00</td>
-					    <td>
-						    Signed up for EPYPE<br/>
-                            <strong>&#8226; Used promo code FREE</strong>
-                        </td>
-					    <td>N/A</td>
-                        <td></td>
-					</tr>
-                </tbody>
-            </Table>
-            <p>
-                <a href="">Full Payment History</a>
-            </p>
-            <hr style={{width: "40%"}}/>
-            <p>
-                <a href="">Back to My Account</a>
-            </p>
+            {/* <h3 className="green-text py-2">Edit Account Information</h3> */}
+            <h5 className="py-4">Fiesta Days</h5>
+            <Nav variant="tabs" id="crminfocontainer" className="my-3" activeKey={active}>
+                <Nav.Item>
+                    <Nav.Link
+                        href="" 
+                        onClick={() => {
+                            setCurrentTab("profile") 
+                            setActive("1")
+                        }} 
+                        className="text-decoration-none"
+                        eventKey="1"
+                        >
+                            Profile
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link
+                        onClick={() => {
+                            setCurrentTab("notifications")
+                            setActive("2")
+                        }}
+                        eventKey="2"
+                        >
+                        Notifications
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link
+                        onClick={() => {
+                            setCurrentTab("billing")
+                            setActive("3")
+                        }}
+                        eventKey="3"
+                    >
+                        Billing
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link 
+                        href="" 
+                        onClick={() => {
+                            setCurrentTab("change-password")
+                            setActive("4")
+                        }}
+                        eventKey="4"
+                    >
+                        Change Password
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link 
+                        onClick={() => {
+                            setCurrentTab("product-payments")
+                            setActive("5")
+                        }}
+                        eventKey="5"
+                    >
+                        Product Payments
+                    </Nav.Link>
+                </Nav.Item>
+            </Nav>
+            {currentTab === "profile" ? <AccountInfo/> : null}
+            {currentTab === "notifications" ? <NotificationSettings/> : null}
+            {currentTab === "billing" ? <BillingSettings/> : null}
+            {currentTab === "change-password" ? <ChangePassword/> : null}
+            {currentTab === "product-payments" ? <ProductPayments/> : null}
         </Container>
     )
 }

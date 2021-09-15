@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Container, Nav, Button } from 'react-bootstrap'
 import NotificationSettings from './notification-settings'
-import BillingSettings from "./billing-settings"
+import BillingSettings from "./billing-info"
 import ChangePassword from "./change-password"
 import ProductPayments from "./product-payments"
 import AccountInfo from './account-info'
