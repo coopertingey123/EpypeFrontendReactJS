@@ -6,6 +6,7 @@ export default function ChangePassword(props) {
         <Container>
             <h1 className="green-text">Product Payment Settings</h1> 
             {/* <h3>Fiesta Days</h3> */}
+            <hr style={{width: "100%"}}/>
             <Table className="table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>

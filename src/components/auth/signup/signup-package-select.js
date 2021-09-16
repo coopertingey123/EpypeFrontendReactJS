@@ -28,7 +28,7 @@ export default function SignupPackageSelect(props) {
                                 value="personal"
                                 onChange={(e) => setPackageSelect(e.target.value)}
                             />
-                            <div class="px-4 py-1">
+                            <div className="px-4 py-1">
 				                <strong> 400 </strong> Text Messages<br />
                                 <strong> 1600 </strong> Video Viewing Minutes<br />
                                 Initial setup fee: <strong>$19.95</strong><br />
@@ -48,7 +48,7 @@ export default function SignupPackageSelect(props) {
                                 value="business"
                                 onChange={(e) => setPackageSelect(e.target.value)}
                             />
-                            <div class="px-4 py-1">
+                            <div className="px-4 py-1">
 				                <strong> 3000 </strong> Text Messages<br />
                                 <strong> 9000 </strong> Video Viewing Minutes<br />
                                 Initial setup fee: <strong>$49.95</strong><br />
@@ -70,7 +70,7 @@ export default function SignupPackageSelect(props) {
                                 value="business plus"
                                 onChange={(e) => setPackageSelect(e.target.value)}
                             />
-                            <div class="px-4 py-1">
+                            <div className="px-4 py-1">
 				                <strong> 8000 </strong> Text Messages<br />
                                 <strong> 32000 </strong> Video Viewing Minutes<br />
                                 Initial setup fee: <strong>$199.00</strong><br />
@@ -90,7 +90,7 @@ export default function SignupPackageSelect(props) {
                                 value="business pro"
                                 onChange={(e) => setPackageSelect(e.target.value)}
                             />
-                            <div class="px-4 py-1">
+                            <div className="px-4 py-1">
 				                <strong> 20000 </strong> Text Messages<br />
                                 <strong> Unlimited </strong> Video Viewing Minutes<br />
                                 Initial setup fee: <strong>$499.00</strong><br />

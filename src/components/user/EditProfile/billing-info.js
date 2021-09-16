@@ -1,22 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Container, Table, Alert, Button} from "react-bootstrap"
 import NewCreditCard from "./update-credit-card-info"
 
 export default function BillingInfo(props) {
+
+    const [show, setShow] = useState(false)
+
+    function handleShow(event) {
+        event.preventDefault()
+        if (show) {
+            setShow(false)
+        }
+        else {
+            setShow(true)
+        }
+    }
+
     return (
         <Container>
             <h1 className="green-text">Billing Information</h1>
+            <hr style={{width: "100%"}}/>
             {/* <h3>Fiesta Days</h3> */}
             <h2 className="py-3">Credit Card on File</h2>
             <p>
                 <Alert variant="danger">No credit card is on file</Alert>
             </p>
             <p>
-                <Button variant="warning">Update Credit Card Information</Button>
-                {/* ***********If this button is selected, open update credit card component and close all else*************** */}
+                <Button onClick={handleShow}>Update Credit Card Information</Button>
             </p>
-            {/* <h2>Fees</h2>
-            <p>No fees are attached to your account.</p> */}
+            {show ? <NewCreditCard/> : null}
             <hr style={{width: "100%"}}/>
             <h2>Payment History</h2>
             <p>Last 1 payment</p>
@@ -43,16 +55,12 @@ export default function BillingInfo(props) {
 					</tr>
                 </tbody>
             </Table>
-            {/* <p>
-                <a href="">Full Payment History</a>
-            </p> */}
-            <hr style={{width: "100%"}}/>
             <p>
-                <Button href="">Back to My Account</Button>
+                <Button href="">Full Payment History</Button>
             </p>
-            <NewCreditCard/>
-            {/* <FullPaymentHistory/> */}
-
+            <hr style={{width: "100%"}}/>
+            <h2>Fees</h2>
+            <Alert variant="success">No fees are attached to your account.</Alert>
         </Container>
     )
 }

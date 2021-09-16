@@ -61,31 +61,31 @@ export default function OutboundReport(props) {
                             <tbody>
                                 <tr>
                                     <td>VLP views</td>
-                                    <td class="text-end">82</td>
+                                    <td className="text-end">82</td>
                                 </tr>
                                 <tr>
                                     <td>Video watches</td>
-                                    <td class="text-end">4</td>
+                                    <td className="text-end">4</td>
                                 </tr>
                                 <tr>
                                     <td>Average watch time (seconds)</td>
-                                    <td class="text-end">28</td>
+                                    <td className="text-end">28</td>
                                 </tr>
                                 <tr>
                                     <td>VLP shares</td>
-                                    <td class="text-end">1</td>
+                                    <td className="text-end">1</td>
                                 </tr>
                                 <tr>
                                     <td>Link clicks: General</td>
-                                    <td class="text-end">0</td>
+                                    <td className="text-end">0</td>
                                 </tr>
                                 <tr>
                                     <td>Link clicks: Action Items</td>
-                                    <td class="text-end">33</td>
+                                    <td className="text-end">33</td>
                                 </tr>
                                 <tr>
                                     <td>Link clicks: Social Media</td>
-                                    <td class="text-end">0</td>
+                                    <td className="text-end">0</td>
                                 </tr>
                             </tbody>
                         </Table>
@@ -168,7 +168,7 @@ export default function OutboundReport(props) {
                                     </tr>
                                     <tr>
 						                <td>rejected-unallocated-to-number</td>
-						                <td class="text-end">5</td>
+						                <td className="text-end">5</td>
 					                </tr>
                                 </tbody>
                             </Table>

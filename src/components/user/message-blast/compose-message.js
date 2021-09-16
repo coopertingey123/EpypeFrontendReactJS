@@ -13,7 +13,7 @@ export default function ComponseMessage(props) {
                                 <textarea 
                                     id="message_initial_message" 
                                     name="message_initial_message" 
-                                    class="text_message_input form-control" 
+                                    className="text_message_input form-control" 
                                     data-max-chars="138" 
                                     data-count-display-id="char_counter_initial_message" 
                                     rows="3" 
@@ -35,7 +35,7 @@ export default function ComponseMessage(props) {
                             </Col>
                             <Col className="col-auto">
                                 <div className="mb-3">
-                                    <Button id="insertVlpButton" class="btn-primary" disabled>Insert Link</Button>
+                                    <Button id="insertVlpButton" className="btn-primary" disabled>Insert Link</Button>
                                 </div>
                             </Col>             
                         </Row>

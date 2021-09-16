@@ -5,7 +5,7 @@ export default function (props) {
     return (
         <Container>
             <h1 className="green-text py-3 text-center">Products</h1>
-            <p class="text-center">
+            <p className="text-center">
 		        <a href="/user/order-history"> Order History </a> | 
 		        <a href="/user/add-product"> Add a new Product </a>
 	        </p>

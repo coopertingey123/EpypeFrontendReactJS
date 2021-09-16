@@ -404,7 +404,7 @@ export default function AdminEditUser(props) {
                                         </tr>
                                         <tr>
                                             <td>Current Amount Due</td>
-                                            <td><span class="attention">$0.00</span></td>
+                                            <td><span className="attention">$0.00</span></td>
 
                                         </tr>
                                     </tbody>

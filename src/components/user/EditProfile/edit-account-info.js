@@ -13,7 +13,6 @@ export default function EditAccountInformation(props) {
 
     return (
         <Container>
-            {/* <h3 className="green-text py-2">Edit Account Information</h3> */}
             <h5 className="py-4">Fiesta Days</h5>
             <Nav variant="tabs" id="crminfocontainer" className="my-3" activeKey={active}>
                 <Nav.Item>

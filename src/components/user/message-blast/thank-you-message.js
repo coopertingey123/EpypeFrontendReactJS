@@ -20,7 +20,7 @@ export default function ThankYouMessage(props) {
                     <p>Some messages could not be sent.</p>
                     <ul id="blast-errors"></ul>
                 </Alert>
-                <p class="text-center">
+                <p className="text-center">
                     <Button id="return-home-btn" className="returnButton btn-primary">Done</Button>
                 </p>
             </div>

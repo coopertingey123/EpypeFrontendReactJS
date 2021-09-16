@@ -68,6 +68,7 @@ export default function AccountInfo(props) {
     return (
         <Container>
             <h1 className="green-text">Profile</h1>
+            <hr style={{width: "100%"}}/>
             {/* <h3>Fiesta Days</h3> */}
             <Table className="table-responsive table-borderless table-sm no-padding">
                 <tbody>
@@ -374,11 +375,11 @@ export default function AccountInfo(props) {
                     <legend>Profile Image</legend>
                     <Form.Group className="mb-3">
                         <Button className="my-2" onClick={handleShow}>Update</Button>
-                        <p class="text-danger">No profile image set.</p>
+                        <p className="text-danger">No profile image set.</p>
                     </Form.Group>
                 </fieldset>
 
-                <p class="text-center">
+                <p className="text-center">
                     <Button 
                         type="submit" id="btnSubmit" 
                         name="btnSubmit" className="btn-primary m-1" 

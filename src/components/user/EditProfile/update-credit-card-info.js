@@ -10,6 +10,7 @@ export default function updateCreditCardInfo(props) {
     const[postalCode, setPostalCode] = useState("")
 
     function handleSubmit(event) {
+        
         event.preventDefault()
         console.log(firstName)
         console.log(lastName)
@@ -139,8 +140,7 @@ export default function updateCreditCardInfo(props) {
                     </Col>
                 </Row>
                 <div className="text-center">
-                    <Button className="bg-secondary m-1" href="/signup/package-select">Back</Button>
-                    <Button className="m-1" href="" type="submit">Next</Button>
+                    <Button className="m-1" href="" type="submit">Save Changes</Button>
                 </div>
             </Form>
         </Container>

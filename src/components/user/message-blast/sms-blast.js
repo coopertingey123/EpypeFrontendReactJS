@@ -13,9 +13,9 @@ export default function SMSBlast(props) {
     return (
         <Container className="text-center">
             <h1 className="green-text">Create a Message Blast</h1>
-            <div id="steps-progress-bar-wrapper" class="with-video-training">
+            <div id="steps-progress-bar-wrapper" className="with-video-training">
                 <ul id="steps-progress-bar">
-                    <li class="active">
+                    <li className="active">
                         <FontAwesomeIcon icon="key"/>
                         <p>Choose SMS Keyword</p>
                     </li>

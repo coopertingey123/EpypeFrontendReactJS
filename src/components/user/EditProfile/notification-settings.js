@@ -14,6 +14,7 @@ export default function NotificationSettings(props) {
     return (
         <Container>
             <h1 className="green-text">Notification Settings</h1>
+            <hr style={{width: "100%"}}/>
             {/* <h3>Fiesta Days</h3> */}
             <Form className="int -phone-form">
                 <p>How would you like to receive notifications?</p>

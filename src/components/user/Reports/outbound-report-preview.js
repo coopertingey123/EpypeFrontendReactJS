@@ -13,9 +13,9 @@ export default function OutboundSMSReport(props) {
             <Form className="text-start">
                 <legend>Date Range</legend>
                 <div className="mb-3">
-                    <label for="frmDateSelect" class="visually-hidden">Date Range</label>
+                    <label for="frmDateSelect" className="visually-hidden">Date Range</label>
 
-                    <select id="frmDateSelect" name="date_select" class="form-select">
+                    <select id="frmDateSelect" name="date_select" className="form-select">
                         <option value="today">Today</option>
                         <option value="week-to-date">This Week</option>
                         <option value="month-to-date" selected>This Month</option>
@@ -29,14 +29,14 @@ export default function OutboundSMSReport(props) {
                 <Row>
                     <Col className="col-lg mb-3">
                         <label for="frmStartDate">Start Date</label>
-                        <div class="input-group">
+                        <div className="input-group">
                             <DatePicker className="form-control" id="frmStartDate" name="start_date" maxlength="10" value="8/1/2021"/>  
                         </div>
                     </Col>
 
                     <Col className="mb-3">
                         <label for="frmEndDate">End Date</label>
-                        <div class="input-group">
+                        <div className="input-group">
                             <DatePicker className="form-control" id="frmEndDate" name="end_date" maxlength="10" value="8/30/2021"/>
                         </div>
                     </Col>

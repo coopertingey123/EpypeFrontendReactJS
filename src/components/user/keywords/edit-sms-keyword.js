@@ -53,9 +53,9 @@ export default function EditSMSKeyword(props) {
                 </fieldset>
                 <fieldset>
                     <legend>Response Message</legend>
-                    <Row id="response_info" class="row">
+                    <Row id="response_info" className="row">
                         <Col>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <label for="message_initial_message" className="form-label">Enter the message you want sent in response to people who text your keyword.</label>
                                 <textarea id="message_initial_message" name="initial_message" className="text_message_input form-control" data-max-chars="160" data-count-display-id="char_counter_initial_message" rows="3" cols="40">Please follow the link to see westwood football fundraiser https://vlp.epype.net/5y9JD6</textarea>
                                 <div className="form-text">Characters remaining: <span id="char_counter_initial_message">73</span></div>
@@ -64,15 +64,15 @@ export default function EditSMSKeyword(props) {
                     </Row>
                     <Row className="">
                         <Col className="col">
-                            <div class="mb-3">
-                                <select id="choose-vlp" class="form-select">
+                            <div className="mb-3">
+                                <select id="choose-vlp" className="form-select">
                                     <option value="">Select VLP</option>
                                     <option value="">Westwood Football Fundraiser</option>
                                 </select>
                             </div>
                         </Col>
                         <Col className="col-auto">
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <Button id="insertVlpButton" className="" disabled>Insert Link</Button>
                             </div>
                         </Col>
@@ -83,11 +83,11 @@ export default function EditSMSKeyword(props) {
                     <legend>Contact Tags</legend>
 	                <Form.Label className="form-label">These tags will be added to new contacts who text your keyword.</Form.Label>
 	                <Alert id="contact_taglist" className="alert-primary pt-2">
-                        <div class="tag">
+                        <div className="tag">
                             <label id="taglabel_235" for="tag_235">New Contact</label>
                             <input id="tag_235" className="tag" name="tag_id[]" type="checkbox" value="235"/>
 		                </div>
-                        <div class="tag">
+                        <div className="tag">
                             <label id="taglabel_239" for="tag_239">James Wright</label>
                             <input id="tag_239" className="tag" name="tag_id[]" type="checkbox" value="239"/>
                         </div>
@@ -106,12 +106,12 @@ export default function EditSMSKeyword(props) {
                             <p>You can send up to 5 follow-up messages.</p>
                             <div id="message_list">
                             </div>
-                            <p id="messageAdd"><a href="#" className="btn btn-primary"><span class="fas fa-plus"></span> Add a Follow-up Message</a></p>
+                            <p id="messageAdd"><a href="#" className="btn btn-primary"><span className="fas fa-plus"></span> Add a Follow-up Message</a></p>
                         </div>
                     </div>
                 </fieldset>
 
-                <p class="text-center">
+                <p className="text-center">
                     <Button type="submit" id="btnSubmit" className="btnSubmit" className="m-1">Save Changes</Button>
                     <Button type="button" id="btnCancel" className="btnCancel" variant="danger" className="m-1">Cancel</Button>
                 </p>

@@ -17,7 +17,7 @@ export default function VlpContainerThumbnail(props) {
             <Modal show={show} onHide={handleClose} id="videoPlaybackModal" className="modal" tabindex="-1" aria-labelledby="loginPatienterModalLabel" aria-hidden="true">
                 <Modal.Body>
                     <div id="videoContainer">
-                        {/* <video id="myVideo" playsinline class="video-js vjs-default-skin vjs-big-play-centered"></video> */}
+                        {/* <video id="myVideo" playsinline className="video-js vjs-default-skin vjs-big-play-centered"></video> */}
                         {/* Video Goes here */}
                         <img width="100%" src={ExcitedGirl} alt="" />
                     </div>

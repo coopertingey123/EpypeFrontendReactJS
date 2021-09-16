@@ -55,36 +55,36 @@ export default function ManagePromoCodes(props) {
                     <tr>
                         <td><a href="">AMMON1</a></td>
                         <td></td>
-                        <td class="text-end">
+                        <td className="text-end">
                             49.00 / 399.00
                         </td>
-                        <td class="text-end"></td>
+                        <td className="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
-                        <td class="text-end">
+                        <td className="text-end">
                             <Button><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
                     <tr>
                         <td><a href="">AMMON1</a></td>
                         <td></td>
-                        <td class="text-end">
+                        <td className="text-end">
                             49.00 / 399.00
                         </td>
-                        <td class="text-end"></td>
+                        <td className="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
-                        <td class="text-end">
+                        <td className="text-end">
                             <Button><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
                     <tr>
                         <td><a href="">AMMON1</a></td>
                         <td></td>
-                        <td class="text-end">
+                        <td className="text-end">
                             49.00 / 399.00
                         </td>
-                        <td class="text-end"></td>
+                        <td className="text-end"></td>
                         <td>Ammon Freest0ne (Platpay)</td>
-                        <td class="text-end">
+                        <td className="text-end">
                             <Button><FontAwesomeIcon icon="trash"/></Button>
                         </td>
                     </tr>
