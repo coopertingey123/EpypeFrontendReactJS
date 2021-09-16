@@ -31,28 +31,28 @@ export default function ReviewAndSend(props) {
                     <div className="phone-display">
                         <div className="user messages">
                             <div id="opt-in-request-message-5" className="message">
-                                <span id="optinMessageBubbleContent" class="optinMessageBubbleContent"> Join the Westwood Football Fundraiser! </span>
-								 Msg&amp;Data rates may apply. Reply <span class="optInMessageKeyword">COOPER</span> to opt in, STOP to cancel
+                                <span id="optinMessageBubbleContent" className="optinMessageBubbleContent"> Join the Westwood Football Fundraiser! </span>
+								 Msg&amp;Data rates may apply. Reply <span className="optInMessageKeyword">COOPER</span> to opt in, STOP to cancel
                             </div>
                         </div>
                         <div className="contact messages">
-                            <div id="opt-in-keyword" class="message last">
-								<span class="optInMessageKeyword">COOPER</span>
+                            <div id="opt-in-keyword" className="message last">
+								<span className="optInMessageKeyword">COOPER</span>
 							</div>
                         </div>
                         {/* <div className="user messages">
-                            <span id="opt-in-message" class="message">
+                            <span id="opt-in-message" className="message">
 								<span id="smsOptInMessage">https://vlp.epype.net/5y9JD6</span>
 							</span>
                         </div> */}
-                        <div class="user messages">
-							<span id="messageBubble" class="message last">
+                        <div className="user messages">
+							<span id="messageBubble" className="message last">
                                 Thank you for optin in to the Westwood Football Fundraiser! Follow the link to support the team!
                                 <span className="blastMessageContent"> https://vlp.epype.net/5y9JD6 </span>
                                  Reply STOP to cancel
                             </span>
                         </div>
-                        <div class="bottom-phone"></div>
+                        <div className="bottom-phone"></div>
                     </div>
                 </Col>
             </Row>

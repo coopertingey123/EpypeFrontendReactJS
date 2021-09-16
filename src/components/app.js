@@ -62,6 +62,7 @@ import KeywordActivity from "./user/Reports/keyword-activity-report";
 import EditAccountInfo from "./user/EditProfile/edit-account-info";
 import OrderHistory from './user/products/order-history';
 import AddProduct from "./user/products/add-product";
+import StepsAddSmsKeyword from "./user/keywords/add-keyword/steps";
 
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -152,6 +153,7 @@ export default function App(props) {
               <Route path="/user/edit-account-info" component={EditAccountInfo}/>
               <Route path="/user/order-history" component={OrderHistory}/>
               <Route path="/user/add-product" component={AddProduct}/>
+              <Route path="/user/add-keyword" component={StepsAddSmsKeyword}/>
             </Switch>
           <Footer />
         </BrowserRouter>        

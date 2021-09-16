@@ -13,7 +13,7 @@ export default function Tags(props) {
                 <img src={CountryFlag} alt="" style={{paddingRight: "4px"}} /> 
                  (888) 888-8888
             </p>
-            <Button className="my-2">+ Add a new tag</Button>
+            <Button className="my-2">+ Add a new SMS keyword</Button>
             <Table className="table-striped border_bottom text-start p-3">
                 <thead className="thead-dark">
                     <tr>
