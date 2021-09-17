@@ -105,12 +105,12 @@
 	justify-content: center;
 }
 
-#steps-progress-bar-wrapper > #videoTrainingIcon i {
+#steps-progress-bar-wrapper > #videoTrainingIcon {
 	color: #f00;
 	transition: 0.3s ease-in-out;
 }
 
-#steps-progress-bar-wrapper > #videoTrainingIcon i:hover {
+#steps-progress-bar-wrapper > #videoTrainingIcon :hover {
 	color: #545454;
 	cursor: pointer;
 }
@@ -176,8 +176,11 @@
 	}
 }
 
-#steps-progress-bar li.active i {
+#steps-progress-bar li.active {
 	color: #f7a800;
+	p {
+		color: black;
+	}
 }
 
 #steps-progress-bar li.active p::before,
@@ -186,7 +189,12 @@
 	color: #fff;
 }
 
-
+@media (min-width: 992px) {
+	#steps-progress-bar-wrapper.with-video-training {
+		display: grid;
+		grid-template-columns: 2fr 80px;
+	}
+}
 
 .phone-display {
 	display: flex;

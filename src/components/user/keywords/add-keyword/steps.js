@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
-import { Container, Form, Button, Row, Col, Alert } from 'react-bootstrap'
+import { Container, Form, Button, Row, Col, Alert, Modal } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import YoutubeLogo from "../../../../../static/assets/photos/youtube-logo.png"
 
 export default function Steps(props) {
 
@@ -11,6 +13,7 @@ export default function Steps(props) {
     const [myMessage, setMyMessage] = useState("")
     const [link, setLink] = useState("")
     const [charsLeft, setCharsLeft] = useState(137)
+    const [showModal, setShowModal] = useState(false)
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -27,13 +30,47 @@ export default function Steps(props) {
         let charLength = myMessage.length
         setCharsLeft(137 - charLength)
     }
+    console.log(step)
 
     return (
         <Container>
             <h2 className="green-text py-2">Add SMS Keyword</h2>
             <hr style={{width: "100%"}}/>
+            <div id="steps-progress-bar-wrapper" className="with-video-training">
+                <ul id="steps-progress-bar">
+                    <li className={step === 1, 2, 3 ? "active" : null}>
+                        <FontAwesomeIcon icon="key"/>
+                        <p>Create Keyword</p>
+                    </li>
+                    <li className={step !== 1 ? "active" : null}>
+                        <FontAwesomeIcon icon="tags"/>
+                        <p>Compose Message</p>
+                    </li>
+                    <li className={step === 3 ? "active" : null}>
+                        <FontAwesomeIcon icon="envelope-open-text"/>
+                        <p>Message Response</p>
+                    </li>
+                </ul>
+                <div id="videoTrainingIcon" onClick={() => setShowModal(true)}>
+                    <img src={YoutubeLogo} alt="" />
+                    <p>Video Help</p>
+                </div>
+                <Modal className="fade" show={showModal} onHide={() => setShowModal(false)}>
+                    <Modal.Dialog>
+                        <Modal.Body>
+                            <div className="ratio ratio-16x9">
+                                <iframe src="" frameborder="0"></iframe>
+                            </div>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button onClick={() => setShowModal(false)}>Close</Button>
+                        </Modal.Footer>
+                    </Modal.Dialog>
+                </Modal>
+		    </div>
             <Form onSubmit={handleSubmit}>
                 {step == 1 ? <Form>
+                    <h4 className="green-text my-2">Create Keyword</h4>
                     <Form.Group className="py-2">
                         <Form.Label>
                             Enter a word that people can text to your EPYPE phone number. When people text this number, 
@@ -54,6 +91,7 @@ export default function Steps(props) {
                     </div>
                 </Form> : null}
                 {step == 2 ? <Form>
+                    <h4 className="green-text my-2">Compose Message</h4>
                     <Form.Label>
                         <p className="text-thin">
                             The first time someone texts your keyword they will receive a message 
@@ -116,6 +154,7 @@ export default function Steps(props) {
                     </div>
                 </Form> : null}
                 {step == 3 ? <Form>
+                    <h4 className="green-text my-2">Message Response</h4>
                     <Form.Group className="py-2">
                         <Form.Label>
                             Enter the message you want sent in response to people who text your keyword.
@@ -127,8 +166,6 @@ export default function Steps(props) {
                                     setMyMessage(e.target.value),
                                     countChars(e.target.value)
                                 }
-                                // countChars
-                                // () => setCharsLeft(charsLeft - 1)
                             }
                             className="form-control"
                         />
