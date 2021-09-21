@@ -51,8 +51,10 @@ export default function Steps(props) {
                         <p>Message Response</p>
                     </li>
                 </ul>
-                <div id="videoTrainingIcon" onClick={() => setShowModal(true)}>
-                    <img src={YoutubeLogo} alt="" />
+                <div id="videoTrainingIcon" className="text-center" onClick={() => setShowModal(true)}>
+                    <div className="text-center">
+                        <img src={YoutubeLogo} width="60px" alt="" />
+                    </div>
                     <p>Video Help</p>
                 </div>
                 <Modal className="fade" show={showModal} onHide={() => setShowModal(false)}>

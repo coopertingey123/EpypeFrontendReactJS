@@ -23,15 +23,15 @@ export default function Tags(props) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="">COOPER</a></td>
+                        <td><a href="/user/edit-sms-keywords">COOPER</a></td>
                         <td>Westwood football fundraiser</td>
                     </tr>
                     <tr>
-                        <td><a href="">FOOTBALL</a></td>
+                        <td><a href="/user/edit-sms-keywords">FOOTBALL</a></td>
                         <td>Westwood football fundraiser</td>
                     </tr>
                     <tr>
-                        <td><a href="">RODEO</a></td>
+                        <td><a href="/user/edit-sms-keywords">RODEO</a></td>
                         <td>Westwood football fundraiser</td>
                     </tr>
                 </tbody>
