@@ -22,7 +22,7 @@ export default function OrderHistory(props) {
                         <td className="text-end">7/23/2021</td>
                         <td className="text-end">$10.00</td>
                         <td className="text-end">
-                            <a href="">View</a>
+                            <a href="/user/order-details">View</a>
                         </td>
                     </tr>
                     <tr>
@@ -31,7 +31,7 @@ export default function OrderHistory(props) {
                         <td className="text-end">7/23/2021</td>
                         <td className="text-end">$10.00</td>
                         <td className="text-end">
-                            <a href="">View</a>
+                            <a href="/user/order-details">View</a>
                         </td>
                     </tr>
                     <tr>
@@ -40,7 +40,7 @@ export default function OrderHistory(props) {
                         <td className="text-end">7/23/2021</td>
                         <td className="text-end">$10.00</td>
                         <td className="text-end">
-                            <a href="">View</a>
+                            <a href="/user/order-details">View</a>
                         </td>
                     </tr>
                     <tr>
@@ -49,7 +49,7 @@ export default function OrderHistory(props) {
                         <td className="text-end">7/23/2021</td>
                         <td className="text-end">$10.00</td>
                         <td className="text-end">
-                            <a href="">View</a>
+                            <a href="/user/order-details">View</a>
                         </td>
                     </tr>
                     <tr>
@@ -58,7 +58,7 @@ export default function OrderHistory(props) {
                         <td className="text-end">7/23/2021</td>
                         <td className="text-end">$10.00</td>
                         <td className="text-end">
-                            <a href="">View</a>
+                            <a href="/user/order-details">View</a>
                         </td>
                     </tr>
                 </tbody>

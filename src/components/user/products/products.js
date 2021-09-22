@@ -27,7 +27,7 @@ export default function (props) {
                         <td className="text-end">$30.00</td>
                         <td className="text-end">Active</td>
                         <td className="text-end">0</td>
-                        <td className="text-center"><a href="">Edit</a></td>
+                        <td className="text-center"><a href="/user/edit-products">Edit</a></td>
                     </tr>
                     <tr>
                         <td>Donate</td>
@@ -35,7 +35,7 @@ export default function (props) {
                         <td className="text-end">$5.00</td>
                         <td className="text-end">Active</td>
                         <td className="text-end">0</td>
-                        <td className="text-center"><a href="">Edit</a></td>
+                        <td className="text-center"><a href="/user/edit-products">Edit</a></td>
                     </tr>
                     <tr>
                         <td>Discount Card</td>
@@ -43,7 +43,7 @@ export default function (props) {
                         <td className="text-end">$25.00</td>
                         <td className="text-end">Active</td>
                         <td className="text-end">0</td>
-                        <td className="text-center"><a href="">Edit</a></td>
+                        <td className="text-center"><a href="/user/edit-products">Edit</a></td>
                     </tr>
                     <tr>
                         <td>Shirt</td>
@@ -51,7 +51,7 @@ export default function (props) {
                         <td className="text-end">$15.00</td>
                         <td className="text-end">Active</td>
                         <td className="text-end">0</td>
-                        <td className="text-center"><a href="">Edit</a></td>
+                        <td className="text-center"><a href="/user/edit-products">Edit</a></td>
                     </tr>
                 </tbody>
             </Table>

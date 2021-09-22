@@ -19,7 +19,7 @@ export default function SMSBlast(props) {
     const [blast, setBlast] = useState(false)
     const [showModal, setShowModal] = useState(false)
 
-    function handleSubmit() {
+    function handleSubmit(event) {
         event.preventDefault()
         console.log(step)
         console.log(chooseKeyword)

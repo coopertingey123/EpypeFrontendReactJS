@@ -62,11 +62,14 @@ import KeywordActivity from "./user/Reports/keyword-activity-report";
 import EditAccountInfo from "./user/EditProfile/edit-account-info";
 import OrderHistory from './user/products/order-history';
 import AddProduct from "./user/products/add-product";
+import EditProduct from "./user/products/edit-product";
+import OrderDetails from './user/products/order-details';
 import StepsAddSmsKeyword from "./user/keywords/add-keyword/steps";
 
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
+
 
 export default function App(props) {
   
@@ -153,6 +156,8 @@ export default function App(props) {
               <Route path="/user/edit-account-info" component={EditAccountInfo}/>
               <Route path="/user/order-history" component={OrderHistory}/>
               <Route path="/user/add-product" component={AddProduct}/>
+              <Route path="/user/edit-products" component={EditProduct}/>
+              <Route path="/user/order-details" component={OrderDetails}/>
               <Route path="/user/add-keyword" component={StepsAddSmsKeyword}/>
             </Switch>
           <Footer />

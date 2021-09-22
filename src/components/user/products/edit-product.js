@@ -22,7 +22,7 @@ export default function AddProduct(props) {
 
     return (
         <Container className="text-center my-3">
-            <h1 className="green-text">Add Product</h1>
+            <h1 className="green-text">Edit Product</h1>
             <Form className="text-start" onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
                     <Form.Label>Name</Form.Label>
@@ -86,7 +86,7 @@ export default function AddProduct(props) {
                 />
                 <div className="text-center">
                     <Button className="m-1" variant="danger" href="/user/products">Cancel</Button>
-                    <Button className="m-1" type="submit">Add Product</Button>
+                    <Button className="m-1" type="submit" href="/user/products">Save Changes</Button>
                 </div>
             </Form>
         </Container>
