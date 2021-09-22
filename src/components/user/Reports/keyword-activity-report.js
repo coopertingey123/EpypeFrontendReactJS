@@ -1,25 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Form, Alert, Row, Col, Button, Table } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import BarChart from './bar-chart';
 
 export default function OutboundSMSReport(props) {
+
+    const [dateRange, setDateRange] = useState("")
+    const [startDate, setStartDate] = useState("")
+    const [endDate, setEndDate] = useState("")
+
+    function handleFilter() {
+        console.log(dateRange)
+        console.log(startDate)
+        console.log(endDate)
+    }
+
     return (
         <Container className="text-center">
-            <h3 className="green-text">Keyword Activity Report</h3>
+            <h3 className="green-text py-3">Keyword Activity Report</h3>
+            <hr/>
             <Row>
-                <Col className="col-lg">
+                <Col className="text-start px-5" lg={6}>
                     <h4>Keyword</h4>
                     <p>FOOTBALL</p>
+                    <hr/>
                     <h4>Current Date Range</h4>
                     <p>7/1/2021 to 8/31/2021</p>
                 </Col>
-                <Col>
+                <Col lg={6}>
                     <h4>Date Range</h4>
                     <Form className="mb-3">
-                        <Form.Label>Date Range</Form.Label>
-                        <select name="" id="" className="form-select">
+                        <Form.Label className="">Date Range</Form.Label>
+                        <select 
+                            name="" id="" 
+                            className="form-select"
+                            value={dateRange}
+                            onChange={(e) => setDateRange(e.target.value)}
+                        >
                             <option value="today">Today</option>
 							<option value="week-to-date">This Week</option>
 							<option value="month-to-date" selected>This Month</option>
@@ -36,7 +54,11 @@ export default function OutboundSMSReport(props) {
                                     Start Date
                                 </Form.Label>
                                 <div className="input-group">
-                                    <DatePicker className="form-control"/>
+                                    <DatePicker 
+                                        className="form-control"
+                                        selected={startDate}
+                                        onChange={(e) => setStartDate(e)}
+                                    />
                                 </div>
                             </Form>
                         </Col>
@@ -46,12 +68,16 @@ export default function OutboundSMSReport(props) {
                                     End Date
                                 </Form.Label>
                                 <div className="input-group">
-                                    <DatePicker className="form-control"/>
+                                    <DatePicker 
+                                        className="form-control"
+                                        selected={endDate}
+                                        onChange={(e) => setEndDate(e)}
+                                    />
                                 </div>
                             </Form>
                         </Col>
                         <p className="mb-0 text-center">
-                            <Button>Filter</Button>
+                            <Button onClick={handleFilter}>Filter</Button>
                         </p>
                     </Row>
                 </Col>
@@ -63,7 +89,7 @@ export default function OutboundSMSReport(props) {
                         <th></th>
                         <th>Keyword</th>
                         <th>Description</th>
-                        <th></th>
+                        <th width="110px"></th>
                     </tr>
                 </thead>
                 <tbody>

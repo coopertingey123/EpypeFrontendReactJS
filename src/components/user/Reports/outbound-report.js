@@ -5,8 +5,9 @@ import BarChart from "./bar-chart";
 
 export default function OutboundReport(props) {
     return (
-        <Container classname="py-3" id="main_content">
-            <h1 className="green-text">Outbound SMS Report</h1>
+        <Container className="px-3" id="main_content">
+            <h2 className="green-text py-3">Outbound SMS Report</h2>
+            <hr/>
             <h4>Blast Date</h4>
             <p>7/24/2021 9:49 pm</p>
             <h4>Message</h4>

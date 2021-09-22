@@ -1,9 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, Form, Alert, Row, Col, Button, Table } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function OutboundSMSReport(props) {
+
+    const [dateRange, setDateRange] = useState("")
+    const [startDate, setStartDate] = useState("")
+    const [endDate, setEndDate] = useState("")
+
+    function handleSearch() {
+        console.log(dateRange)
+        console.log(startDate)
+        console.log(endDate)
+    }
+
     return (
         <Container className="text-center">
             <Alert className="" variant="danger">
@@ -14,11 +25,16 @@ export default function OutboundSMSReport(props) {
                 <legend>Date Range</legend>
                 <div className="mb-3">
                     <label for="frmDateSelect" className="visually-hidden">Date Range</label>
-
-                    <select id="frmDateSelect" name="date_select" className="form-select">
+                    <select 
+                        id="frmDateSelect" 
+                        name="date_select" 
+                        className="form-select"
+                        value={dateRange}
+                        onChange={(e) => setDateRange(e.target.value)}
+                    >
                         <option value="today">Today</option>
                         <option value="week-to-date">This Week</option>
-                        <option value="month-to-date" selected>This Month</option>
+                        <option value="month-to-date">This Month</option>
                         <option value="year-to-date">This Year</option>
                         <option value="yesterday">Yesterday</option>
                         <option value="last-week">Last Week</option>
@@ -30,19 +46,29 @@ export default function OutboundSMSReport(props) {
                     <Col className="col-lg mb-3">
                         <label for="frmStartDate">Start Date</label>
                         <div className="input-group">
-                            <DatePicker className="form-control" id="frmStartDate" name="start_date" maxlength="10" value="8/1/2021"/>  
+                            <DatePicker 
+                                className="form-control" 
+                                id="frmStartDate" name="start_date" 
+                                maxlength="10" selected={startDate}
+                                onChange={(e) => setStartDate(e)}
+                                />  
                         </div>
                     </Col>
 
                     <Col className="mb-3">
                         <label for="frmEndDate">End Date</label>
                         <div className="input-group">
-                            <DatePicker className="form-control" id="frmEndDate" name="end_date" maxlength="10" value="8/30/2021"/>
+                            <DatePicker 
+                                className="form-control" 
+                                id="frmEndDate" name="end_date" 
+                                maxlength="10" selected={endDate}
+                                onChange={(e) => setEndDate(e)}
+                                />
                         </div>
                     </Col>
                 </Row>
             </Form>
-            <Button className="mb-5">Search</Button>
+            <Button className="mb-5" onChange={handleSearch}>Search</Button>
             <h3>Blast Group List</h3>
             <Table className="text-start">
                 <thead className="thead-dark">

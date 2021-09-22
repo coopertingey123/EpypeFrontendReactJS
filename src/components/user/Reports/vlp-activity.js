@@ -1,25 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Form, Row, Col, Button, Table } from "react-bootstrap"
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import BarChart from './bar-chart';
 
 export default function OutboundSMSReport(props) {
+
+    const [dateRange, setDateRange] = useState("")
+    const [startDate, setStartDate] = useState("")
+    const [endDate, setEndDate] = useState("")
+
+
+    function print() {
+        window.print();
+    }
+
+    function handleFilter() {
+        console.log(dateRange)
+        console.log(startDate)
+        console.log(endDate)
+    }
+
     return (
-        <Container className="text-center">
-            <h3 className="green-text">VLP Activity Report</h3>
+        <Container className="">
+            <h3 className="green-text py-3 text-center" id="pageStart">VLP Activity Report</h3>
+            <hr/>
             <Row>
-                <Col className="col-lg">
-                    <h4>VLP Name</h4>
+                <Col className="px-5" lg={6}>
+                    <h4>VLP Name: </h4>
                     <p>BareBack Friday</p>
-                    <h4>Current Date Range</h4>
+                    <hr/>
+                    <h4>Current Date Range: </h4>
                     <p>7/1/2021 to 8/31/2021</p>
                 </Col>
-                <Col>
-                    <h4>Date Range</h4>
+                <Col className="px-5" lg={6}>
+                    <h4 className="text-center">Date Range</h4>
                     <Form className="mb-3">
                         <Form.Label>Date Range</Form.Label>
-                        <select name="" id="" className="form-select">
+                        <select 
+                            name="" id="" 
+                            className="form-select"
+                            value={dateRange}
+                            onChange={(e) => setDateRange(e.target.value)}
+                            >
                             <option value="today">Today</option>
 							<option value="week-to-date">This Week</option>
 							<option value="month-to-date" selected>This Month</option>
@@ -36,7 +59,11 @@ export default function OutboundSMSReport(props) {
                                     Start Date
                                 </Form.Label>
                                 <div className="input-group">
-                                    <DatePicker className="form-control"/>
+                                    <DatePicker 
+                                        className="form-control"
+                                        selected={startDate}
+                                        onChange={(e) => setStartDate(e)}
+                                    />
                                 </div>
                             </Form>
                         </Col>
@@ -46,18 +73,22 @@ export default function OutboundSMSReport(props) {
                                     End Date
                                 </Form.Label>
                                 <div className="input-group">
-                                    <DatePicker className="form-control"/>
+                                    <DatePicker 
+                                        className="form-control"
+                                        selected={endDate}
+                                        onChange={(e) => setEndDate(e)}
+                                    />
                                 </div>
                             </Form>
                         </Col>
                         <p className="mb-0 text-center">
-                            <Button>Filter</Button>
+                            <Button onClick={handleFilter}>Filter</Button>
                         </p>
                     </Row>
                 </Col>
             </Row>
             <hr/>
-            <Table className="text-start table-striped border_bottom">
+            <Table className="text-start table-striped border_bottom py-3">
                 <thead className="thead-dark">
                     <tr>
                         <th></th>
@@ -71,26 +102,26 @@ export default function OutboundSMSReport(props) {
                         <td><Form.Check/></td>
                         <td>7/24/2021 12:30 pm</td>
                         <td>We'd love to hear from you. Please tell us what you throught of the Fundraiser! See you next year. https://vlp.epype.net/MkqWJy</td>
-                        <td><Button className="btn-sm">Get Report</Button></td>
+                        <td width="110px"><Button className="btn-sm">Get Report</Button></td>
                     </tr>
                     <tr>
                         <td><Form.Check/></td>
                         <td>8/2/2021 8:30 pm</td>
                         <td> Thanks for participating in the Fundraiser!  https://vlp.epype.net/MkqWJy</td>
-                        <td><Button className="btn-sm">Get Report</Button></td>
+                        <td width="110px"><Button className="btn-sm">Get Report</Button></td>
                     </tr>
                     <tr>
                         <td><Form.Check/></td>
                         <td>7/8/2021 12:45 pm</td>
                         <td>View the highlights here! https://vlp.epype.net/MkqWJy</td>
-                        <td><Button className="btn-sm">Get Report</Button></td>
+                        <td width="110px"><Button className="btn-sm">Get Report</Button></td>
                     </tr>
                 </tbody>
             </Table>
-            <Row>
+            <Row className="py-3">
                 <Col className="col order-1 order-lg-2">
                     <div className="table-responsive">
-                        <Table className="text-start table-striped border_bottom">
+                        <Table className="text-start table-striped border_bottom py-3" >
                             <thead className="thead-dark">
                                 <tr>
                                     <td></td>
@@ -139,8 +170,8 @@ export default function OutboundSMSReport(props) {
                 </Col>
             </Row>
             <div className="text-end p-3">
-                <Button className="m-1">Print</Button>
-                <Button className="m-1">New Report</Button>
+                <Button className="m-1" onClick={print}>Print</Button>
+                <Button className="m-1" href="#pageStart">New Report</Button>
             </div>
         </Container>
     )
