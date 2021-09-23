@@ -14,10 +14,10 @@ export default function OutboundReport(props) {
             <p>We'd love to hear from you. Please tell us what you thought of the Fundraiser! See you next year. https://vlp.epype.netMkqWJy</p>
             <hr/>
             <div className="total-messages-wrapper mt-4">
-                <h3>Total Messages</h3>
+                <h3 className="py-3">Total Messages</h3>
                 <Row>
-                    <Col className="col-lg-5 table-responsive">
-                        <Table className="table-striped border_bottom">
+                    <Col className="order-1 order-lg-2">
+                        <Table className="table-striped table-responsive border_bottom">
                             <thead className="thead-dark">
                                 <tr>
                                     <th></th>
@@ -40,19 +40,17 @@ export default function OutboundReport(props) {
                             </tbody>
                         </Table>
                     </Col>
-                    <Col className="order-2 mb-3 total-messages-chart">
-                        {/* <canvas id="totalMessagesChart"> */}
-                            <BarChart/>
-                        {/* </canvas> */}
+                    <Col className="order-2 order-lg-1 mb-3">
+                        <BarChart/>
                     </Col>
                 </Row>
             </div>
             <hr/>
             <div className="video-pages-wrapper mt-4">
-                <h3>Video Landing Page Activity</h3>
-                <Row className="video-table-chart">
-                    <Col className="col-lg-5 order-1 order-lg-2">
-                        <Table className="table-responsive table-striped border_bottom">
+                <h3 className="py-3">Video Landing Page Activity</h3>
+                <Row>
+                    <Col className="order-1 order-lg-1">
+                        <Table className="table-striped table-responsive border_bottom">
                             <thead className="thead-dark">
                                 <tr>
                                     <th></th>
@@ -91,19 +89,19 @@ export default function OutboundReport(props) {
                             </tbody>
                         </Table>
                     </Col>
-                    <Col className="order-2 order-lg-1 mb-3 video-page-chart">
+                    <Col className="order-2 order-lg-2 mb-3">
                         <BarChart/>
                     </Col>
                 </Row>
             </div>
             <hr/>
             <div className="delivered-messages-wrapper mt-4">
-                <h3>Delivered Messages</h3>
+                <h3 className="py-3">Delivered Messages</h3>
                 <div className="opt-out-wrapper mt-3">
                     <h4>Opt-outs</h4>
                     <small><em>(Within two hours after the blast was initiated)</em></small>
-                    <Row className="optout-table-chart">
-                        <Col className="col-lg-5 order-1 order-lg-1">
+                    <Row>
+                        <Col className="order-1 order-lg-2">
                             <Table className="table-responsive border_bottom table-striped">
                                 <thead className="thead-dark">
                                     <tr>
@@ -123,7 +121,7 @@ export default function OutboundReport(props) {
                                 </tbody>
                             </Table>
                         </Col>
-                        <Col className="order-2 order-lg-2 mb-3 optout-chart">
+                        <Col className="order-2 order-lg-1 mb-3">
                             <BarChart/>
                         </Col>
                     </Row>
@@ -131,51 +129,49 @@ export default function OutboundReport(props) {
             </div>
             <hr/>
             <div className="undelivered-messages-wrapper mt-4">
-                <h3>Undelivered Messages</h3>
+                <h3 className="py-3">Undelivered Messages</h3>
                 <Row className="chart-table">
-                    <Col className="col-lg-5 order-2 order-lg-2">
-                        <div className="table-responsive">
-                            <Table className="table-striped border_bottom">
-                                <thead className="thead-dark">
-                                    <tr>
-                                        <th></th>
-                                        <th className="text-end">Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>delivery-receipt-expired</td>
-                                        <td className="text-end">5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>destination-failed</td>
-                                        <td className="text-end">1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>delivery-rejected-due-to-uder-opt-out</td>
-                                        <td className="text-end">1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>destination-rejected-message</td>
-                                        <td className="text-end">1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>invalid-destination-address</td>
-                                        <td className="text-end">5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>invalid-service-type</td>
-                                        <td className="text-end">1</td>
-                                    </tr>
-                                    <tr>
-						                <td>rejected-unallocated-to-number</td>
-						                <td className="text-end">5</td>
-					                </tr>
-                                </tbody>
-                            </Table>
-                        </div>
+                    <Col className="order-1 order-lg-1">
+                        <Table className="table-striped border_bottom table-responsive">
+                            <thead className="thead-dark">
+                                <tr>
+                                    <th></th>
+                                    <th className="text-end">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>delivery-receipt-expired</td>
+                                    <td className="text-end">5</td>
+                                </tr>
+                                <tr>
+                                    <td>destination-failed</td>
+                                    <td className="text-end">1</td>
+                                </tr>
+                                <tr>
+                                    <td>delivery-rejected-due-to-uder-opt-out</td>
+                                    <td className="text-end">1</td>
+                                </tr>
+                                <tr>
+                                    <td>destination-rejected-message</td>
+                                    <td className="text-end">1</td>
+                                </tr>
+                                <tr>
+                                    <td>invalid-destination-address</td>
+                                    <td className="text-end">5</td>
+                                </tr>
+                                <tr>
+                                    <td>invalid-service-type</td>
+                                    <td className="text-end">1</td>
+                                </tr>
+                                <tr>
+                                    <td>rejected-unallocated-to-number</td>
+                                    <td className="text-end">5</td>
+                                </tr>
+                            </tbody>
+                        </Table>
                     </Col>
-                    <Col className="order-1 orer-lg-1 mb-3 undelivered-message-chart">
+                    <Col className="order-1 order-lg-2 mb-3">
                         <BarChart/>
                     </Col>
                 </Row>

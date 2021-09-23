@@ -114,7 +114,7 @@ export default function OutboundSMSReport(props) {
                 </tbody>
             </Table>
             <Row>
-                <Col className="col order-1 order-lg-2">
+                <Col className="order-1 order-lg-2">
                     <div className="table-responsive">
                         <Table className="text-start table-striped">
                             <thead className="thead-dark">
