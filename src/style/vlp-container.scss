@@ -20,3 +20,173 @@ h5.videoPageStatus4 { color: #999; }
 .videoPageStatus2 {}
 .videoPageStatus3 { color: #999; }
 .videoPageStatus4 { color: #999; }
+#myContainer {
+    display: none;
+}
+
+#cameraRecordContainer {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#myContainer h2 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    color: #efac1f;
+}
+
+#myContainer h3 {
+    margin: 1em 0;
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+
+#myContainer textarea {
+    font-size: 1.25em;
+}
+
+/* change player background color */
+#myVideo {
+    background-color: #333;
+}
+
+.step, #uploadFileContainer, #cameraRecordContainer, #iOSRecordInstructions {
+    display: none;
+}
+
+.currentStep {
+    display: block;
+}
+
+#step1, #step4 {
+    text-align: center;
+}
+
+#linksOptions a {
+    min-width: 15em;
+}
+
+#videoUploadProgressBar {
+    width: 100%;
+}
+
+#mainErrorMessage, #noBrowserRecordAllowed, #noFileUploadAllowed, #imageErrorMessage, #contactErrorMessage, #noDesktopSafariRecordAllowed {
+    display: none;
+    text-align: left;
+}
+
+.vjs-record.video-js .vjs-control.vjs-record-indicator {
+    width: 1.8em;
+    height: 1.8em;
+    top: 5ex;
+    right: 6ex;
+}
+
+.vjs-record.video-js .vjs-control.vjs-record-indicator:before {
+    color: #ff625e;
+    top: 0.3em;
+    left: -3em;
+    font-size: 2em;
+}
+
+.vjs-record.video-js .vjs-control.vjs-record-indicator:after {
+    width: calc(1.8em - 4px);
+    height: calc(1.8em - 4px);
+}
+
+.vjs-record .vjs-record-button.vjs-control.vjs-icon-record-start:before {
+    color: #ff625e;
+}
+
+        @supports not (old: ie) {
+    #myContainer {
+        display: block;
+    }
+    #internet-explorer {
+        display: none;
+    }
+}
+
+#myContainer {
+    .prevArrow {
+        color: blue;
+    }
+}
+
+
+/**** VLP TEMPLATE EDITING START ****/
+#templateEditor h3 {
+	margin: 1rem 0;
+	font-size: 1.4em;
+	font-weight: normal;
+}
+
+#templateEditor textarea {
+	font-size: 1.25rem;
+}
+
+#templateEditor > #selectTemplatesButtons {
+	text-align: center;
+}
+
+#templateEditor > #selectTemplatesButtons button {
+	border: 1px solid transparent;
+	border-width: 0 0 4px;
+	border-radius: 0;
+	background: transparent;
+	color: #333;
+	font-size: 1.3em;
+}
+
+#templateEditor > #selectTemplatesButtons button.active,
+#templateEditor > #selectTemplatesButtons button:hover {
+	cursor: pointer;
+	border-color: #f7a800;
+	font-weight: bold;
+}
+
+#templateEditor > .templatesWrapper {
+	display: none;
+	text-align: center;
+}
+
+#user-themes {
+	background: rgb(45,0,152);
+	background: linear-gradient(180deg, rgba(45,0,152,1) 0%, rgba(255,246,246,1) 100%);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 100px;
+}
+
+#user-themes .slides-container-one {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3rem;
+	h1 {
+		color: #fff;
+		font-size: 4rem;
+	}
+	p {
+		color: #fff;
+		font-size: 2rem;
+	}
+}
+
+#user-themes #slides-wrapper {
+	h4 {
+		color: #fff;
+		font-size: 1.4rem;
+	}
+	p {
+		margin: 0;
+		color: #fff;
+		font-size: 1rem;
+	}
+}

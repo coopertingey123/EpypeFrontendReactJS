@@ -65,6 +65,7 @@ import AddProduct from "./user/products/add-product";
 import EditProduct from "./user/products/edit-product";
 import OrderDetails from './user/products/order-details';
 import StepsAddSmsKeyword from "./user/keywords/add-keyword/steps";
+import AddVlp from "./VLPs/add-vlp";
 
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -159,6 +160,7 @@ export default function App(props) {
               <Route path="/user/edit-products" component={EditProduct}/>
               <Route path="/user/order-details" component={OrderDetails}/>
               <Route path="/user/add-keyword" component={StepsAddSmsKeyword}/>
+              <Route path="/user/add-vlp" component={AddVlp}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
