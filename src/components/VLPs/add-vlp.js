@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Container, Form, Button, Alert, Row, Col, Popover, OverlayTrigger, Modal } from 'react-bootstrap'
+import { Container, Form, Button, Alert, Row, Col, Popover, OverlayTrigger, Modal, Nav } from 'react-bootstrap'
 import SavedTemplatesCarousel from "./saved-templates-carousel";
+import ThemesCarousel from "./themes-carousel";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import YoutubeLogo from "../../../static/assets/photos/youtube-logo.png"
 
@@ -11,6 +12,8 @@ export default function CreateVlp(props) {
     const [vlpName, setVlpName] = useState("")
     const [step, setStep] = useState(1)
     const [showModal, setShowModal] = useState(false)
+    const [templateName, setTemplateName] = useState("")
+    const [active, setActive] = useState("templates")
 
     const popover = (
         <Popover id="popover-basic" className="text-center">
@@ -83,9 +86,26 @@ export default function CreateVlp(props) {
             : null }
             {step == 2 ? 
                 <Container id="main_content" fluid>
+                    <Nav variant="pills" className="d-flex justify-content-center p-3" activeKey={active}>
+                        <Nav.Item>
+                            <Nav.Link eventKey="templates" onClick={() => setActive("templates")}>
+                                Saved Templates
+                            </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item eventKey="themes">
+                            <Nav.Link eventKey="themes" onClick={() => setActive("themes")}>
+                                Themes
+                            </Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                    {active == "templates" ? 
                     <div className="section-three d-md-flex d-none">
                         <SavedTemplatesCarousel/>
                     </div>
+                    : 
+                    <div className="section-three d-md-flex d-none">
+                        <ThemesCarousel/>
+                    </div> }
                     <h2 className="text-center pb-4">Use the buttons below to build your content. </h2>
                     <Container>
                         <Row className="justify-content-center">
@@ -97,25 +117,70 @@ export default function CreateVlp(props) {
                                             <OverlayTrigger trigger="click" placement="right" overlay={popover}>
                                                 <Button className="btn-sm my-1" variant="success">Learn more</Button>
                                             </OverlayTrigger>
-                                            <Form.Control value="" placeholder="Nuet is Starting a Workout Series!"/>
+                                            <Form.Control value={templateName} onChange={(e) => setTemplateName(e.target.value)} placeholder="Template Name"/>
                                         </Alert>
                                         <div className="text-center title-element" width="100%">
-                                            <Button style={{width: "100%"}} className="btn-lg my-2 p-lg-3">Add Heading</Button>
+                                            <Button style={{width: "100%"}} className="btn-lg justify-content-between my-2 p-lg-3 d-flex">
+                                                <h4>
+                                                    <FontAwesomeIcon className="" icon="heading"/>
+                                                </h4>
+                                                <h4>Add Heading</h4>
+                                                <h4></h4>
+                                            </Button>
                                         </div>
                                         <div className="text-center">
-                                            <Button style={{width: "100%"}} className="btn-lg my-2 p-lg-3">Add Text</Button>
+                                            <Button style={{width: "100%"}} className="btn-lg justify-content-between my-2 p-lg-3 d-flex">
+                                                <h4>
+                                                    <FontAwesomeIcon className="" icon="align-center"/>
+                                                </h4>
+                                                <h4>Add Text</h4>
+                                                <h4></h4>
+                                            </Button>
                                         </div>
                                         <div className="text-center">
-                                            <Button style={{width: "100%"}} className="btn-lg my-2 p-lg-3">Add Image</Button>
+                                            <Button style={{width: "100%"}} className="btn-lg justify-content-between my-2 p-lg-3 d-flex">
+                                                <h4>
+                                                    <FontAwesomeIcon className="" icon="image"/>
+                                                </h4>
+                                                <h4>Add Image</h4>
+                                                <h4></h4>
+                                            </Button>
                                         </div>
                                         <div className="text-center">
-                                            <Button style={{width: "100%"}} className="btn-lg my-2 p-lg-3">Add Link</Button>
+                                            <Button style={{width: "100%"}} className="btn-lg justify-content-between my-2 p-lg-3 d-flex">
+                                                <h4>
+                                                    <FontAwesomeIcon className="" icon="link"/>
+                                                </h4>
+                                                <h4>Add Link</h4>
+                                                <h4></h4>
+                                            </Button>
                                         </div>
                                         <div className="text-center">
-                                            <Button style={{width: "100%"}} className="btn-lg my-2 p-lg-3">Add Product</Button>
+                                            <Button style={{width: "100%"}} className="btn-lg justify-content-between my-2 p-lg-3 d-flex">
+                                                <h4>
+                                                    <FontAwesomeIcon className="" icon="shopping-cart"/>
+                                                </h4>
+                                                <h4>Add Product</h4>
+                                                <h4></h4>
+                                            </Button>
                                         </div>
                                         <div className="text-center">
-                                            <Button style={{width: "100%"}} className="btn-lg my-2 p-lg-3" variant="danger">Clear Content</Button>
+                                            <Button style={{width: "100%"}} variant="danger" className="btn-lg justify-content-between my-2 p-lg-3 d-flex">
+                                                <h4>
+                                                    <FontAwesomeIcon className="" icon="trash"/>
+                                                </h4>
+                                                <h4>Clear Content</h4>
+                                                <h4></h4>
+                                            </Button>
+                                        </div>
+                                        <div className="text-center">
+                                            <Button style={{width: "100%"}} className="btn-lg justify-content-between my-2 p-lg-3 mt-5 d-flex">
+                                                <h4>
+                                                    <FontAwesomeIcon className="" icon="comments"/>
+                                                </h4>
+                                                <h4>Contact Options</h4>
+                                                <h4></h4>
+                                            </Button>
                                         </div>
                                     </Col>
                                 </Row>
