@@ -5,14 +5,14 @@ import {
     faExclamationTriangle, faFileDownload, faPaperPlane, faInfoCircle, faPlayCircle, faCheckSquare, 
     faUserCheck, faCoffee, faSearch, faUser, faList, faEdit, faEllipsisV, faShare, faFileVideo,
     faChartBar, faEye, faCopy, faBan, faTrash, faKey, faTags, faEnvelopeOpenText, faGripLines, faVideo,
-    faHeading, faAlignCenter, faImage, faLink, faShoppingCart, faComments
+    faHeading, faAlignCenter, faImage, faLink, faShoppingCart, faComments, faFileCsv, faColumns, faUserTag
   } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = () => {
     return library.add(faExclamationTriangle, faFileDownload, faPaperPlane, faInfoCircle, faGripLines,
       faPlayCircle, faUserCheck, faEnvelopeOpenText, faTags, faCheckSquare, faCoffee, faFileVideo,
       faSearch, faUser, faList, faEdit, faEllipsisV, faShare, faChartBar, faEye, faCopy, faBan, faTrash, faKey, 
-      faVideo, faHeading, faAlignCenter, faImage, faLink, faShoppingCart, faComments)
+      faVideo, faHeading, faAlignCenter, faImage, faLink, faShoppingCart, faComments, faFileCsv, faColumns, faUserTag)
 }
 
 export default Icons;
