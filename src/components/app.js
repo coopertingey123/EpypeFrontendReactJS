@@ -52,6 +52,7 @@ import UserProducts from "./user/products/products";
 import UserContacts from "./user/Contacts/contacts";
 import AddContact from "./user/Contacts/add-contact";
 import ImportContacts from './user/Contacts/import-contact';
+import ExportContacts from './user/Contacts/export-contacts';
 
 import ContactSearchResults from './user/Contacts/contact-search-results';
 import UserTags from "./user/keywords/tags";
@@ -73,8 +74,6 @@ import AddVlp from "./VLPs/add-vlp";
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
-
-
 
 export default function App(props) {
   
@@ -151,6 +150,7 @@ export default function App(props) {
               <Route exact path="/user/contacts" component={UserContacts}/>
               <Route path="/user/contacts/add-contact" component={AddContact}/>
               <Route path="/user/contacts/import-contacts" component={ImportContacts}/>
+              <Route path="/user/contacts/export-contacts" component={ExportContacts}/>
 
               <Route path="/user/search-results-contacts" component={ContactSearchResults}/>
               <Route path="/user/tags" component={UserTags}/>
