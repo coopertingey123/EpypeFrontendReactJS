@@ -50,6 +50,8 @@ import HomeVLPs from "./VLPs/home-vlps";
 import UserTemplates from "./VLPs/saved-templates";
 import UserProducts from "./user/products/products";
 import UserContacts from "./user/Contacts/contacts";
+import AddContact from "./user/Contacts/add-contact";
+
 import ContactSearchResults from './user/Contacts/contact-search-results';
 import UserTags from "./user/keywords/tags";
 import SMSKeywords from "./user/keywords/sms-keywords";
@@ -144,7 +146,9 @@ export default function App(props) {
               <Route exact path="/user" component={HomeVLPs}/>
               <Route path="/user/templates" component={UserTemplates}/>
               <Route path="/user/products" component={UserProducts}/>
-              <Route path="/user/contacts" component={UserContacts}/>
+              <Route exact path="/user/contacts" component={UserContacts}/>
+              <Route path="/user/contacts/add-contact" component={AddContact}/>
+
               <Route path="/user/search-results-contacts" component={ContactSearchResults}/>
               <Route path="/user/tags" component={UserTags}/>
               <Route path="/user/sms-keywords" component={SMSKeywords}/>
