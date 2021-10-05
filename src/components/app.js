@@ -53,6 +53,7 @@ import UserContacts from "./user/Contacts/contacts";
 import AddContact from "./user/Contacts/add-contact";
 import ImportContacts from './user/Contacts/import-contact';
 import ExportContacts from './user/Contacts/export-contacts';
+import ContactTags from './user/Contacts/manage-tags';
 
 import ContactSearchResults from './user/Contacts/contact-search-results';
 import UserTags from "./user/keywords/tags";
@@ -151,6 +152,7 @@ export default function App(props) {
               <Route path="/user/contacts/add-contact" component={AddContact}/>
               <Route path="/user/contacts/import-contacts" component={ImportContacts}/>
               <Route path="/user/contacts/export-contacts" component={ExportContacts}/>
+              <Route path="/user/contacts/tags" component={ContactTags}/>
 
               <Route path="/user/search-results-contacts" component={ContactSearchResults}/>
               <Route path="/user/tags" component={UserTags}/>
