@@ -8,12 +8,13 @@ export default function ContactSearchResults(props) {
 
     return (
         <Container>
-            <Alert variant="primary">
-                <strong>Search criteria: </strong> 536 matches
+            <Alert variant="primary" className="my-3">
+                <p><strong>Search criteria: </strong> 536 matches</p>
+                <p>Tag(s): New Contact</p>
             </Alert>
             <Row>
                 <Col className="records-wrapper">
-                    <strong>536</strong> records found | <a href="">New Search</a> | <a href="">Add Tags</a> | <a href="">Export Data</a>
+                    <strong>536</strong> records found | <a href="/user/contacts">New Search</a> | <a href="/user/contacts/add-tag">Add Tags</a> | <a href="/user/contacts/export-contacts">Export Data</a>
                 </Col>
                 <Col className="pagination-wrapper text-end">
                     <Pagination className="">
@@ -69,7 +70,7 @@ export default function ContactSearchResults(props) {
             </Table>
             <Row>
                 <Col className="records-wrapper">
-                    <strong>536</strong> records found | <a href="">New Search</a> | <a href="">Add Tags</a> | <a href="">Export Data</a>
+                    <strong>536</strong> records found | <a href="/user/contacts">New Search</a> | <a href="/user/contacts/add-tag">Add Tags</a> | <a href="/user/contacts/export-contacts">Export Data</a>
                 </Col>
                 <Col className="pagination-wrapper text-end">
                     <Pagination className="">

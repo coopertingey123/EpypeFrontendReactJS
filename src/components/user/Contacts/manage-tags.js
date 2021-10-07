@@ -19,8 +19,8 @@ export default function ManageTags(props) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="">New Contact</a></td>
-                        <td className="text-end"><a href="">1</a></td>
+                        <td><a href="/user/contacts/edit-tag">New Contact</a></td>
+                        <td className="text-end"><a href="/user/contacts/search-results">1</a></td>
                         <td className="text-end"><Button variant="danger">Delete <FontAwesomeIcon icon="trash"/></Button></td>
                     </tr>
 

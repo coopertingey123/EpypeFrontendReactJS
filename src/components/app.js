@@ -54,6 +54,9 @@ import AddContact from "./user/Contacts/add-contact";
 import ImportContacts from './user/Contacts/import-contact';
 import ExportContacts from './user/Contacts/export-contacts';
 import ContactTags from './user/Contacts/manage-tags';
+import AddTag from "./user/Contacts/add-tag";
+import EditTag from "./user/Contacts/edit-tag";
+import EditContact from "./user/Contacts/EditContact/edit-contact";
 
 import ContactSearchResults from './user/Contacts/contact-search-results';
 import UserTags from "./user/keywords/tags";
@@ -153,8 +156,11 @@ export default function App(props) {
               <Route path="/user/contacts/import-contacts" component={ImportContacts}/>
               <Route path="/user/contacts/export-contacts" component={ExportContacts}/>
               <Route path="/user/contacts/tags" component={ContactTags}/>
+              <Route path="/user/contacts/add-tag" component={AddTag}/>
+              <Route path="/user/contacts/edit-tag" component={EditTag}/>
+              <Route path="/user/contacts/edit-contact" component={EditContact}/>
 
-              <Route path="/user/search-results-contacts" component={ContactSearchResults}/>
+              <Route path="/user/contacts/search-results" component={ContactSearchResults}/>
               <Route path="/user/tags" component={UserTags}/>
               <Route path="/user/sms-keywords" component={SMSKeywords}/>
               <Route path="/user/sms-blast" component={SMSBlast}/>

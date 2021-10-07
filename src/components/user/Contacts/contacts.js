@@ -30,10 +30,10 @@ export default function UserSignups(props) {
     return (
         <Container className="text-center pb-5">
             <h1 className="green-text p-3">Contacts</h1>
-            <Button className="m-1">Add New Contact</Button>
-            <Button className="m-1">Import Contacts</Button>
-            <Button className="m-1">Export Contacts</Button>
-            <Button className="m-1">Manage Tags</Button>
+            <Button className="m-1" href="/user/contacts/add-contact">Add New Contact</Button>
+            <Button className="m-1" href="/user/contacts/import-contacts">Import Contacts</Button>
+            <Button className="m-1" href="/user/contacts/export-contacts">Export Contacts</Button>
+            <Button className="m-1" href="/user/contacts/tags">Manage Tags</Button>
             <Form className="text-start p-3" onSubmit={handleSubmit}>
                 <Form.Group>
                     <Form.Label>
