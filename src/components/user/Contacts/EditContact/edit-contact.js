@@ -4,7 +4,7 @@ import MainInfo from "./main-info"
 import SendMessage from "./send-message"
 import Invoices from "./invoices"
 import Notes from "./notes"
-import ExportData from './export-data'
+import ExportData from '../export-contacts'
 
 export default function EditAccountInformation(props) {
 
@@ -13,7 +13,7 @@ export default function EditAccountInformation(props) {
 
     return (
         <Container>
-            <h5 className="py-4">Fiesta Days</h5>
+            <h3 className="py-3">Edit Contact: Cooper Tingey</h3>
             <Nav variant="tabs" id="crminfocontainer" className="my-3" activeKey={active}>
                 <Nav.Item>
                     <Nav.Link

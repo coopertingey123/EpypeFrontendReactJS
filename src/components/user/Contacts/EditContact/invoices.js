@@ -14,6 +14,7 @@ export default function Invoices(props) {
 
     return (
         <Container>
+            <h2 className="green-text py-2">Invoices</h2>
             <Alert className="pb-3" variant="danger">
                 No invoice history was found
             </Alert>

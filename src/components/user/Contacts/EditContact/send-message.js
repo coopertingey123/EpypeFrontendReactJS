@@ -15,6 +15,7 @@ export default function SendMessage(props) {
 
     return (
         <Container>
+            <h2 className="green-text py-2">Send Message</h2>
             <Alert variant="primary">
                 <p>This contact has opted in to text messages for this keyword:</p>
                 <Button>COOPER</Button>

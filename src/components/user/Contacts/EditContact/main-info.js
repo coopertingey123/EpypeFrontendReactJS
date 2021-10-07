@@ -18,7 +18,7 @@ export default function MainInfo(props) {
 
     return (
         <Container>
-            This is the main info component
+            <h2 className="green-text py-2">Main Info</h2>
             <Form>
                 <Form.Label>Attached Tags</Form.Label>
                 <Alert variant="primary">
@@ -130,7 +130,7 @@ export default function MainInfo(props) {
                 </Row>
                 <hr />
                 <Form.Label>Notes</Form.Label>
-                <textarea value={notes} onChange={(e) => setNotes(e.target.value)} className="form-control mb-3" id="" cols="30" rows="10"/>
+                <textarea value={notes} onChange={(e) => setNotes(e.target.value)} className="form-control mb-3" id="" cols="30" rows="5"/>
                 <div className="text-center py-3">
                     <Button className="m-1">Save Changes</Button>
                     <Button variant="danger" className="m-1">Cancel</Button>
