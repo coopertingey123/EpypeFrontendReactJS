@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Form, Button, Alert, Row, Col, Popover, OverlayTrigger, Modal, Nav } from 'react-bootstrap'
-import SavedTemplatesCarousel from "./saved-templates-carousel";
-import ThemesCarousel from "./themes-carousel";
+import SavedTemplatesCarousel from "../templates/saved-templates-carousel";
+import ThemesCarousel from "../templates/themes-carousel";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import YoutubeLogo from "../../../static/assets/photos/youtube-logo.png"
 
@@ -199,7 +199,7 @@ export default function CreateVlp(props) {
             : null }
             {step == 3 ?
                 <Container>
-                    <h3>Select a video option.</h3>
+                    <h3 className="text-center">Select a video option.</h3>
                     <div className="text-center">
                         <Button style={{width: "300px", height: "100px"}} className="m-2" onClick={() => setStep(5)}>
                             <div className="video">

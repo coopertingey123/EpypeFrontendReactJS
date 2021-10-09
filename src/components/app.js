@@ -47,7 +47,7 @@ import AdminEditUser from "./admin/Other/edit-user"
 
 // User Components
 import HomeVLPs from "./VLPs/home-vlps";
-import UserTemplates from "./VLPs/saved-templates";
+import UserTemplates from "./templates/saved-templates";
 import UserProducts from "./user/products/products";
 import UserContacts from "./user/Contacts/contacts";
 import AddContact from "./user/Contacts/add-contact";
@@ -74,6 +74,7 @@ import EditProduct from "./user/products/edit-product";
 import OrderDetails from './user/products/order-details';
 import StepsAddSmsKeyword from "./user/keywords/add-keyword/steps";
 import AddVlp from "./VLPs/add-vlp";
+import UpdateVlp from "./VLPs/update-vlp"
 
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -176,6 +177,7 @@ export default function App(props) {
               <Route path="/user/order-details" component={OrderDetails}/>
               <Route path="/user/add-keyword" component={StepsAddSmsKeyword}/>
               <Route path="/user/add-vlp" component={AddVlp}/>
+              <Route path="/user/update-vlp" component={UpdateVlp}/>
             </Switch>
           <Footer />
         </BrowserRouter>        

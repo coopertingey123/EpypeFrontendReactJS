@@ -4,10 +4,10 @@ import { Container, Alert, Button, Table } from 'react-bootstrap'
 export default function SavedTemplates(props) {
     return (
         <Container className="text-center">
-            <h1 className="green-text p-3">Saved VLP Templates</h1>
+            <h2 className="green-text p-3">Saved VLP Templates</h2>
             <Alert variant="danger">You don't have any Video Landing Page Templates</Alert>
             <Button>+ Add a new Template</Button>
-            <Table className="table-striped border_bottom text-start p-3">
+            <Table className="table-striped border_bottom text-start my-3">
                 <thead className="thead-dark">
                     <tr>
                         <th style={{width: "120x"}}></th>
