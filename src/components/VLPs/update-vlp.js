@@ -27,10 +27,12 @@ export default function UpdateVlp(props) {
             <h2 className="green-text text-center pt-3">Update a VLP</h2>
             <Row>
                 <Col className="text-start">
-                    <Button className="mb-5 ms-5" onClick={alternateThemes == false ? () => setAlerternateThemes(true) : () => setAlerternateThemes(false)}>Alternate Themes</Button>
+                    <Button className="mb-5 ms-5" onClick={alternateThemes == false ? () => setAlerternateThemes(true) : () => setAlerternateThemes(false)}>
+                        {alternateThemes ? <FontAwesomeIcon icon="eye"/> : <FontAwesomeIcon icon="eye-slash"/> } Alternate Themes
+                    </Button>
                 </Col>
                 <Col className="text-end">
-                    <Button className="mb-5 me-5">Advanced Edit</Button>
+                    <Button className="mb-5 me-5" href="/user/advanced-edit">Advanced Edit</Button>
                 </Col>
             </Row>
             {alternateThemes ? 
@@ -149,3 +151,9 @@ export default function UpdateVlp(props) {
         </Container>
     )
 }
+
+// Check for wanting to switch to advanced edit mode:
+// Switching to advanced mode gives you complete control over your content and layout.  
+// However, once you save changes in advanced mode, you will not be able to use the 
+// guided editor again for this content.
+// Are you sure you want to switch to advanced mode?

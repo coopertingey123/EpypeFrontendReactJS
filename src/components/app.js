@@ -34,6 +34,7 @@ import ManageAccounts from './admin/General/manage-accounts';
 import ManageEvents from './admin/General/manage-events';
 import ManagePromoCodes from './admin/General/manage-promo-codes';
 import ManageVLPLayouts from './admin/General/manage-vlp-layouts';
+import EditVlpTheme from './admin/General/edit-vlp-theme';
 import SMSCodes from './admin/General/sms-codes';
 import ClientSignups from './admin/Reports/user-signups';
 import InvoicePayments from './admin/Billing/invoice-payments';
@@ -74,11 +75,14 @@ import EditProduct from "./user/products/edit-product";
 import OrderDetails from './user/products/order-details';
 import StepsAddSmsKeyword from "./user/keywords/add-keyword/steps";
 import AddVlp from "./VLPs/add-vlp";
-import UpdateVlp from "./VLPs/update-vlp"
+import UpdateVlp from "./VLPs/update-vlp";
+import AdvancedEdit from './VLPs/advanced-edit';
 
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
+
+
 
 export default function App(props) {
   
@@ -135,6 +139,7 @@ export default function App(props) {
               <Route path="/admin/events" component={ManageEvents}/>
               <Route path="/admin/promo-codes" component={ManagePromoCodes}/>
               <Route path="/admin/vlp-layouts" component={ManageVLPLayouts}/>
+              <Route path="/admin/edit-vlp-theme" component={EditVlpTheme}/>
               <Route path="/admin/sms-codes" component={SMSCodes}/>
               {/* admin reports pages */}
               <Route path="/admin/client-signups" component={ClientSignups}/>
@@ -178,6 +183,7 @@ export default function App(props) {
               <Route path="/user/add-keyword" component={StepsAddSmsKeyword}/>
               <Route path="/user/add-vlp" component={AddVlp}/>
               <Route path="/user/update-vlp" component={UpdateVlp}/>
+              <Route path="/user/advanced-edit" component={AdvancedEdit}/>
             </Switch>
           <Footer />
         </BrowserRouter>        
