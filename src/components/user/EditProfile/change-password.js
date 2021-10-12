@@ -16,7 +16,7 @@ export default function ChangePassword(props) {
 
     return (
         <Container>
-            <h1 className="green-text">Change Password</h1> 
+            <h3 className="green-text py-3">Change Password</h3> 
             <hr style={{width: "100%"}}/>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="py-2">
@@ -43,7 +43,7 @@ export default function ChangePassword(props) {
             </Form>
             <p className="text-center">
                 <Button className="m-1" type="submit">Change Password</Button>
-                <Button variant="danger" className="m-1">Cancel</Button>
+                <Button variant="danger" className="m-1" href="/user">Cancel</Button>
             </p>
         </Container>
     )

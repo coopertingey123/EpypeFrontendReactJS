@@ -13,7 +13,7 @@ export default function NotificationSettings(props) {
 
     return (
         <Container>
-            <h1 className="green-text">Notification Settings</h1>
+            <h3 className="green-text py-3">Notification Settings</h3>
             <hr style={{width: "100%"}}/>
             {/* <h3>Fiesta Days</h3> */}
             <Form className="int -phone-form">
@@ -172,7 +172,7 @@ export default function NotificationSettings(props) {
                 </fieldset>
                 <p className="text-center">
                     <Button type="submit" id="btnSubmit" name="btnSubmit" className="btn-primary m-1" value="Save Changes">Save Changes</Button>
-                    <Button type="button" id="btnCancel" name="btnCancel" className="btn-danger m-1" value="Cancel">Cancel</Button>
+                    <Button type="button" id="btnCancel" name="btnCancel" className="btn-danger m-1" value="Cancel" href="/user">Cancel</Button>
                 </p>
             </Form>
             

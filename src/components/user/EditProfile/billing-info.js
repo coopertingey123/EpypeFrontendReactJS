@@ -18,10 +18,10 @@ export default function BillingInfo(props) {
 
     return (
         <Container>
-            <h1 className="green-text">Billing Information</h1>
+            <h3 className="green-text py-3">Billing Information</h3>
             <hr style={{width: "100%"}}/>
             {/* <h3>Fiesta Days</h3> */}
-            <h2 className="py-3">Credit Card on File</h2>
+            <h4 className="py-2">Credit Card on File</h4>
             <p>
                 <Alert variant="danger">No credit card is on file</Alert>
             </p>
@@ -30,7 +30,7 @@ export default function BillingInfo(props) {
             </p>
             {show ? <NewCreditCard/> : null}
             <hr style={{width: "100%"}}/>
-            <h2>Payment History</h2>
+            <h4 className="py-2">Payment History</h4>
             <p>Last 1 payment</p>
             <Table className="table-responsive table-striped border_bottom">
                 <thead className="thead-dark">
@@ -59,7 +59,7 @@ export default function BillingInfo(props) {
                 <Button href="">Full Payment History</Button>
             </p>
             <hr style={{width: "100%"}}/>
-            <h2>Fees</h2>
+            <h4 className="py-2">Fees</h4>
             <Alert variant="success">No fees are attached to your account.</Alert>
         </Container>
     )

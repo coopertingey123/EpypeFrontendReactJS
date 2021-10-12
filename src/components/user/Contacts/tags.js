@@ -7,7 +7,7 @@ export default function Tags(props) {
     return (
         <Container className="text-center">
             <h1 className="green-text py-3">Contact Tags</h1>
-            <Button>+ Add a new tag</Button>
+            <Button className="mb-3" href="/user/contacts/add-tag">+ Add a new tag</Button>
             <Table className="table-striped border_bottom text-start p-3">
                 <thead className="thead-dark">
                     <tr>
@@ -18,22 +18,22 @@ export default function Tags(props) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="">New Contact</a></td>
+                        <td><a href="/user/contacts/edit-tag">New Contact</a></td>
                         <td className="text-end"><a href="">3</a></td>
                         <td className="text-end"></td>
                     </tr>
                     <tr>
-                        <td><a href="">Johnny Wright</a></td>
+                        <td><a href="/user/contacts/edit-tag">Johnny Wright</a></td>
                         <td className="text-end">0</td>
                         <td className="text-end"><Button><FontAwesomeIcon icon="trash"/></Button></td>
                     </tr>
                     <tr>
-                        <td><a href="">Kevin Wright</a></td>
+                        <td><a href="/user/contacts/edit-tag">Kevin Wright</a></td>
                         <td className="text-end">1</td>
                         <td className="text-end"><Button><FontAwesomeIcon icon="trash"/></Button></td>
                     </tr>
                     <tr>
-                        <td><a href="">Max Wright</a></td>
+                        <td><a href="/user/contacts/edit-tag">Max Wright</a></td>
                         <td className="text-end">2</td>
                         <td className="text-end"><Button><FontAwesomeIcon icon="trash"/></Button></td>
                     </tr>

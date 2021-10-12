@@ -4,8 +4,8 @@ import { Container, Button, Alert, Row, Col, Form } from 'react-bootstrap'
 export default function EditSMSKeyword(props) {
 
     const [optinMessage, setOptinMessage] = useState("")
-    const [messages, setMessages] = useState("")
-    const [msgFrequency, setMsgFrequency] = useState("")
+    const [messages, setMessages] = useState(1)
+    const [msgFrequency, setMsgFrequency] = useState("mo")
     const [responseMsg, setResponseMsg] = useState("")
     const [charsRemaining, setCharsRemaining] = useState(73)
     const [selectVlp, setSelectVlp] = useState("")
@@ -81,10 +81,11 @@ export default function EditSMSKeyword(props) {
                                 Your opt-in message for <strong><span id="optInKeyword">COOPER</span>:</strong>
                                 <Alert className="alert-primary my-2">
                                     <p>
-                                        <em>[YOUR PHONE NUMBER HERE]</em>:
-                                        <span id="optInDescription">{optinMessage}</span>.
+                                        <em>[YOUR PHONE NUMBER HERE]</em>: 
+                                         {selectVlp} 
+                                         {optinMessage} 
                                         Msg&amp;Data rates may apply.
-                                        <span id="optInFrequencyCount">1</span>msg/ <span id="optInFrequencyInterval">mo</span>. Reply HELP for help, STOP to cancel.
+                                        {messages} msg/ {msgFrequency}. Reply HELP for help, STOP to cancel.
                                     </p>
                                 </Alert>
                             </Form.Label>
@@ -175,10 +176,10 @@ export default function EditSMSKeyword(props) {
                     </div>
                 </fieldset>
 
-                <p className="text-center">
-                    <Button type="submit" id="btnSubmit" className="btnSubmit" className="m-1">Save Changes</Button>
-                    <Button type="button" id="btnCancel" className="btnCancel" variant="danger" className="m-1">Cancel</Button>
-                </p>
+                <div className="text-center">
+                    <Button type="submit" id="btnSubmit" className="btnSubmit" className="m-1" href="/user">Save Changes</Button>
+                    <Button type="button" id="btnCancel" className="btnCancel" variant="danger" className="m-1" href="/user">Cancel</Button>
+                </div>
             </Form>
         </Container>
     )

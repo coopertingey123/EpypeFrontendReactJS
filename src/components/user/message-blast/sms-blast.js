@@ -59,7 +59,7 @@ export default function SMSBlast(props) {
 
     return (
         <Container className="text-center">
-            <h1 className="green-text">Create a Message Blast</h1>
+            <h3 className="green-text py-3">Create a Message Blast</h3>
             <div id="steps-progress-bar-wrapper" className="with-video-training">
                 <ul id="steps-progress-bar">
                     <li className={step === 1, 2, 3, 4, 5 ? "active" : ""}>
@@ -121,7 +121,7 @@ export default function SMSBlast(props) {
                             </select>
                         </Form.Group>
                         <Button type="submit" className="my-2 mx-1" onClick={() => setStep(2)}>Next</Button>
-                        <Button variant="danger" className="my-2 mx-1">Cancel</Button>
+                        <Button variant="danger" className="my-2 mx-1" href="/user">Cancel</Button>
                     </Container>
                 : null }
                 {step === 2 ? 
@@ -144,7 +144,7 @@ export default function SMSBlast(props) {
                         </Form.Group>
                         <Button className="my-2 mx-1" onClick={() => setStep(3)}>Next</Button>
                         <Button className="my-2 mx-1" onClick={() => setStep(1)}>Back</Button>
-                        <Button variant="danger" className="my-2 mx-1">Cancel</Button>
+                        <Button variant="danger" className="my-2 mx-1" href="/user">Cancel</Button>
                     </Container>
                 : null }
                 {step === 3 ? 
@@ -222,7 +222,7 @@ export default function SMSBlast(props) {
                         </Row>
                         <Button id="step3NextButton" className="nextButton m-1" onClick={() => setStep(4)}>Next</Button>
                         <Button id="step3NextButton" className="nextButton m-1" onClick={() => setStep(2)}>Back</Button>
-                        <Button id="step3NextButton" className="nextButton m-1" variant="danger">Cancel</Button>
+                        <Button id="step3NextButton" className="nextButton m-1" variant="danger" href="/user">Cancel</Button>
                     </Container>
                 : null }
                 {step === 4 ? 
@@ -460,7 +460,7 @@ export default function SMSBlast(props) {
                             <div className="mb-3">
                                 <Button type="submit" id="step5NextButton" className="nextButton mx-1" disabled={checked} onClick={() => setStep(5)}>Confirm &amp; Send</Button>
                                 <Button id="step5PrevButton" className="prevButton mx-1" onClick={() => setStep(3)}>Back</Button>
-                                <Button id="step5CancelButton" className="btn-danger mx-1">Cancel</Button>
+                                <Button id="step5CancelButton" className="btn-danger mx-1" href="/user">Cancel</Button>
                             </div>
                         </div>
                     </Container>
@@ -486,7 +486,7 @@ export default function SMSBlast(props) {
                             <Button id="return-home-btn" className="returnButton btn-primary" onClick={() => setStep(6)} href="/user">Done</Button>
                         </p>
                         <p id="try-again-later-wrapper" className="text-center">
-                            <Button id="try-again-later-btn" className="tryAgainLaterButton btn-primary">Try Again Later</Button>
+                            <Button id="try-again-later-btn" className="tryAgainLaterButton btn-primary" href="/user">Try Again Later</Button>
                         </p>
                     </Container>
                 : null }

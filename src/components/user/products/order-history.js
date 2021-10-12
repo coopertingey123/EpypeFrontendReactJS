@@ -4,7 +4,7 @@ import { Container, Button, Table} from "react-bootstrap"
 export default function OrderHistory(props) {
     return (
         <Container className="text-center">
-            <h1 className="green-text">Product Order History</h1>
+            <h3 className="green-text py-3">Product Order History</h3>
             <Table className="table-reponsibe table-striped border_bottom">
                 <thead className="thead-dark">
                     <tr>

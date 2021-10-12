@@ -84,7 +84,7 @@ export default function VlpContainerThumbnail(props) {
                 className="sendQuickMessageModal"
             >
                 <h3 className="p-3 green-text">Quick Send</h3>
-                <h4 className="p-2">Choose Recipient</h4>
+                <h4 className="py-2 px-3">Choose Recipient</h4>
                 <Nav variant="tabs" id="crminfocontainer" className="m-3" activeKey={active}>
                     <Nav.Item>
                         <Nav.Link
@@ -570,8 +570,8 @@ export default function VlpContainerThumbnail(props) {
                                 >
                                 <small> <FontAwesomeIcon icon="chart-bar"/> Activity</small>
                             </Button>
-                            <Button id="actionUpdate853" variant="outline-primary" className="btn-sm actionUpdate853 mx-1" href="" title="Update">
-                                <small> <FontAwesomeIcon icon="edit"/> Update</small>
+                            <Button id="actionUpdate853" variant="outline-primary" className="btn-sm actionUpdate853 mx-1" href="/user/update-vlp" title="Update">
+                                <small> <FontAwesomeIcon icon="edit" /> Update</small>
                             </Button>
                         </Col>
                         <Col className="col-auto">

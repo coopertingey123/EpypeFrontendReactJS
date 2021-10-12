@@ -146,8 +146,8 @@ export default function UserSignups(props) {
                     </select>
                 </Form.Group>
                 <div className="text-center">
-                    <Button className="mx-1" type="submit">Find Contacts</Button>
-                    <Button className="mx-1">Previous Search</Button>
+                    <Button className="mx-1" type="submit" href="/user/contacts/search-results">Find Contacts</Button>
+                    <Button className="mx-1" href="/user/contacts/search-results">Previous Search</Button>
                 </div>
             </Form>
         </Container>

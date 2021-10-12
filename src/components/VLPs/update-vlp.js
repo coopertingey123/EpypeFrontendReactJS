@@ -24,17 +24,19 @@ export default function UpdateVlp(props) {
 
     return (
         <Container id="main_content" fluid>
-            <h2 className="green-text text-center pt-3">Update a VLP</h2>
-            <Row>
-                <Col className="text-start">
-                    <Button className="mb-5 ms-5" onClick={alternateThemes == false ? () => setAlerternateThemes(true) : () => setAlerternateThemes(false)}>
-                        {alternateThemes ? <FontAwesomeIcon icon="eye"/> : <FontAwesomeIcon icon="eye-slash"/> } Alternate Themes
-                    </Button>
-                </Col>
-                <Col className="text-end">
-                    <Button className="mb-5 me-5" href="/user/advanced-edit">Advanced Edit</Button>
-                </Col>
-            </Row>
+            <Container>
+                <h2 className="green-text text-center pt-3">Update a VLP</h2>
+                <Row>
+                    <Col className="text-start">
+                        <Button className="mb-5 ms-5" onClick={alternateThemes == false ? () => setAlerternateThemes(true) : () => setAlerternateThemes(false)}>
+                            {alternateThemes ? <FontAwesomeIcon icon="eye"/> : <FontAwesomeIcon icon="eye-slash"/> } Alternate Themes
+                        </Button>
+                    </Col>
+                    <Col className="text-end">
+                        <Button className="mb-5 me-5" href="/user/advanced-edit">Advanced Edit</Button>
+                    </Col>
+                </Row>
+            </Container>
             {alternateThemes ? 
                 <Container id="main_content" fluid>
                     <Nav variant="pills" className="d-flex justify-content-center p-3" activeKey={active}>

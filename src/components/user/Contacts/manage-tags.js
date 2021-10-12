@@ -6,8 +6,8 @@ export default function ManageTags(props) {
     return (
         <Container>
             <h2 className="green-text py-3">Contact Tags</h2>
-            <div className="text-center py-3">
-                <Button>+ Add a new tag</Button>
+            <div className="text-center">
+                <Button className="my-3" href="/user/contacts/add-tag">+ Add a new tag</Button>
             </div>
             <Table className="border_bottom table-striped">
                 <thead className="thead-dark">

@@ -30,7 +30,7 @@ export default function CreateVlp(props) {
     return (
         <Container id="main_content" fluid>
             <Container>
-                <h1 className="green-text">Create a VLP</h1>
+                <h3 className="green-text">Create a VLP</h3>
                 <div id="steps-progress-bar-wrapper" className="with-video-training">
                     <ul id="steps-progress-bar">
                         <li className={step === 1, 2, 3, 4, 5 ? "active" : ""}>
@@ -79,7 +79,7 @@ export default function CreateVlp(props) {
                         <Form.Control className="py-2" placeholder="Page Title" value={vlpName} onChange={(e) => setVlpName(e.target.value)}/>
                         <div className="py-3">
                             <Button className="m-1" onClick={(e) => setStep(2)}>Next</Button>
-                            <Button className="m-1" variant="danger">Cancel</Button>
+                            <Button className="m-1" variant="danger" href="/user">Cancel</Button>
                         </div>
                     </Form>
                 </Container>
@@ -193,7 +193,7 @@ export default function CreateVlp(props) {
                     <div className="py-3 text-center">
                         <Button className="m-1" onClick={() => setStep(3)}>Next</Button>
                         <Button className="m-1" onClick={() => setStep(1)}>Back</Button>
-                        <Button className="m-1" variant="danger">Cancel</Button>
+                        <Button className="m-1" variant="danger" href="/user">Cancel</Button>
                     </div>
                 </Container>
             : null }
@@ -214,6 +214,9 @@ export default function CreateVlp(props) {
                             Select a file
                         </Button>
                     </div>
+                    <div className="text-center">
+                        <Button variant="danger" href="/user" className="m-1">Cancel</Button>
+                    </div>
                 </Container>
             : null }
             {step == 4 ?
@@ -225,7 +228,7 @@ export default function CreateVlp(props) {
                     <div className="text-center">
                         <Button onClick={() => setStep(6)} className="m-1">Upload Video</Button>
                         <Button className="m-1" onClick={() => setStep(3)}>Back</Button>
-                        <Button variant="danger" className="m-1">Cancel</Button>
+                        <Button variant="danger" className="m-1" href="/user">Cancel</Button>
                     </div>
                 </Container>
             : null }
@@ -237,7 +240,7 @@ export default function CreateVlp(props) {
                         <Button className="m-1">Save a Copy</Button>
                         <Button className="m-1" onClick={() => setStep(6)}>Upload Video</Button>
                         <Button className="m-1" onClick={() => setStep(3)}>Back</Button>
-                        <Button className="m-1" variant="danger">Cancel</Button>
+                        <Button className="m-1" variant="danger" href="/user">Cancel</Button>
                     </div>
                 </Container>
             : null }
@@ -252,9 +255,9 @@ export default function CreateVlp(props) {
                     <hr />
                     <h4 className="my-3">Would you like to send this VLP to your contacts right now?</h4>
                     <div className="buttons">
-                        <Button className="m-1">Quick Send</Button>
-                        <Button className="m-1">Advanced</Button>
-                        <Button className="m-1" variant="danger">Skip</Button>
+                        <Button className="m-1" href="/user">Quick Send</Button>
+                        <Button className="m-1" href="/user">Advanced</Button>
+                        <Button className="m-1" variant="danger" href="/user">Skip</Button>
                     </div>
                 </Container>
             : null }

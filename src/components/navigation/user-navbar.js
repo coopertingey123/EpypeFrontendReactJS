@@ -51,7 +51,7 @@ export default function UserNavbar(props) {
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
                             />
-                            <Button className="bg-transparent border-0" href="/user/search-results-contacts" type="submit">
+                            <Button className="bg-transparent border-0" href="/user/contacts/search-results" type="submit">
                                 <FontAwesomeIcon icon="search"/>
                             </Button>
                         </Form>

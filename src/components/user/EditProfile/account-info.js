@@ -67,7 +67,7 @@ export default function AccountInfo(props) {
 
     return (
         <Container>
-            <h1 className="green-text">Profile</h1>
+            <h3 className="green-text py-3">Profile</h3>
             <hr style={{width: "100%"}}/>
             {/* <h3>Fiesta Days</h3> */}
             <Table className="table-responsive table-borderless table-sm no-padding">
@@ -388,7 +388,7 @@ export default function AccountInfo(props) {
                     <Button 
                         type="button" id="btnCancel" 
                         name="btnCancel" className="btn-danger m-1" 
-                        value="Cancel">
+                        value="Cancel" href="/user">
                     Cancel</Button>
                 </p>
             </Form>

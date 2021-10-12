@@ -60,7 +60,7 @@ import EditTag from "./user/Contacts/edit-tag";
 import EditContact from "./user/Contacts/EditContact/edit-contact";
 
 import ContactSearchResults from './user/Contacts/contact-search-results';
-import UserTags from "./user/keywords/tags";
+import UserTags from "./user/Contacts/tags";
 import SMSKeywords from "./user/keywords/sms-keywords";
 import SMSBlast from "./user/message-blast/sms-blast";
 import EditSMSKeywords from "./user/keywords/edit-sms-keyword";

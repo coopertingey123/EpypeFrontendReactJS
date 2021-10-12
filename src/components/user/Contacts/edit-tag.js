@@ -12,8 +12,8 @@ export default function AddTag(props) {
                 <Form.Label>Description</Form.Label>
                 <Form.Control value={description} onChange={(e) => setDescription(e.target.value)}/>
                 <div className="text-center py-3">
-                    <Button className="m-1">Save Changes</Button>
-                    <Button className="m-1" variant="danger">Cancel</Button>
+                    <Button className="m-1" href="/user/tags">Save Changes</Button>
+                    <Button className="m-1" variant="danger" href="/user/tags">Cancel</Button>
                 </div>
             </Form>
         </Container>

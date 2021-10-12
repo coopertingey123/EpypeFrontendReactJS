@@ -8,8 +8,8 @@ export default function Steps(props) {
     const [step, setStep] = useState(1)
     const [keyword, setKeyword] = useState("")
     const [optinMessage, setOptinMessage] = useState("")
-    const [messages, setMessages] = useState("")
-    const [time, setTime] = useState("")
+    const [messages, setMessages] = useState(1)
+    const [time, setTime] = useState("month")
     const [myMessage, setMyMessage] = useState("")
     const [link, setLink] = useState("")
     const [charsLeft, setCharsLeft] = useState(137)
@@ -145,7 +145,7 @@ export default function Steps(props) {
                                     <em>[YOUR PHONE NUMBER]</em>
                                     <span>{optinMessage}</span>.
                                     Msg&amp;Data rates may apply.
-                                    <span id="optInFrequencyCount"> 1</span> msg/<span id="optInFrequencyInterval">mo</span>. Reply HELP for help, STOP to cancel.
+                                    {messages} msg/ {time}. Reply HELP for help, STOP to cancel.
                                 </p>
                             </Alert>
                         </Col>
@@ -201,7 +201,7 @@ export default function Steps(props) {
                         </Row>
                     </Form.Group>
                     <div className="py-2">
-                        <Button className="m-1" type="submit">Add Keyword</Button>
+                        <Button className="m-1" type="submit" href="/user/sms-keywords">Add Keyword</Button>
                         <Button className="m-1" variant="danger" onClick={() => setStep(2)}>Back</Button>
                     </div>
                 </Form> : null}

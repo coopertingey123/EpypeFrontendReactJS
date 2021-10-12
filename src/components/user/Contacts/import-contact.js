@@ -36,7 +36,7 @@ export default function ImportContacts(props) {
                             <Form.Check  className="py-2" label="The file contains headers in the first row."/>
                             <div className="text-center py-3">
                                 <Button className="m-1" onClick={() => setStep(2)}>Next</Button>
-                                <Button className="m-1" variant="danger">Cancel</Button>
+                                <Button className="m-1" variant="danger" href="/user/contacts">Cancel</Button>
                             </div>
                         </Form.Group>
                     </Form>
@@ -96,7 +96,7 @@ export default function ImportContacts(props) {
                     <div className="text-center py-3">
                         <Button className="m-1" onClick={() => setStep(3)}>Next</Button>
                         <Button className="m-1" onClick={() => setStep(1)}>Back</Button>
-                        <Button className="m-1" variant="danger">Cancel</Button>
+                        <Button className="m-1" variant="danger" href="/user/contacts">Cancel</Button>
                     </div>
                 </Container>
             : null }
@@ -111,9 +111,9 @@ export default function ImportContacts(props) {
                     <h4>Data Update</h4>
                     <Form.Check type="checkbox" label="Update existing contacts with new data if the mobile phone number matches."/>
                     <div className="text-center py-3">
-                        <Button className="m-1">Import Contacts</Button>
+                        <Button className="m-1" href="/user/contacts">Import Contacts</Button>
                         <Button className="m-1" onClick={() => setStep(2)}>Back</Button>
-                        <Button className="m-1" onClick={() => setStep(1)} variant="danger">Cancel</Button>
+                        <Button className="m-1" onClick={() => setStep(1)} variant="danger" href="/user/contacts">Cancel</Button>
                     </div>
                 </Container>
             : null }
