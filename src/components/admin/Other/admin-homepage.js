@@ -4,7 +4,7 @@ import { Container, ListGroup } from "react-bootstrap";
 export default function AdminHomepage(props) {
     return (
         <Container>
-            <h1 className="green-text m-3">General Admin</h1>
+            <h3 className="green-text m-3">General Admin</h3>
             <ListGroup className="m-3">
                 <ListGroup.Item action href="/admin/accounts">
                     Manage Accounts

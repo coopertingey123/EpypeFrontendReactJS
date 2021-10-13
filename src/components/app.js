@@ -38,6 +38,7 @@ import EditVlpTheme from './admin/General/edit-vlp-theme';
 import SMSCodes from './admin/General/sms-codes';
 import ClientSignups from './admin/Reports/user-signups';
 import InvoicePayments from './admin/Billing/invoice-payments';
+import AddOrganization from './admin/General/add-organization';
 import OrganizationBilling from './admin/Billing/organization-billing';
 import ProcessOneTimePayment from './admin/Billing/process-one-time-payment';
 import UserBilling from './admin/Billing/user-billing';
@@ -81,6 +82,7 @@ import AdvancedEdit from './VLPs/advanced-edit';
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
+
 
 
 
@@ -148,6 +150,7 @@ export default function App(props) {
               <Route path="/admin/organization-billing" component={OrganizationBilling}/>
               <Route path="/admin/process-one-time-payment" component={ProcessOneTimePayment}/>
               <Route path="/admin/client-billing" component={UserBilling}/>
+              <Route path="/admin/add-organization" component={AddOrganization}/>
               {/* admin misc pages */}
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>

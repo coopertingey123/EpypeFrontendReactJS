@@ -22,9 +22,9 @@ export default function AdminClients(props) {
 
     return (
         <Container className="text-center">
-            <h1 className="green-text p-3">
+            <h3 className="green-text p-3">
                 Admin Users
-            </h1>
+            </h3>
             <Button>+ Add a new Admin User</Button>
             <Form className="text-start p-3" onSubmit={handleSubmit}>
                 <Form.Group className="p-3">

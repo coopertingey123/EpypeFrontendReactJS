@@ -36,9 +36,11 @@ export default function ManageAccounts(props) {
       }
 
     return (
-        <Container className="text-center">
-            <h1 className="green-text p-3">Accounts</h1>
-            <Button>+ Add a New Organization</Button>
+        <Container>
+            <div className="text-center">
+                <h3 className="green-text p-3">Accounts</h3>
+                <Button>+ Add a New Organization</Button>
+            </div>
             <Form className="text-start" onSubmit={handleSubmit}>
                 <Form.Group className="p-3">
                     <Form.Label>
@@ -285,8 +287,8 @@ export default function ManageAccounts(props) {
                     <Form.Check type="checkbox" label="Include Organization User Count"/>
                 </Form.Group>
                 <div className="text-center">
-                    <Button className="m-3" type="submit" href="">Find Accounts</Button>
-                    <Button className="m-3">Previous Search</Button>
+                    <Button className="m-1" type="submit" href="">Find Accounts</Button>
+                    <Button className="m-1">Previous Search</Button>
                 </div>
             </Form>
             
