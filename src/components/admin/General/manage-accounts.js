@@ -39,7 +39,7 @@ export default function ManageAccounts(props) {
         <Container>
             <div className="text-center">
                 <h3 className="green-text p-3">Accounts</h3>
-                <Button>+ Add a New Organization</Button>
+                <Button href="/admin/add-organization">+ Add a New Organization</Button>
             </div>
             <Form className="text-start" onSubmit={handleSubmit}>
                 <Form.Group className="p-3">

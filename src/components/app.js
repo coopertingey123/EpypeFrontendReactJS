@@ -46,6 +46,7 @@ import AccountSearchResults from "./admin/Other/account-search-results";
 import AdminChangePassword from "./auth/admin/admin-change-password";
 import AdminChangePreferences from './auth/admin/admin-preferences';
 import AdminEditUser from "./admin/Other/edit-user"
+import AddAdminUser from './admin/General/add-admin-user';
 
 // User Components
 import HomeVLPs from "./VLPs/home-vlps";
@@ -82,6 +83,7 @@ import AdvancedEdit from './VLPs/advanced-edit';
 // css styles for components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-datepicker/dist/react-datepicker.css";
+
 
 
 
@@ -151,6 +153,7 @@ export default function App(props) {
               <Route path="/admin/process-one-time-payment" component={ProcessOneTimePayment}/>
               <Route path="/admin/client-billing" component={UserBilling}/>
               <Route path="/admin/add-organization" component={AddOrganization}/>
+              <Route path="/admin/add-user" component={AddAdminUser}/>
               {/* admin misc pages */}
               <Route path="/admin/account-search-results" component={AccountSearchResults}/>
               <Route path="/admin/change-password" component={AdminChangePassword}/>

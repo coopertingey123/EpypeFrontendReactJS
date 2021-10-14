@@ -1,138 +1,44 @@
 import React, { useState } from 'react'
-import {Container, Form, InputGroup, Button, Row, Col} from 'react-bootstrap'
+import { Container, Button, Form} from "react-bootstrap"
 
-export default function AddOrganization(props) {
+export default function AddAdminUser(props) {
 
-    const [loginEmail, setLoginEmail] = useState("")
+    const [adminUserId, setAdminUserId] = useState("")
     const [password, setPassword] = useState("")
-    const [businessName, setBusinessName] = useState("")
-    const [address1, setAddress1] = useState("")
-    const [address2, setAddress2] = useState("")
-    const [city, setCity] = useState("")
-    const [state, setState] = useState("")
-    const [postalCode, setPostalCode] = useState("")
-    const [contactName, setContactName] = useState("")
-    const [phone, setPhone] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
-    const [vlpReviewEmail, setVlpReviewEmail] = useState("")
     const [timeZone, setTimeZone] = useState("")
-    const [salesPerson, setSalesPerson] = useState("")
-    const [feeAmount, setFeeAmount] = useState("")
-    const [chargeFrequency, setChargeFrequency] = useState("")
-    const [billingContact, setBillingContact] = useState("")
-    const [billingType, setBillingType] = useState("")
-    const [firstNameOnCard, setFirstNameOnCard] = useState("")
-    const [lastNameOnCard, setLastNameOnCard] = useState("")
-    const [creditCardNumber, setCreditCardNumber] = useState("")
-    const [cardMonth, setCardMonth] = useState("")
-    const [cardYear, setCardYear] = useState("")
-    const [billingPostalCode, setBillingPostalCode] = useState("")
-
+    const [adminUserType, setAdminUserType] = useState("")
 
     return (
         <Container>
-            <h3 className="green-text py-3">Add Organization</h3>
+            <h3 className="green-text py-3">Add Admin User</h3>
             <Form>
-                <h4>General</h4>
                 <Form.Group className="py-2">
-                    <Form.Label>Login Email</Form.Label>
-                    <Form.Control value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)}/>
+                    <Form.Label>Admin User ID</Form.Label>
+                    <Form.Control value={adminUserId} onChange={(e) => setAdminUserId(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="py-2">
                     <Form.Label>Password</Form.Label>
                     <Form.Control value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="py-2">
-                    <Form.Label>Business Name</Form.Label>
-                    <Form.Control value={businessName} onChange={(e) => setBusinessName(e.target.value)}/>
+                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Control value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="py-2">
-                    <Form.Label>Office Address</Form.Label>
-                    <Form.Control className="my-2" value={address1} onChange={(e) => setAddress1(e.target.value)}/>
-                    <Form.Control className="my-2" value={address2} onChange={(e) => setAddress2(e.target.value)}/>
+                    <Form.Label>First Name</Form.Label>
+                    <Form.Control value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="py-2">
-                    <Form.Label>City</Form.Label>
-                    <Form.Control value={city} onChange={(e) => setCity(e.target.value)}/>
-                </Form.Group>
-                <Form.Group className="py-2">
-                    <Form.Label>State</Form.Label>
-                    <select className="form-select" value={state} onChange={(e) => setState(e.target.value)}>
-                        <option value="AK">AK</option>
-                        <option value="AL">AL</option>
-                        <option value="AR">AR</option>
-                        <option value="AZ">AZ</option>
-                        <option value="CA">CA</option>
-                        <option value="CO">CO</option>
-                        <option value="CT">CT</option>
-                        <option value="DC">DC</option>
-                        <option value="DE">DE</option>
-                        <option value="FL">FL</option>
-                        <option value="GA">GA</option>
-                        <option value="GU">GU</option>
-                        <option value="HI">HI</option>
-                        <option value="IA">IA</option>
-                        <option value="ID">ID</option>
-                        <option value="IL">IL</option>
-                        <option value="IN">IN</option>
-                        <option value="KS">KS</option>
-                        <option value="KY">KY</option>
-                        <option value="LA">LA</option>
-                        <option value="MA">MA</option>
-                        <option value="MD">MD</option>
-                        <option value="ME">ME</option>
-                        <option value="MI">MI</option>
-                        <option value="MN">MN</option>
-                        <option value="MO">MO</option>
-                        <option value="MS">MS</option>
-                        <option value="MT">MT</option>
-                        <option value="NC">NC</option>
-                        <option value="ND">ND</option>
-                        <option value="NE">NE</option>
-                        <option value="NH">NH</option>
-                        <option value="NJ">NJ</option>
-                        <option value="NM">NM</option>
-                        <option value="NV">NV</option>
-                        <option value="NY">NY</option>
-                        <option value="OH">OH</option>
-                        <option value="OK">OK</option>
-                        <option value="OR">OR</option>
-                        <option value="PA">PA</option>
-                        <option value="PR">PR</option>
-                        <option value="RI">RI</option>
-                        <option value="SC">SC</option>
-                        <option value="SD">SD</option>
-                        <option value="TN">TN</option>
-                        <option value="TX">TX</option>
-                        <option value="UT">UT</option>
-                        <option value="VA">VA</option>
-                        <option value="VI">VI</option>
-                        <option value="VT">VT</option>
-                        <option value="WA">WA</option>
-                        <option value="WI">WI</option>
-                        <option value="WV">WV</option>
-                        <option value="WY">WY</option>
-                    </select>
-                </Form.Group>
-                <Form.Group className="py-2">
-                    <Form.Label>Postal Code</Form.Label>
-                    <Form.Control value={postalCode} onChange={(e) => setPostalCode(e.target.value)}/>
-                </Form.Group>
-                <Form.Group className="py-2">
-                    <Form.Label>Contact Name</Form.Label>
-                    <Form.Control value={contactName} onChange={(e) => setContactName(e.target.value)}/>
-                </Form.Group>
-                <Form.Group className="py-2">
-                    <Form.Label>Phone</Form.Label>
-                    <Form.Control value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                    <Form.Label>Last Name</Form.Label>
+                    <Form.Control value={lastName} onChange={(e) => setLastName(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="py-2">
                     <Form.Label>Email</Form.Label>
                     <Form.Control value={email} onChange={(e) => setEmail(e.target.value)}/>
-                </Form.Group>
-                <Form.Group className="py-2">
-                    <Form.Label>VLP Review Email</Form.Label>
-                    <Form.Control value={vlpReviewEmail} onChange={(e) => setVlpReviewEmail(e.target.value)}/>
                 </Form.Group>
                 <Form.Group className="py-2">
                     <Form.Label>Time Zone</Form.Label>
@@ -564,132 +470,21 @@ export default function AddOrganization(props) {
                         <option value="UTC">UTC</option>
                     </select>
                 </Form.Group>
-
-                <h4 className="py-3">Account Status / Flags</h4>
                 <Form.Group className="py-2">
-                    <Form.Label>Sales Person</Form.Label>
-                    <select className="form-select" value={salesPerson} onChange={(e) => setSalesPerson(e.target.value)}>
-                        <option value="0">Unassigned</option>
-                        <option value="9">Ammon Freest0ne (Platpay)</option>
-                        <option value="1" selected>Corporate Sales</option>
-                        <option value="2">Ethan Morley (Epype)</option>
-                        <option value="8">Glen Oliver (EPYPE)</option>
-                        <option value="5">Jed Morley (Platinum Payments)</option>
-                        <option value="4">Lance Hansen (Platinum Payments)</option>
-                        <option value="6">Stace Vest (Platinum Payments)</option>
-                        <option value="7">Trennen Rasmussen (EPYPE)</option>
-                        <option value="3">Valinda Hanks (Platinum Payments)</option>
+                    <Form.Label>Admin User Type</Form.Label>
+                    <select className="form-select" value={adminUserType} onChange={(e) => setAdminUserType(e.target.value)}>
+                        <option value="">---</option>
+                        <option value="Limited support">Limited Support</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="support">Support</option>
+                        <option value="sales">Sales</option>
                     </select>
                 </Form.Group>
                 <Form.Group className="py-2">
-                    <Form.Check type="checkbox" label="Users Pay"/>
-                    <Form.Check type="checkbox" label="Users share SMS Codes"/>
-                    <Form.Check type="checkbox" label="Users can set company logo image"/>
-                    <Form.Check checked type="checkbox" label="Users can record video"/>
-                    <Form.Check checked type="checkbox" label="users can create VLP templates"/>
-                    <Form.Check checked type="checkbox" label="Users can use EPYPE product system"/>
+                    <Form.Check label="Active"/>
+                    <Form.Check label="Allow Account Reminders"/>
                 </Form.Group>
-
-                <h4 className="py-3">Billing</h4>
-                <Row>
-                    <Col>
-                        <Form.Group>
-                            <Form.Label>Fee Amount</Form.Label>
-                            <InputGroup className="mb-3">
-                                <InputGroup.Text>$</InputGroup.Text>
-                                <Form.Control value={feeAmount} onChange={(e) => setFeeAmount(e.target.value)}/>
-                            </InputGroup>
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group>
-                            <Form.Label>Charged Every</Form.Label>
-                            <InputGroup className="mb-3">
-                                <Form.Control value={chargeFrequency} onChange={(e) => setChargeFrequency(e.target.value)}/>
-                                <InputGroup.Text>month(s)</InputGroup.Text>
-                            </InputGroup>
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Form.Group className="py-2">
-                    <Form.Label>Billing Contact</Form.Label>
-                    <Form.Control value={billingContact} onChange={(e) => setBillingContact(e.target.value)}/>
-                </Form.Group>
-                <Form.Group className="py-2">
-                    <Form.Label>Billing Type</Form.Label>
-                    <select className="form-select" value={billingType} onChange={(e) => setBillingType(e.target.value)}>
-                        <option value="0">Invoice</option>
-			            <option value="1" selected>Credit Card</option>
-                    </select>
-                </Form.Group>
-                <Row>
-                    <Col>
-                        <Form.Group className="py-2">
-                            <Form.Label>First Name on Credit Card</Form.Label>
-                            <Form.Control value={firstNameOnCard} onChange={(e) => setFirstNameOnCard(e.target.value)}/>
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group className="py-2">
-                            <Form.Label>Last Name on Credit Card</Form.Label>
-                            <Form.Control value={lastNameOnCard} onChange={(e) => setLastNameOnCard(e.target.value)}/>
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Form.Group className="py-2">
-                            <Form.Label>Credit Card Number</Form.Label>
-                            <Form.Control value={creditCardNumber} onChange={(e) => setCreditCardNumber(e.target.value)}/>
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group className="py-2">
-                            <Form.Label>Billing Postal Code</Form.Label>
-                            <Form.Control value={billingPostalCode} onChange={(e) => setBillingPostalCode(e.target.value)}/>
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Form.Group className="py-2">
-                            <Form.Label>Expiration Month</Form.Label>
-                            <select className="form-select" value={cardMonth} onChange={(e) => setCardMonth(e.target.value)}>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10" selected>10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group className="py-2">
-                            <Form.Label>Expiration Year</Form.Label>
-                            <select className="form-select" value={cardYear} onChange={(e) => setCardYear(e.target.value)}>
-                                <option value="2021" selected>2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                                <option value="2031">2031</option>
-                            </select>
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <div className="text-center py-3">
+                <div className="text-center">
                     <Button className="m-1">Save Changes</Button>
                     <Button className="m-1" variant="danger" href="/admin">Cancel</Button>
                 </div>
