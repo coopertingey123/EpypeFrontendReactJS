@@ -6,7 +6,7 @@ import {
     faUserCheck, faCoffee, faSearch, faUser, faList, faEdit, faEllipsisV, faShare, faFileVideo,
     faChartBar, faEye, faCopy, faBan, faTrash, faKey, faTags, faEnvelopeOpenText, faGripLines, faVideo,
     faHeading, faAlignCenter, faImage, faLink, faShoppingCart, faComments, faFileCsv, faColumns, faUserTag,
-    faEyeSlash
+    faEyeSlash, faCalendarAlt
   } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = () => {
@@ -14,7 +14,7 @@ const Icons = () => {
       faPlayCircle, faUserCheck, faEnvelopeOpenText, faTags, faCheckSquare, faCoffee, faFileVideo,
       faSearch, faUser, faList, faEdit, faEllipsisV, faShare, faChartBar, faEye, faCopy, faBan, faTrash, faKey, 
       faVideo, faHeading, faAlignCenter, faImage, faLink, faShoppingCart, faComments, faFileCsv, faColumns, faUserTag,
-      faEyeSlash)
+      faEyeSlash, faCalendarAlt)
 }
 
 export default Icons;

@@ -25,7 +25,7 @@ export default function AdminClients(props) {
             <h3 className="green-text p-3">
                 Admin Users
             </h3>
-            <Button href="/admin/add-user">+ Add a new Admin User</Button>
+            <Button href="/admin/add-admin-client">+ Add a new Admin User</Button>
             <Form className="text-start p-3" onSubmit={handleSubmit}>
                 <Form.Group className="p-3">
                     <Form.Label>
