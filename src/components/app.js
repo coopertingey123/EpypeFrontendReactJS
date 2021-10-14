@@ -48,6 +48,7 @@ import AdminChangePreferences from './auth/admin/admin-preferences';
 import AdminEditUser from "./admin/Other/edit-user"
 import AddAdminUser from './admin/General/add-admin-user';
 import AddPromoCode from "./admin/General/add-promo-code";
+import AddSmsCode from "./admin/General/add-sms-code";
 
 // User Components
 import HomeVLPs from "./VLPs/home-vlps";
@@ -146,6 +147,7 @@ export default function App(props) {
               <Route path="/admin/vlp-layouts" component={ManageVLPLayouts}/>
               <Route path="/admin/edit-vlp-theme" component={EditVlpTheme}/>
               <Route path="/admin/sms-codes" component={SMSCodes}/>
+              <Route path="/admin/add-sms-code" component={AddSmsCode}/>
               {/* admin reports pages */}
               <Route path="/admin/client-signups" component={ClientSignups}/>
               {/* admin billing pages */}

@@ -14,9 +14,11 @@ export default function SMSCodes(props) {
     }
 
     return (
-        <Container className="text-center">
-            <h1 className="green-text p-3">SMS Codes</h1>
-            <Button className="mb-3">+ Add a new SMS Code</Button>
+        <Container>
+            <div className="text-center">
+                <h3 className="green-text py-3">SMS Codes</h3>
+                <Button href="/admin/add-sms-code">+ Add a new SMS Code</Button>
+            </div>
             <Form className="text-start py-3" onSubmit={handleSubmit}>
                 <Form.Group>
                     <Form.Label>SMS Code</Form.Label>
@@ -42,8 +44,8 @@ export default function SMSCodes(props) {
                     </select>
                 </Form.Group>
                 <div className="text-center">
-                    <Button className="m-3" type="submit">Find SMS Codes</Button>
-                    <Button className="m-3">Previous Search</Button>
+                    <Button className="m-1" type="submit">Find SMS Codes</Button>
+                    <Button className="m-1">Previous Search</Button>
                 </div>
             </Form>
             
