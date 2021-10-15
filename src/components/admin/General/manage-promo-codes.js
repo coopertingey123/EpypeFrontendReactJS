@@ -6,9 +6,9 @@ export default function ManagePromoCodes(props) {
 
     return (
         <Container className="text-center">
-            <h1 className="green-text p-3">
+            <h3 className="green-text p-3">
                 Promo Codes
-            </h1>
+            </h3>
             <Row className="justify-content-center py-2">
                 <Col sm={4}>
                     <Row className="mb-3 g-3 justify-content-center">
@@ -23,7 +23,7 @@ export default function ManagePromoCodes(props) {
                     </Row>
                 </Col>
                 <Col sm={4}>
-                    <Button className="">+ Add a new promo code</Button>
+                    <Button className="" href="/admin/add-promo-code">+ Add a new promo code</Button>
                 </Col>
             </Row>
             
